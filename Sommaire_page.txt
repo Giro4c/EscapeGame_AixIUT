@@ -1,0 +1,8 @@
+Sommaire des pages :
+
+-> Entrée de l'Escape Game : QG.html
+    -> Le PUTAIN de Manuel
+        -> Le manuel du Faker
+    -> Aller vers le champs de bataille (vrai site de l'IUT)
+    -> RTFM : Faker (debut du game, faux site de l'IUT)
+        -> 
