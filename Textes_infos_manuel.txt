@@ -1,0 +1,71 @@
+        Les différentes systèmes de numérotation nombres :
+
+Il existe plusieurs systèmes de numérotation dans le monde. On différencie ces systèmes par leur base : chaque nombre peut être décomposé en fonction des puissances de cette base. 
+Les systèmes les plus connus sont : le décimal (base 10), le binaire (base 2) et l'hexadécimal (base 16).
+
+    Le système décimal :
+
+C'est le système que l'on utilise dans la vie de tous les jours.
+C'est un système de numération positionnel qui regroupe les objets par dix et qui utilise les chiffres 0, 1, 2, 3, 4, 5, 6, 7, 8 et 9. 
+On dit que le système de numération décimal est un système de numération en base 10.
+
+Par exemple :
+    154 = 1*10^2 + 5*10^1 + 4*10^0
+    85 603 = 8*10^4 + 5*10^3 + 6*10^2 + 0**10^1 + 3*10^0
+
+    Le système binaire : 
+
+C'est le système utilisé par les ordinateur.
+C'est un système de numération positionnel qui regroupe les objets par 2 et qui utilise uniquement les chiffres 0 et 1. 
+On dit que le système de numération binaire est un système de numération en base 2.
+
+Par exemple :
+    154 = 10011010 = 2^7 + 2^4 + 2^3 + 2^1
+    1001 = 1111101001 = 2^9 + 2^8 + 2^7 + 2^6 + 2^5 + 2^3 + 2^0
+
+    Le système hexadécimal :
+
+C'est le système utilisé pour les adresses IP.
+C'est un système de numération positionnel qui regroupe les objets par 16 et qui utilise les chiffres 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F. 
+Les chiffres A, B, C, D, E et F en hexadécimal correspondent respectivement à 10, 11, 12, 13, 14 et 15 en décimal.
+On dit que le système de numération hexadécimal est un système de numération en base 16.
+
+Par exemple :
+    154 = 9A = 9*16^1 + 10*16^0
+    1249 = 4E1 = 4*16^2 + 14*16^1 + 1*16^0
+
+--------------------------------------------
+
+        Le code ASCII :
+
+L’abréviation ASCII (prononcé "asski") signifie American Standard Code for Information Interchange. 
+ASCII est un unicode allant de 0 à 127 qui permet de coder les caractères. 
+Parmi d’autres aspects, le code peut être utilisé pour l’encodage d’URL.
+Voici le tableau des caractères et leur code :
+
+--------------------------------------------
+
+        Les langages de programmation :
+    
+    C++ :
+
+Le C++ est un langage de programmation compilé incontournable pour les développeurs : il permet d'écrire des programmes informatiques, pour créer des applications mobiles ou des jeux vidéo, par exemple. 
+C++ est créé à partir du langage C, dont il étend les fonctionnalités : C++ permet notamment de faire de la programmation orientée objet (POO).
+
+Comme tout langage de programmation, il repose sur le l'algorithmie : l'exécution de suites d'opération élémentaires selon un processus défini pour aboutir à un résultat.
+Il utilise ainsi des variables de stockage de valeur qui sont définies selon un type (nombre, caractère, chaine de caractère, booléen, etc...), des expressions logiques utilisées dans l'évaluation d'une condition, des boucles (répétition d'instruction dont la condition de fin est définie), etc...
+
+Pour les variables, le C++ utilise un grand nombre de type définis sur un certain nombre de bits en fonction notamment du "préfixe" de celui ci.
+Voici les types les plus communs utilisés :
+    (Faire un tableau)
+    - bool
+    - unsigned int
+    - int 
+    - float
+    - char
+    - string
+
+
+
+
+
