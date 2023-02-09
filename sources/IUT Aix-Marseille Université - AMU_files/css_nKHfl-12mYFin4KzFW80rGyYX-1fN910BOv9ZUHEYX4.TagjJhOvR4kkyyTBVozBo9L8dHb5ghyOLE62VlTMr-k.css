@@ -1,0 +1,147 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS............You’re reading it!
+ */
+
+.accordion-content--components .content:last-of-type {
+  margin-bottom: 0;
+}
+
+.accordion.with-bg {
+  color: inherit;
+  background: inherit;
+}
+
+.accordion.width-auto.with-bg .accordion-content {
+  color: inherit;
+  background: inherit;
+}
+
+.accordion-title {
+  padding: unset;
+  z-index: 2;
+}
+
+.accordion-title:before {
+  font-size: 1.5rem;
+  top: 40%;
+  right: 1.25rem;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .accordion-title:before {
+    right: .5rem;
+  }
+}
+
+.accordion-title .section-title {
+  font-size: 1.35rem;
+  padding: .8rem;
+  margin: inherit;
+  text-align: left;
+}
+
+.accordion:not(.width-auto) .accordion-title .section-title {
+  max-width: 95%;
+}
+
+.accordion.with-bg .accordion-title:hover {
+  background-color: #fff;
+}
+
+.accordion.with-bg .accordion-title {
+  border-color: #5a5a5a;
+}
+
+.accordion.with-bg a.accordion-title {
+  text-decoration: none;
+}
+
+.accordion.with-bg a.accordion-title.bg-light {
+  color: #000;
+}
+
+.accordion.with-bg .accordion-content {
+  border-color: #5a5a5a;
+}
+
+.accordion.with-bg:not(.width-auto) a.accordion-title.bg-dark {
+  border-bottom-color: #fff;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.accordion.with-bg:not(.width-auto) :last-child:not(.is-active) > .accordion-title.bg-dark {
+  border-bottom: 1px solid #5a5a5a;
+}
+
+.accordion-title.bg-light.bg-light--dark,
+.accordion-title.bg-light.bg-light--dark:hover,
+.accordion-title.bg-light.bg-light--dark:focus,
+.accordion-title.bg-dark:hover,
+.accordion-title.bg-dark:focus {
+  color: #000;
+}
+
+.accordion-title.bg-light.bg-lighter {
+  color: #000;
+}
+
+.accordion-title.bg-dark {
+  color: #fff;
+}
+
+.accordion .text-center .accordion-content .paragraph-text {
+  text-align: left;
+}
+
+/* ---------------Header With Auto styles-------------------- */
+.accordion.width-auto .accordion-item {
+  margin-bottom: 1rem;
+}
+
+.accordion.width-auto .accordion-title {
+  display: inline-block;
+  border: unset;
+}
+
+.accordion.width-auto .accordion-title::before {
+  content: "";
+}
+
+.accordion.width-auto .accordion-title .section-title {
+  padding: .5rem;
+  font-size: 1.18rem;
+}
+
+.accordion.width-auto .accordion-title:hover,
+.accordion.width-auto .accordion-title:focus {
+  border-bottom: unset;
+}
+
+.accordion.width-auto .accordion-title .section-title::after {
+  font-family: "Font Awesome 5 Pro", serif;
+  content: "\f0d7";
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin-left: .9rem;
+  display: inline-block;
+}
+
+.accordion.width-auto .accordion-content {
+  border: unset;
+  padding-left: .5rem;
+}
+
+.accordion.width-auto .accordion-content--components .paragraph {
+  margin-left: 0;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .accordion-item {
+    width: 100%;
+  }
+}

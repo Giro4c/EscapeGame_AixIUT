@@ -1,0 +1,343 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS ..........................You’re reading it!
+ * VARIABLES ..........................................
+ * .... Transparency color set (blocks over region) ...
+ * aliceblue ...........................................
+ * .... Tabs styles ...................................
+ * .... Background styles .............................
+ * .... Accordions styles .............................
+ * .... Border styles .................................
+ * .... CTA Styles ....................................
+ *
+*/
+
+/**
+ * Taxonomies à créer par color style
+ *   Tab styles: tabs-style-aliceblue tabs-bg-dark/tabs-bg-light
+ *   Background colors: bg-aliceblue bg-dark/bg-light
+ *   Background Hover colors: bg-hv-aliceblue bg-hv-light/bg-hv-dark
+ *   Border colors: border-aliceblue
+ *   Link Color Style: cta cta-aliceblue cta-dark/cta-light
+ *   Text Color Style: color-aliceblue color-dark/color-light
+ *   List Link Styles: color-bullet--aliceblue
+ *   CKEDITOR styles: ul.color-bullet.aliceblue|Liste aliceblue
+*/
+
+/* ------------------------------------ *\
+  == VARIABLES
+\* ------------------------------------ */
+:root {
+  /* Specific colors scheme */
+  --aliceblue: #eff4f8;
+  --aliceblue-hv: #eaf5fd;
+}
+
+/* == Transparency color set (blocks over region) -------------------- *\
+\* ------------------------------------------------------------------ */
+.op-6 .bg-aliceblue,
+.op-7 .bg-aliceblue,
+.op-8 .bg-aliceblue,
+.op-9 .bg-aliceblue {
+  --op-6: rgba(239 244 248 / 60%);
+  --op-7: rgba(239 244 248 / 70%);
+  --op-8: rgba(239 244 248 / 80%);
+  --op-9: rgba(239 244 248 / 90%);
+}
+
+/* ------------------------------------ *\
+* == aliceblue
+\* ------------------------------------ */
+
+/* == Tabs styles -------------------- *\
+\* ----------------------------------- */
+
+/* Taxo. Tab styles: tabs-style-aliceblue */
+
+/* style des tabs avec animation */
+.tabs-style-aliceblue.tabs-bg-light .tabs:before,
+.tabs-style-aliceblue.tabs-bg-dark .tabs:before {
+  color: var(--aliceblue);
+  border-bottom: 5px solid var(--aliceblue);
+}
+
+/* == Background styles -------------------- *\
+\* ----------------------------------------- */
+
+/**
+ * Taxo. Background colors: bg-aliceblue bg-dark/bg-light
+ * Taxo. Background Hover colors: bg-hv-aliceblue bg-hv-light/bg-hv-dark
+*/
+.bg-aliceblue,
+.content-hover.bg-hv-aliceblue:hover {
+  background-color: var(--aliceblue);
+}
+
+.op-6 .bg-aliceblue {
+  background-color: var(--op-6);
+}
+
+.op-7 .bg-aliceblue {
+  background-color: var(--op-7);
+}
+
+.op-8 .bg-aliceblue {
+  background-color: var(--op-8);
+}
+
+.op-9 .bg-aliceblue {
+  background-color: var(--op-9);
+}
+
+/* == Accordions styles -------------------- *\
+\* ----------------------------------------- */
+.accordion.with-bg .accordion-title.bg-aliceblue:hover,
+.accordion.with-bg .accordion-title.bg-aliceblue:focus {
+  background-color: var(--aliceblue-hv);
+}
+
+.accordion.with-bg .accordion-title.bg-aliceblue.bg-dark:hover,
+.accordion.with-bg .accordion-title.bg-aliceblue.bg-dark:focus {
+  color: var(--white);
+}
+
+.accordion.with-bg .accordion-title.bg-aliceblue.bg-light:hover,
+.accordion.with-bg .accordion-title.bg-aliceblue.bg-light:focus {
+  color: var(--black);
+}
+
+.accordion.with-bg .accordion-title.bg-aliceblue.bg-dark {
+  color: var(--white);
+  border: 0;
+}
+
+.accordion.with-bg .accordion-title.bg-aliceblue.bg-light {
+  color: var(--black);
+  border: 0;
+}
+
+/* == Text elements -------------------- *\
+\* ----------------------------------------- */
+
+/* Taxo. Text Color Style: color-aliceblue color-light/color-light */
+
+/* FA color */
+.color-aliceblue i {
+  color: var(--aliceblue);
+}
+
+.bg-aliceblue.bg-dark .color-aliceblue i,
+.content-hover.bg-hv-aliceblue.bg-hv-dark:hover i {
+  color: var(--white);
+}
+
+.bg-aliceblue.bg-light .color-aliceblue i,
+.content-hover.bg-hv-aliceblue.bg-hv-light:hover i {
+  color: var(--black);
+}
+
+/* Puces colorées */
+.bg-aliceblue.bg-dark ul li::marker,
+.bg-aliceblue.bg-hv-dark ul li::marker,
+.content-hover.bg-hv-aliceblue.bg-hv-dark:hover ul li::marker {
+  color: var(--white);
+}
+
+.bg-aliceblue.bg-light ul li::marker,
+.bg-aliceblue.bg-hv-light ul li::marker,
+.content-hover.bg-hv-aliceblue.bg-hv-light:hover ul li::marker {
+  color: var(--black);
+}
+
+ul.color-bullet--aliceblue.list li.link-list-item::marker,
+ul.color-bullet.aliceblue > li::marker,
+ul.color-bullet.aliceblue > li::before {
+  color: var(--aliceblue);
+}
+
+/* == Border styles -------------------- *\
+\* ------------------------------------- */
+
+/* Taxo. Border colors: border-aliceblue */
+.border-aliceblue,
+.border-aliceblue:after {
+  border-color: var(--aliceblue);
+}
+
+/* == CTA Styles --------------------------- *\
+\* ----------------------------------------- */
+
+/* Taxo. Link Color Style: cta cta-aliceblue */
+.paragraph .cta.cta-aliceblue a,
+.paragraph.cta.cta-aliceblue a,
+.paragraph.cta.cta-aliceblue .cta-link {
+  background-color: var(--aliceblue);
+  border: 1px solid var(--aliceblue);
+  padding: .5rem 2rem;
+}
+
+.paragraph .cta.cta-aliceblue i,
+.paragraph.cta.cta-aliceblue i {
+  color: var(--aliceblue);
+}
+
+.paragraph .cta.cta-aliceblue.cta-dark i,
+.paragraph.cta.cta-aliceblue.cta-dark i,
+.paragraph .cta.cta-aliceblue.cta-dark a,
+.paragraph.cta.cta-aliceblue.cta-dark a,
+.paragraph.cta.cta-aliceblue.cta-dark .cta-link {
+  color: var(--white);
+}
+
+.paragraph .cta.cta-aliceblue.cta-light i,
+.paragraph.cta.cta-aliceblue.cta-light i,
+.paragraph .cta.cta-aliceblue.cta-light a,
+.paragraph.cta.cta-aliceblue.cta-light a,
+.paragraph.cta.cta-aliceblue.cta-light .cta-link {
+  color: var(--black);
+}
+
+.paragraph .cta.cta-aliceblue a:focus,
+.paragraph.cta.cta-aliceblue a:focus,
+.paragraph.cta.cta-aliceblue .cta-link:focus,
+.paragraph .cta.cta-aliceblue a:hover,
+.paragraph.cta.cta-aliceblue a:hover,
+.paragraph.cta.cta-aliceblue .cta-link:hover {
+  background-color: var(--white);
+}
+
+.paragraph .cta.cta-aliceblue.cta-dark a:focus i,
+.paragraph.cta.cta-aliceblue.cta-dark a:focus i,
+.paragraph.cta.cta-aliceblue.cta-dark .cta-link:focus i,
+.paragraph .cta.cta-aliceblue.cta-dark a:hover i,
+.paragraph.cta.cta-aliceblue.cta-dark a:hover i,
+.paragraph.cta.cta-aliceblue.cta-dark .cta-link:hover i,
+.paragraph .cta.cta-aliceblue.cta-dark a:focus,
+.paragraph.cta.cta-aliceblue.cta-dark a:focus,
+.paragraph.cta.cta-aliceblue.cta-dark .cta-link:focus,
+.paragraph .cta.cta-aliceblue.cta-dark a:hover,
+.paragraph.cta.cta-aliceblue.cta-dark a:hover,
+.paragraph.cta.cta-aliceblue.cta-dark .cta-link:hover {
+  color: var(--aliceblue);
+}
+
+.paragraph .cta.cta-aliceblue.cta-light a:focus i,
+.paragraph.cta.cta-aliceblue.cta-light a:focus i,
+.paragraph.cta.cta-aliceblue.cta-light .cta-link:focus i,
+.paragraph .cta.cta-aliceblue.cta-light a:hover i,
+.paragraph.cta.cta-aliceblue.cta-light a:hover i,
+.paragraph.cta.cta-aliceblue.cta-light .cta-link:hover i,
+.paragraph .cta.cta-aliceblue.cta-light a:focus,
+.paragraph.cta.cta-aliceblue.cta-light a:focus,
+.paragraph.cta.cta-aliceblue.cta-light .cta-link:focus,
+.paragraph .cta.cta-aliceblue.cta-light a:hover,
+.paragraph.cta.cta-aliceblue.cta-light a:hover,
+.paragraph.cta.cta-aliceblue.cta-light .cta-link:hover {
+  color: var(--black);
+}
+
+.paragraph .cta.cta-reverse.cta-aliceblue a,
+.paragraph.cta.cta-reverse.cta-aliceblue a {
+  background-color: var(--white);
+}
+
+.paragraph .cta.cta-reverse.cta-aliceblue.cta-dark i,
+.paragraph.cta.cta-reverse.cta-aliceblue.cta-dark i,
+.paragraph .cta.cta-reverse.cta-aliceblue.cta-dark a,
+.paragraph.cta.cta-reverse.cta-aliceblue.cta-dark a {
+  color: var(--aliceblue);
+}
+
+.paragraph .cta.cta-reverse.cta-aliceblue.cta-light a,
+.paragraph.cta.cta-reverse.cta-aliceblue.cta-light a {
+  color: var(--black);
+}
+
+.paragraph .cta.cta-reverse.cta-aliceblue a:focus,
+.paragraph .cta.cta-reverse.cta-aliceblue a:hover {
+  background-color: var(--aliceblue);
+}
+
+.paragraph .cta.cta-reverse.cta-aliceblue.cta-dark a:focus i,
+.paragraph.cta.cta-reverse.cta-aliceblue.cta-dark a:focus i,
+.paragraph.cta.cta-reverse.cta-aliceblue.cta-dark .cta-link:focus i,
+.paragraph .cta.cta-reverse.cta-aliceblue.cta-dark a:hover i,
+.paragraph.cta.cta-reverse.cta-aliceblue.cta-dark a:hover i,
+.paragraph.cta.cta-reverse.cta-aliceblue.cta-dark .cta-link:hover i,
+.paragraph .cta.cta-reverse.cta-aliceblue.cta-dark a:focus,
+.paragraph.cta.cta-reverse.cta-aliceblue.cta-dark a:focus,
+.paragraph.cta.cta-reverse.cta-aliceblue.cta-dark .cta-link:focus,
+.paragraph .cta.cta-reverse.cta-aliceblue.cta-dark a:hover,
+.paragraph.cta.cta-reverse.cta-aliceblue.cta-dark a:hover,
+.paragraph.cta.cta-reverse.cta-aliceblue.cta-dark .cta-link:hover {
+  color: var(--white);
+}
+
+.bg-aliceblue .cta.cta-reverse.cta-aliceblue.cta-dark a:focus i,
+.bg-aliceblue .paragraph.cta.cta-reverse.cta-aliceblue.cta-dark a:focus i,
+.bg-aliceblue .paragraph.cta.cta-reverse.cta-aliceblue.cta-dark .cta-link:focus i,
+.bg-aliceblue .paragraph .cta.cta-reverse.cta-aliceblue.cta-dark a:hover i,
+.bg-aliceblue .paragraph.cta.cta-reverse.cta-aliceblue.cta-dark a:hover i,
+.bg-aliceblue .paragraph.cta.cta-reverse.cta-aliceblue.cta-dark .cta-link:hover i,
+.bg-aliceblue .cta.cta-reverse.cta-aliceblue.cta-dark a:focus,
+.bg-aliceblue .paragraph.cta.cta-reverse.cta-aliceblue.cta-dark a:focus,
+.bg-aliceblue .paragraph.cta.cta-reverse.cta-aliceblue.cta-dark .cta-link:focus,
+.bg-aliceblue .paragraph .cta.cta-reverse.cta-aliceblue.cta-dark a:hover,
+.bg-aliceblue .paragraph.cta.cta-reverse.cta-aliceblue.cta-dark a:hover,
+.bg-aliceblue .paragraph.cta.cta-reverse.cta-aliceblue.cta-dark .cta-link:hover {
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+
+.bg-aliceblue .cta.cta-reverse.cta-aliceblue.cta-light a:focus,
+.bg-aliceblue .paragraph.cta.cta-reverse.cta-aliceblue.cta-light a:focus,
+.bg-aliceblue .paragraph.cta.cta-reverse.cta-aliceblue.cta-light .cta-link:focus,
+.bg-aliceblue .paragraph .cta.cta-reverse.cta-aliceblue.cta-light a:hover,
+.bg-aliceblue .paragraph.cta.cta-reverse.cta-aliceblue.cta-light a:hover,
+.bg-aliceblue .paragraph.cta.cta-reverse.cta-aliceblue.cta-light .cta-link:hover {
+  color: var(--black);
+  border: 1px solid var(--black);
+}
+
+.paragraph .cta.cta-reverse.cta-aliceblue.cta-light a:focus,
+.paragraph.cta.cta-reverse.cta-aliceblue.cta-light a:focus,
+.paragraph.cta.cta-reverse.cta-aliceblue.cta-light .cta-link:focus,
+.paragraph .cta.cta-reverse.cta-aliceblue.cta-light a:hover,
+.paragraph.cta.cta-reverse.cta-aliceblue.cta-light a:hover,
+.paragraph.cta.cta-reverse.cta-aliceblue.cta-light .cta-link:hover {
+  color: var(--black);
+}
+
+/** cta on aliceblue bg */
+.bg-hv-aliceblue.bg-hv-dark:hover .paragraph .cta.cta-aliceblue a,
+.bg-hv-aliceblue.bg-hv-dark:hover .paragraph.cta.cta-aliceblue a,
+.bg-hv-aliceblue.bg-hv-dark:hover .paragraph.cta.cta-aliceblue .cta-link,
+.bg-aliceblue.bg-dark .paragraph .cta.cta-aliceblue a,
+.bg-aliceblue.bg-dark .paragraph.cta.cta-aliceblue a,
+.bg-aliceblue.bg-dark .paragraph.cta.cta-aliceblue .cta-link {
+  border: 1px solid var(--white);
+}
+
+.bg-hv-aliceblue.bg-hv-light:hover .paragraph .cta.cta-aliceblue a,
+.bg-hv-aliceblue.bg-hv-light:hover .paragraph.cta.cta-aliceblue a,
+.bg-hv-aliceblue.bg-hv-light:hover .paragraph.cta.cta-aliceblue .cta-link,
+.bg-aliceblue.bg-light .paragraph .cta.cta-aliceblue a,
+.bg-aliceblue.bg-light .paragraph.cta.cta-aliceblue a,
+.bg-aliceblue.bg-light .paragraph.cta.cta-aliceblue .cta-link {
+  border: 1px solid var(--black);
+}
+
+.paragraph.cta.cta-reverse.link-fa.cta-aliceblue a:hover > i::before,
+.paragraph.cta.link-fa.cta-aliceblue a > i::before {
+  background-color: var(--white);
+  color: var(--blue);
+}
+
+.paragraph.cta.cta-reverse.link-fa.cta-aliceblue a > i::before,
+.paragraph.cta.link-fa.cta-aliceblue a:hover > i::before {
+  background-color: var(--aliceblue);
+  color: var(--black);
+}

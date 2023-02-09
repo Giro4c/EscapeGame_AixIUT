@@ -1,0 +1,92 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS............You’re reading it!
+ */
+
+.language-switcher--wrapper .menu .is-active > a,
+.title-bar.main-menu-responsive .menu .is-active > a {
+  background-color: inherit;
+}
+
+.site-top-header .title-bar .language-switcher li:first-of-type {
+  border: none;
+}
+
+.site-top-header .title-bar .language-switcher.menu li:not(:last-of-type) {
+  border-right: dotted 1px #8d8d8d;
+}
+
+.language-switcher .link-untranslated a,
+.language-switcher .is-active {
+  cursor: default;
+}
+
+.language-switcher .link-untranslated a {
+  color: #6e6e6e;
+  text-decoration: line-through;
+}
+
+.language-switcher li:not(.link-untranslated):hover a {
+  text-decoration: underline;
+}
+
+.language-switcher a.is-active {
+  text-decoration: underline;
+  color: #000;
+}
+
+.language-switcher .link-untranslated.is-active a {
+  font-weight: normal;
+}
+
+.menu-lang.submenu {
+  z-index: 110;
+}
+
+.dropdown.menu.menu-lang .submenu a {
+  color: #00558b;
+}
+
+.dropdown.menu > li.opens-left > .is-dropdown-submenu {
+  min-width: unset;
+}
+
+.dropdown.menu > li > a {
+  padding: .5rem 1rem;
+}
+
+@media screen and (max-width: 63.9375em) {
+  .language-switcher:not(.menu-lang) {
+    position: absolute;
+    right: 0;
+    top: .8rem;
+  }
+
+  .language-switcher.menu a {
+    padding: .1rem .7rem;
+  }
+
+  .language-switcher.menu li:not(:last-of-type):not(.menu-lang) {
+    border-right: dotted 1px #000;
+  }
+
+  .is-dropdown-submenu-parent > a {
+    display: none;
+  }
+
+  .is-dropdown-submenu {
+    border: 0;
+  }
+
+  .menu-lang.menu.vertical {
+    flex-direction: row;
+  }
+
+  .site-top-header.clone .title-bar .menu.menu-lang {
+    display: block;
+    margin-top: 1rem;
+  }
+}

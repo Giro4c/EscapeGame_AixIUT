@@ -1,0 +1,341 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS ..........................You’re reading it!
+ * VARIABLES ..........................................
+ * .... Transparency color set (blocks over region) ...
+ * blue ...........................................
+ * .... Tabs styles ...................................
+ * .... Background styles .............................
+ * .... Accordions styles .............................
+ * .... Border styles .................................
+ * .... CTA Styles ....................................
+ *
+*/
+
+/**
+ * Taxonomies à créer par color style
+ *   Tab styles: tabs-style-blue tabs-bg-dark/tabs-bg-light
+ *   Background colors: bg-blue bg-dark/bg-light
+ *   Background Hover colors: bg-hv-blue bg-hv-light/bg-hv-dark
+ *   Border colors: border-blue
+ *   Link Color Style: cta cta-blue cta-dark/cta-light
+ *   Text Color Style: color-blue color-dark/color-light
+ *   List Link Styles: color-bullet--blue
+ *   CKEDITOR styles: ul.color-bullet.blue|Liste blue
+*/
+
+/* ------------------------------------ *\
+  == VARIABLES
+\* ------------------------------------ */
+:root {
+  /* Specific colors scheme */
+  --blue: #00558b;
+  --blue-hv: #2599dc;
+}
+
+/* == Transparency color set (blocks over region) -------------------- *\
+\* ------------------------------------------------------------------ */
+.op-6 .bg-blue,
+.op-7 .bg-blue,
+.op-8 .bg-blue,
+.op-9 .bg-blue {
+  --op-6: rgba(0 85 139 / 60%);
+  --op-7: rgba(0 85 139 / 70%);
+  --op-8: rgba(0 85 139 / 80%);
+  --op-9: rgba(0 85 139 / 90%);
+}
+
+/* ------------------------------------ *\
+* == blue
+\* ------------------------------------ */
+
+/* == Tabs styles -------------------- *\
+\* ----------------------------------- */
+
+/* Taxo. Tab styles: tabs-style-blue */
+
+/* style des tabs avec animation */
+.tabs-style-blue.tabs-bg-light .tabs:before,
+.tabs-style-blue.tabs-bg-dark .tabs:before {
+  color: var(--blue);
+  border-bottom: 5px solid var(--blue);
+}
+
+/* == Background styles -------------------- *\
+\* ----------------------------------------- */
+
+/**
+ * Taxo. Background colors: bg-blue bg-dark/bg-light
+ * Taxo. Background Hover colors: bg-hv-blue bg-hv-light/bg-hv-dark
+*/
+.bg-blue,
+.content-hover.bg-hv-blue:hover {
+  background-color: var(--blue);
+}
+
+.op-6 .bg-blue {
+  background-color: var(--op-6);
+}
+
+.op-7 .bg-blue {
+  background-color: var(--op-7);
+}
+
+.op-8 .bg-blue {
+  background-color: var(--op-8);
+}
+
+.op-9 .bg-blue {
+  background-color: var(--op-9);
+}
+
+/* == Accordions styles -------------------- *\
+\* ----------------------------------------- */
+.accordion.with-bg .accordion-title.bg-blue:hover,
+.accordion.with-bg .accordion-title.bg-blue:focus {
+  background-color: var(--blue-hv);
+}
+
+.accordion.with-bg .accordion-title.bg-blue.bg-dark:hover,
+.accordion.with-bg .accordion-title.bg-blue.bg-dark:focus {
+  color: var(--white);
+}
+
+.accordion.with-bg .accordion-title.bg-blue.bg-light:hover,
+.accordion.with-bg .accordion-title.bg-blue.bg-light:focus {
+  color: var(--black);
+}
+
+.accordion.with-bg .accordion-title.bg-blue.bg-dark {
+  color: var(--white);
+  border: 0;
+}
+
+.accordion.with-bg .accordion-title.bg-blue.bg-light {
+  color: var(--black);
+  border: 0;
+}
+
+/* == Text elements -------------------- *\
+\* ----------------------------------------- */
+
+/* Taxo. Text Color Style: color-blue color-light/color-light */
+
+/* FA color */
+.color-blue i {
+  color: var(--blue);
+}
+
+.bg-blue.bg-dark .color-blue i,
+.content-hover.bg-hv-blue.bg-hv-dark:hover i {
+  color: var(--white);
+}
+
+.bg-blue.bg-light .color-blue i,
+.content-hover.bg-hv-blue.bg-hv-light:hover i {
+  color: var(--black);
+}
+
+/* Puces colorées */
+.bg-blue.bg-dark ul li::marker,
+.bg-blue.bg-hv-dark ul li::marker,
+.content-hover.bg-hv-blue.bg-hv-dark:hover ul li::marker {
+  color: var(--white);
+}
+
+.bg-blue.bg-light ul li::marker,
+.bg-blue.bg-hv-light ul li::marker,
+.content-hover.bg-hv-blue.bg-hv-light:hover ul li::marker {
+  color: var(--black);
+}
+
+ul.color-bullet--blue.list li.link-list-item::marker,
+ul.color-bullet.blue > li::marker,
+ul.color-bullet.blue > li::before {
+  color: var(--blue);
+}
+
+/* == Border styles -------------------- *\
+\* ------------------------------------- */
+
+/* Taxo. Border colors: border-blue */
+.border-blue,
+.border-blue:after {
+  border-color: var(--blue);
+}
+
+/* == CTA Styles --------------------------- *\
+\* ----------------------------------------- */
+
+/* Taxo. Link Color Style: cta cta-blue */
+.paragraph .cta.cta-blue a,
+.paragraph.cta.cta-blue a,
+.paragraph.cta.cta-blue .cta-link {
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
+  padding: .5rem 2rem;
+}
+
+.paragraph .cta.cta-blue i,
+.paragraph.cta.cta-blue i {
+  color: var(--blue);
+}
+
+.paragraph .cta.cta-blue.cta-dark i,
+.paragraph.cta.cta-blue.cta-dark i,
+.paragraph .cta.cta-blue.cta-dark a,
+.paragraph.cta.cta-blue.cta-dark a,
+.paragraph.cta.cta-blue.cta-dark .cta-link {
+  color: var(--white);
+}
+
+.paragraph .cta.cta-blue.cta-light i,
+.paragraph.cta.cta-blue.cta-light i,
+.paragraph .cta.cta-blue.cta-light a,
+.paragraph.cta.cta-blue.cta-light a,
+.paragraph.cta.cta-blue.cta-light .cta-link {
+  color: var(--black);
+}
+
+.paragraph .cta.cta-blue a:focus,
+.paragraph.cta.cta-blue a:focus,
+.paragraph.cta.cta-blue .cta-link:focus,
+.paragraph .cta.cta-blue a:hover,
+.paragraph.cta.cta-blue a:hover,
+.paragraph.cta.cta-blue .cta-link:hover {
+  background-color: var(--white);
+}
+
+.paragraph .cta.cta-blue.cta-dark a:focus i,
+.paragraph.cta.cta-blue.cta-dark a:focus i,
+.paragraph.cta.cta-blue.cta-dark .cta-link:focus i,
+.paragraph .cta.cta-blue.cta-dark a:hover i,
+.paragraph.cta.cta-blue.cta-dark a:hover i,
+.paragraph.cta.cta-blue.cta-dark .cta-link:hover i,
+.paragraph .cta.cta-blue.cta-dark a:focus,
+.paragraph.cta.cta-blue.cta-dark a:focus,
+.paragraph.cta.cta-blue.cta-dark .cta-link:focus,
+.paragraph .cta.cta-blue.cta-dark a:hover,
+.paragraph.cta.cta-blue.cta-dark a:hover,
+.paragraph.cta.cta-blue.cta-dark .cta-link:hover {
+  color: var(--blue);
+}
+
+.paragraph .cta.cta-blue.cta-light a:focus i,
+.paragraph.cta.cta-blue.cta-light a:focus i,
+.paragraph.cta.cta-blue.cta-light .cta-link:focus i,
+.paragraph .cta.cta-blue.cta-light a:hover i,
+.paragraph.cta.cta-blue.cta-light a:hover i,
+.paragraph.cta.cta-blue.cta-light .cta-link:hover i,
+.paragraph .cta.cta-blue.cta-light a:focus,
+.paragraph.cta.cta-blue.cta-light a:focus,
+.paragraph.cta.cta-blue.cta-light .cta-link:focus,
+.paragraph .cta.cta-blue.cta-light a:hover,
+.paragraph.cta.cta-blue.cta-light a:hover,
+.paragraph.cta.cta-blue.cta-light .cta-link:hover {
+  color: var(--black);
+}
+
+.paragraph .cta.cta-reverse.cta-blue a,
+.paragraph.cta.cta-reverse.cta-blue a {
+  background-color: var(--white);
+}
+
+.paragraph .cta.cta-reverse.cta-blue.cta-dark i,
+.paragraph.cta.cta-reverse.cta-blue.cta-dark i,
+.paragraph .cta.cta-reverse.cta-blue.cta-dark a,
+.paragraph.cta.cta-reverse.cta-blue.cta-dark a {
+  color: var(--blue);
+}
+
+.paragraph .cta.cta-reverse.cta-blue.cta-light a,
+.paragraph.cta.cta-reverse.cta-blue.cta-light a {
+  color: var(--black);
+}
+
+.paragraph .cta.cta-reverse.cta-blue a:focus,
+.paragraph .cta.cta-reverse.cta-blue a:hover {
+  background-color: var(--blue);
+}
+
+.paragraph .cta.cta-reverse.cta-blue.cta-dark a:focus i,
+.paragraph.cta.cta-reverse.cta-blue.cta-dark a:focus i,
+.paragraph.cta.cta-reverse.cta-blue.cta-dark .cta-link:focus i,
+.paragraph .cta.cta-reverse.cta-blue.cta-dark a:hover i,
+.paragraph.cta.cta-reverse.cta-blue.cta-dark a:hover i,
+.paragraph.cta.cta-reverse.cta-blue.cta-dark .cta-link:hover i,
+.paragraph .cta.cta-reverse.cta-blue.cta-dark a:focus,
+.paragraph.cta.cta-reverse.cta-blue.cta-dark a:focus,
+.paragraph.cta.cta-reverse.cta-blue.cta-dark .cta-link:focus,
+.paragraph .cta.cta-reverse.cta-blue.cta-dark a:hover,
+.paragraph.cta.cta-reverse.cta-blue.cta-dark a:hover,
+.paragraph.cta.cta-reverse.cta-blue.cta-dark .cta-link:hover {
+  color: var(--white);
+}
+
+.bg-blue .cta.cta-reverse.cta-blue.cta-dark a:focus i,
+.bg-blue .paragraph.cta.cta-reverse.cta-blue.cta-dark a:focus i,
+.bg-blue .paragraph.cta.cta-reverse.cta-blue.cta-dark .cta-link:focus i,
+.bg-blue .paragraph .cta.cta-reverse.cta-blue.cta-dark a:hover i,
+.bg-blue .paragraph.cta.cta-reverse.cta-blue.cta-dark a:hover i,
+.bg-blue .paragraph.cta.cta-reverse.cta-blue.cta-dark .cta-link:hover i,
+.bg-blue .cta.cta-reverse.cta-blue.cta-dark a:focus,
+.bg-blue .paragraph.cta.cta-reverse.cta-blue.cta-dark a:focus,
+.bg-blue .paragraph.cta.cta-reverse.cta-blue.cta-dark .cta-link:focus,
+.bg-blue .paragraph .cta.cta-reverse.cta-blue.cta-dark a:hover,
+.bg-blue .paragraph.cta.cta-reverse.cta-blue.cta-dark a:hover,
+.bg-blue .paragraph.cta.cta-reverse.cta-blue.cta-dark .cta-link:hover {
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+
+.bg-blue .cta.cta-reverse.cta-blue.cta-light a:focus,
+.bg-blue .paragraph.cta.cta-reverse.cta-blue.cta-light a:focus,
+.bg-blue .paragraph.cta.cta-reverse.cta-blue.cta-light .cta-link:focus,
+.bg-blue .paragraph .cta.cta-reverse.cta-blue.cta-light a:hover,
+.bg-blue .paragraph.cta.cta-reverse.cta-blue.cta-light a:hover,
+.bg-blue .paragraph.cta.cta-reverse.cta-blue.cta-light .cta-link:hover {
+  color: var(--black);
+  border: 1px solid var(--black);
+}
+
+.paragraph .cta.cta-reverse.cta-blue.cta-light a:focus,
+.paragraph.cta.cta-reverse.cta-blue.cta-light a:focus,
+.paragraph.cta.cta-reverse.cta-blue.cta-light .cta-link:focus,
+.paragraph .cta.cta-reverse.cta-blue.cta-light a:hover,
+.paragraph.cta.cta-reverse.cta-blue.cta-light a:hover,
+.paragraph.cta.cta-reverse.cta-blue.cta-light .cta-link:hover {
+  color: var(--black);
+}
+
+/** cta on blue bg */
+.bg-hv-blue.bg-hv-dark:hover .paragraph .cta.cta-blue a,
+.bg-hv-blue.bg-hv-dark:hover .paragraph.cta.cta-blue a,
+.bg-hv-blue.bg-hv-dark:hover .paragraph.cta.cta-blue .cta-link,
+.bg-blue.bg-dark .paragraph .cta.cta-blue a,
+.bg-blue.bg-dark .paragraph.cta.cta-blue a,
+.bg-blue.bg-dark .paragraph.cta.cta-blue .cta-link {
+  border: 1px solid var(--white);
+}
+
+.bg-hv-blue.bg-hv-light:hover .paragraph .cta.cta-blue a,
+.bg-hv-blue.bg-hv-light:hover .paragraph.cta.cta-blue a,
+.bg-hv-blue.bg-hv-light:hover .paragraph.cta.cta-blue .cta-link,
+.bg-blue.bg-light .paragraph .cta.cta-blue a,
+.bg-blue.bg-light .paragraph.cta.cta-blue a,
+.bg-blue.bg-light .paragraph.cta.cta-blue .cta-link {
+  border: 1px solid var(--black);
+}
+
+.paragraph.cta.link-fa.cta-blue a > i::before {
+  background-color: var(--white);
+  color: var(--blue);
+}
+
+.paragraph.cta.link-fa.cta-blue a:hover > i::before {
+  background-color: var(--medium-gray);
+  color: var(--blue);
+}

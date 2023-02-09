@@ -1,0 +1,355 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS..........................You’re reading it!
+ * VARIABLES ..........................................
+ * .... Transparency color set (blocks over region) ...
+ * gd-iut-mediumblue.........................................
+ * .... Tabs styles ...................................
+ * .... Background styles .............................
+ * .... Accordions styles .............................
+ * .... Border styles .................................
+ * .... CTA Styles ....................................
+ *
+ */
+
+/**
+ * Taxonomies à créer par color style
+ *   Tab styles: tabs-style-gd-iut-mediumblue tabs-bg-dark/tabs-bg-light
+ *   Background colors: bg-gd-iut-mediumblue bg-dark/bg-light
+ *   Background Hover colors: bg-hv-gd-iut-mediumblue bg-hv-light/bg-hv-dark
+ *   Border colors: border-gd-iut-mediumblue
+ *   Link Color Style: cta cta-gd-iut-mediumblue cta-dark/cta-light
+ *   Text Color Style: color-gd-iut-mediumblue color-dark/color-light
+ *   List Link Styles: color-bullet--gd-iut-mediumblue
+ *   CKEDITOR styles: ul.color-bullet.gd-iut-mediumblue|Liste gd-iut-mediumblue
+*/
+
+/* ------------------------------------ *\
+  ==VARIABLES
+\* ------------------------------------ */
+:root {
+  /* Specific colors scheme */
+  --gd-iut-mediumblue: linear-gradient(180deg, #219ad0, #68c2e7);
+  --gd-iut-mediumblue-hv: linear-gradient(180deg, #239bd1, #66c1e6);
+  --gd-iut-mediumblue-bg-dark: #219ad0;
+  --gd-iut-mediumblue-brd: #219ad0;
+}
+
+/* == Transparency color set (blocks over region) -------------------- *\
+\* ------------------------------------------------------------------- */
+.op-6 .bg-gd-iut-mediumblue,
+.op-7 .bg-gd-iut-mediumblue,
+.op-8 .bg-gd-iut-mediumblue,
+.op-9 .bg-gd-iut-mediumblue {
+  --op-6: rgba(33 154 208 / 60%);
+  --op-7: rgba(33 154 208 / 70%);
+  --op-8: rgba(33 154 208 / 80%);
+  --op-9: rgba(33 154 208 / 90%);
+}
+
+/* ------------------------------------ *\
+* == iut-mediumblue
+\* ------------------------------------ */
+
+/* == Tabs styles -------------------- *\
+\* ----------------------------------- */
+
+/* Taxo. Tab styles: tabs-style-gd-iut-mediumblue */
+
+/* style des tabs avec animation */
+.tabs-style-gd-iut-mediumblue.tabs-bg-light .tabs:before,
+.tabs-style-gd-iut-mediumblue.tabs-bg-dark .tabs:before {
+  color: var(--gd-iut-mediumblue-bg-dark);
+  border-bottom: 5px solid var(--gd-iut-mediumblue-bg-dark);
+}
+
+/* == Background styles -------------------- *\
+\* ----------------------------------------- */
+
+/**
+ * Taxo. Background colors: bg-gd-iut-mediumblue bg-dark/bg-light
+ * Taxo. Background Hover colors: bg-hv-gd-iut-mediumblue bg-hv-light/bg-hv-dark
+*/
+
+.bg-gd-iut-mediumblue,
+.content-hover.bg-hv-gd-iut-mediumblue:hover {
+  background: var(--gd-iut-mediumblue);
+}
+
+.op-6 .bg-gd-iut-mediumblue {
+  background: var(--op-6);
+}
+
+.op-7 .bg-gd-iut-mediumblue {
+  background: var(--op-7);
+}
+
+.op-8 .bg-gd-iut-mediumblue {
+  background: var(--op-8);
+}
+
+.op-9 .bg-gd-iut-mediumblue {
+  background: var(--op-9);
+}
+
+/* == Accordions styles -------------------- *\
+\* ----------------------------------------- */
+.accordion.with-bg .accordion-title.bg-gd-iut-mediumblue:hover,
+.accordion.with-bg .accordion-title.bg-gd-iut-mediumblue:focus {
+  background: var(--gd-iut-mediumblue-hv);
+}
+
+.accordion.with-bg .accordion-title.bg-gd-iut-mediumblue.bg-dark:hover,
+.accordion.with-bg .accordion-title.bg-gd-iut-mediumblue.bg-dark:focus {
+  color: var(--white);
+}
+
+.accordion.with-bg .accordion-title.bg-gd-iut-mediumblue.bg-light:hover,
+.accordion.with-bg .accordion-title.bg-gd-iut-mediumblue.bg-light:focus {
+  color: var(--black);
+}
+
+.accordion.with-bg .accordion-title.bg-gd-iut-mediumblue.bg-dark {
+  color: var(--white);
+  border-color: transparent;
+}
+
+.accordion.with-bg .accordion-title.bg-gd-iut-mediumblue.bg-light {
+  color: var(--black);
+  border-color: transparent;
+}
+
+.accordion.with-bg .accordion-content {
+  border-color: transparent;
+}
+
+/* == Text elements -------------------- *\
+\* ----------------------------------------- */
+
+/* Taxo. Text Color Style: color-gd-iut-mediumblue color-light/color-light */
+
+/* FA color */
+.color-gd-iut-mediumblue i {
+  color: var(--gd-iut-mediumblue);
+}
+
+.bg-gd-iut-mediumblue.bg-dark .color-gd-iut-mediumblue i,
+.content-hover.bg-hv-gd-iut-mediumblue.bg-hv-dark:hover i {
+  color: var(--white);
+}
+
+.bg-gd-iut-mediumblue.bg-light .color-gd-iut-mediumblue i,
+.content-hover.bg-hv-gd-iut-mediumblue.bg-hv-light:hover i {
+  color: var(--black);
+}
+
+/* Puces colorées */
+.bg-gd-iut-mediumblue.bg-dark ul li::marker,
+.bg-gd-iut-mediumblue.bg-hv-dark ul li::marker,
+.content-hover.bg-hv-gd-iut-mediumblue.bg-hv-dark:hover ul li::marker {
+  color: var(--white);
+}
+
+.bg-gd-iut-mediumblue.bg-light ul li::marker,
+.bg-gd-iut-mediumblue.bg-hv-light ul li::marker,
+.content-hover.bg-hv-gd-iut-mediumblue.bg-hv-light:hover ul li::marker {
+  color: var(--black);
+}
+
+ul.color-bullet--gd-iut-mediumblue.list li.link-list-item::marker,
+ul.color-bullet.gd-iut-mediumblue > li::marker,
+ul.color-bullet.gd-iut-mediumblue > li::before {
+  color: var(--gd-iut-mediumblue);
+}
+
+/* == Border styles -------------------- *\
+\* ------------------------------------- */
+
+/* Taxo. Border colors: border-gd-iut-mediumblue */
+.border-gd-iut-mediumblue,
+.border-gd-iut-mediumblue:after {
+  border-color: var(--gd-iut-mediumblue-bg-dark);
+}
+
+/* == CTA Styles --------------------------- *\
+\* ----------------------------------------- */
+
+/* Taxo. Link Color Style: cta cta-gd-iut-mediumblue */
+.paragraph .cta.cta-gd-iut-mediumblue a,
+.paragraph.cta.cta-gd-iut-mediumblue a,
+.paragraph.cta.cta-gd-iut-mediumblue .cta-link {
+  background: var(--gd-iut-mediumblue);
+  border: 1px solid var(--gd-iut-mediumblue-brd);
+  padding: .5rem 2rem;
+}
+
+.paragraph .cta.cta-gd-iut-mediumblue i,
+.paragraph.cta.cta-gd-iut-mediumblue i {
+  color: var(--gd-iut-mediumblue);
+}
+
+.paragraph .cta.cta-gd-iut-mediumblue.cta-dark i,
+.paragraph.cta.cta-gd-iut-mediumblue.cta-dark i,
+.paragraph .cta.cta-gd-iut-mediumblue.cta-dark a,
+.paragraph.cta.cta-gd-iut-mediumblue.cta-dark a,
+.paragraph.cta.cta-gd-iut-mediumblue.cta-dark .cta-link {
+  color: var(--white);
+}
+
+.paragraph .cta.cta-gd-iut-mediumblue.cta-light i,
+.paragraph.cta.cta-gd-iut-mediumblue.cta-light i,
+.paragraph .cta.cta-gd-iut-mediumblue.cta-light a,
+.paragraph.cta.cta-gd-iut-mediumblue.cta-light a,
+.paragraph.cta.cta-gd-iut-mediumblue.cta-light .cta-link {
+  color: var(--black);
+}
+
+.paragraph .cta.cta-gd-iut-mediumblue a:focus,
+.paragraph.cta.cta-gd-iut-mediumblue a:focus,
+.paragraph.cta.cta-gd-iut-mediumblue .cta-link:focus,
+.paragraph .cta.cta-gd-iut-mediumblue a:hover,
+.paragraph.cta.cta-gd-iut-mediumblue a:hover,
+.paragraph.cta.cta-gd-iut-mediumblue .cta-link:hover {
+  background: var(--white);
+  border-color: var(--gd-iut-mediumblue-brd);
+  color: var(--gd-iut-mediumblue-bg-dark);
+}
+
+.paragraph .cta.cta-gd-iut-mediumblue.cta-dark a:focus i,
+.paragraph.cta.cta-gd-iut-mediumblue.cta-dark a:focus i,
+.paragraph.cta.cta-gd-iut-mediumblue.cta-dark .cta-link:focus i,
+.paragraph .cta.cta-gd-iut-mediumblue.cta-dark a:hover i,
+.paragraph.cta.cta-gd-iut-mediumblue.cta-dark a:hover i,
+.paragraph.cta.cta-gd-iut-mediumblue.cta-dark .cta-link:hover i,
+.paragraph .cta.cta-gd-iut-mediumblue.cta-dark a:focus,
+.paragraph.cta.cta-gd-iut-mediumblue.cta-dark a:focus,
+.paragraph.cta.cta-gd-iut-mediumblue.cta-dark .cta-link:focus,
+.paragraph .cta.cta-gd-iut-mediumblue.cta-dark a:hover,
+.paragraph.cta.cta-gd-iut-mediumblue.cta-dark a:hover,
+.paragraph.cta.cta-gd-iut-mediumblue.cta-dark .cta-link:hover {
+  color: var(--gd-iut-mediumblue-bg-dark);
+  border-color: var(--gd-iut-mediumblue-brd);
+  box-shadow: unset;
+}
+
+.paragraph .cta.cta-gd-iut-mediumblue.cta-light a:focus i,
+.paragraph.cta.cta-gd-iut-mediumblue.cta-light a:focus i,
+.paragraph.cta.cta-gd-iut-mediumblue.cta-light .cta-link:focus i,
+.paragraph .cta.cta-gd-iut-mediumblue.cta-light a:hover i,
+.paragraph.cta.cta-gd-iut-mediumblue.cta-light a:hover i,
+.paragraph.cta.cta-gd-iut-mediumblue.cta-light .cta-link:hover i,
+.paragraph .cta.cta-gd-iut-mediumblue.cta-light a:focus,
+.paragraph.cta.cta-gd-iut-mediumblue.cta-light a:focus,
+.paragraph.cta.cta-gd-iut-mediumblue.cta-light .cta-link:focus,
+.paragraph .cta.cta-gd-iut-mediumblue.cta-light a:hover,
+.paragraph.cta.cta-gd-iut-mediumblue.cta-light a:hover,
+.paragraph.cta.cta-gd-iut-mediumblue.cta-light .cta-link:hover {
+  color: var(--black);
+}
+
+.paragraph .cta.cta-reverse.cta-gd-iut-mediumblue a,
+.paragraph.cta.cta-reverse.cta-gd-iut-mediumblue a {
+  background: var(--white);
+}
+
+.paragraph .cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark i,
+.paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark i,
+.paragraph .cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark a,
+.paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark a {
+  color: var(--gd-iut-mediumblue-bg-dark);
+  border-color: var(--gd-iut-mediumblue-brd);
+  box-shadow: unset;
+}
+
+.paragraph .cta.cta-reverse.cta-gd-iut-mediumblue.cta-light a,
+.paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-light a {
+  color: var(--black);
+}
+
+.paragraph .cta.cta-reverse.cta-gd-iut-mediumblue a:focus,
+.paragraph .cta.cta-reverse.cta-gd-iut-mediumblue a:hover {
+  background: var(--gd-iut-mediumblue);
+  border-color: transparent;
+}
+
+.paragraph .cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark a:focus i,
+.paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark a:focus i,
+.paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark .cta-link:focus i,
+.paragraph .cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark a:hover i,
+.paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark a:hover i,
+.paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark .cta-link:hover i,
+.paragraph .cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark a:focus,
+.paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark a:focus,
+.paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark .cta-link:focus,
+.paragraph .cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark a:hover,
+.paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark a:hover,
+.paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark .cta-link:hover {
+  color: var(--white);
+  border-color: transparent;
+}
+
+.bg-gd-iut-mediumblue .cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark a:focus i,
+.bg-gd-iut-mediumblue .paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark a:focus i,
+.bg-gd-iut-mediumblue .paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark .cta-link:focus i,
+.bg-gd-iut-mediumblue .paragraph .cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark a:hover i,
+.bg-gd-iut-mediumblue .paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark a:hover i,
+.bg-gd-iut-mediumblue .paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark .cta-link:hover i,
+.bg-gd-iut-mediumblue .cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark a:focus,
+.bg-gd-iut-mediumblue .paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark a:focus,
+.bg-gd-iut-mediumblue .paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark .cta-link:focus,
+.bg-gd-iut-mediumblue .paragraph .cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark a:hover,
+.bg-gd-iut-mediumblue .paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark a:hover,
+.bg-gd-iut-mediumblue .paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-dark .cta-link:hover {
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+
+.bg-gd-iut-mediumblue .cta.cta-reverse.cta-gd-iut-mediumblue.cta-light a:focus,
+.bg-gd-iut-mediumblue .paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-light a:focus,
+.bg-gd-iut-mediumblue .paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-light .cta-link:focus,
+.bg-gd-iut-mediumblue .paragraph .cta.cta-reverse.cta-gd-iut-mediumblue.cta-light a:hover,
+.bg-gd-iut-mediumblue .paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-light a:hover,
+.bg-gd-iut-mediumblue .paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-light .cta-link:hover {
+  color: var(--black);
+  border: 1px solid var(--black);
+}
+
+.paragraph .cta.cta-reverse.cta-gd-iut-mediumblue.cta-light a:focus,
+.paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-light a:focus,
+.paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-light .cta-link:focus,
+.paragraph .cta.cta-reverse.cta-gd-iut-mediumblue.cta-light a:hover,
+.paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-light a:hover,
+.paragraph.cta.cta-reverse.cta-gd-iut-mediumblue.cta-light .cta-link:hover {
+  color: var(--black);
+}
+
+/** cta on gd-iut-mediumblue bg */
+.bg-hv-gd-iut-mediumblue.bg-hv-dark:hover .paragraph .cta.cta-gd-iut-mediumblue a,
+.bg-hv-gd-iut-mediumblue.bg-hv-dark:hover .paragraph.cta.cta-gd-iut-mediumblue a,
+.bg-hv-gd-iut-mediumblue.bg-hv-dark:hover .paragraph.cta.cta-gd-iut-mediumblue .cta-link,
+.bg-gd-iut-mediumblue.bg-dark .paragraph .cta.cta-gd-iut-mediumblue a,
+.bg-gd-iut-mediumblue.bg-dark .paragraph.cta.cta-gd-iut-mediumblue a,
+.bg-gd-iut-mediumblue.bg-dark .paragraph.cta.cta-gd-iut-mediumblue .cta-link {
+  border: 1px solid var(--white);
+}
+
+.bg-hv-gd-iut-mediumblue.bg-hv-light:hover .paragraph .cta.cta-gd-iut-mediumblue a,
+.bg-hv-gd-iut-mediumblue.bg-hv-light:hover .paragraph.cta.cta-gd-iut-mediumblue a,
+.bg-hv-gd-iut-mediumblue.bg-hv-light:hover .paragraph.cta.cta-gd-iut-mediumblue .cta-link,
+.bg-gd-iut-mediumblue.bg-light .paragraph .cta.cta-gd-iut-mediumblue a,
+.bg-gd-iut-mediumblue.bg-light .paragraph.cta.cta-gd-iut-mediumblue a,
+.bg-gd-iut-mediumblue.bg-light .paragraph.cta.cta-gd-iut-mediumblue .cta-link {
+  border: 1px solid var(--black);
+}
+
+.paragraph.cta.link-fa.cta-gd-iut-mediumblue a > i::before {
+  background-color: var(--medium-gray);
+}
+
+.paragraph.cta.link-fa.cta-gd-iut-mediumblue a:hover > i::before {
+  background-color: var(--medium-gray);
+  color: var(--black);
+}

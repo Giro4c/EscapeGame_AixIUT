@@ -1,0 +1,139 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS..............You’re reading it!
+ * Contact.............................
+ * Media queries.......................
+*/
+
+/* ------------------------------------ *\
+  == Contact
+\* ------------------------------------ */
+.paragraph-block-view-ref {
+  width: 100%;
+}
+
+.contact .file-link {
+  display: none;
+}
+
+.contact__contact-item > div,
+.contact {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: inherit;
+}
+
+.contacts-list .contacts .contact__header {
+  width: 100%;
+}
+
+.contact__header.large-8 {
+  padding: 0 .5rem;
+}
+
+.contacts-list .contacts .contact__photo {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact__contact-item {
+  height: 100%;
+}
+
+.contact__name {
+  color: var(--blue);
+}
+
+.contacts-list ul .contacts,
+.paragraph--type--contact {
+  display: inline-block;
+  text-align: center;
+  box-shadow: unset;
+  border-radius: 10px;
+}
+
+.contact__header .contact__cta {
+  justify-content: center;
+  width: 100%;
+  margin: 1rem 0 0;
+}
+
+.contact__header .contact__cta i {
+  color: var(--blue);
+}
+
+.view-contacts .contact__cta {
+  margin: 0;
+  bottom: .3rem;
+}
+
+.contact__cta a.cta-link {
+  display: inline-block;
+}
+
+.contacts-list ul {
+  width: 100%;
+  padding: 1rem;
+}
+
+.view-contacts .contact .contact_type__contact-fonction,
+.view-contacts .contact .contact__cta .cta--cv {
+  display: inline-block;
+}
+
+.contact__photo img,
+.contacts-list ul .contacts .contact_type__contact-photo img {
+  border-radius: 50%;
+}
+
+.contact__photo img,
+.contacts-list ul .contacts:nth-child(odd) .contact_type__contact-photo img {
+  border: 2px solid var(--yellow);
+}
+
+.contact.domaine-1 .contact__photo img {
+  border: 2px solid var(--gd-iut-lightblue-bg-dark);
+}
+
+.contact.domaine-2 .contact__photo img {
+  border: 2px solid var(--gd-iut-mediumblue-bg-dark);
+}
+
+.contact.domaine-3 .contact__photo img {
+  border: 2px solid var(--gd-iut-claret-bg-dark);
+}
+
+.contact.domaine-4 .contact__photo img {
+  border: 2px solid var(--gd-iut-saffron-bg-dark);
+}
+
+.contact.domaine-5 .contact__photo img {
+  border: 2px solid var(--gd-iut-tango-bg-dark);
+}
+
+.contacts-list ul .contacts .contact__cta i,
+.contacts-list ul .contacts .contact__cta a {
+  color: var(--blue);
+}
+
+.contact .contact__cta .cta-link:focus i,
+.contact .contact__cta .cta-link:focus a,
+.contact .contact__cta .cta-link:hover i,
+.contact .contact__cta .cta-link:hover a {
+  color: var(--indigo);
+}
+
+/* ------------------------------------ *\
+  == Media queries
+\* ------------------------------------ */
+@media screen and (max-width: 63.9375em) {
+  .contact {
+    flex-direction: column;
+    justify-content: center;
+  }
+}

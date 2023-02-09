@@ -1,0 +1,231 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS..............You’re reading it!
+ * DEFAULT ................................
+ * BORDER STYLES ..........................
+ * BLOCKQUOTES ............................
+ .... Mot de la Direction .................
+ * LISTES .................................
+ * MEDIA QUERIES ..........................
+*/
+
+/* ------------------------------------ *\
+  ==DEFAULT
+\* ------------------------------------ */
+
+body {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-size: 1.05rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Poppins, sans-serif;
+}
+
+h1.page-title.heading {
+  font-weight: bold;
+  color: var(--black);
+}
+
+h3.heading.fancy {
+  font-size: 1.125rem;
+}
+
+h4.heading.fancy,
+h5.heading.fancy {
+  font-size: 1rem;
+}
+
+h3.heading.fancy::after,
+h4.heading.fancy::after,
+h5.heading.fancy::after {
+  margin-top: 0;
+}
+
+.no-bg,
+.bg-light,
+.bg-light .no-bg,
+.accordion-content .paragraph_text__paragraph-content,
+.tabs-content .no-bg .paragraph_text__paragraph-content,
+.tabs-content {
+  color: #444;
+}
+
+.with-bg.bg-dark .heading {
+  color: var(--white);
+}
+
+/* ------------------------------------ *\
+  ==THEME
+\* ------------------------------------ */
+body:not(.front) .site-bottom-header {
+  border-bottom: 1px solid var(--yellow);
+}
+
+.page > .content {
+  background-color: transparent;
+  background-image: url("/sites/iut.univ-amu.fr/themes/amu_iut/css/../images/curve-footer.svg");
+  background-size: 101%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding-bottom: 15rem;
+  margin-bottom: -1px; /* Supprime le trait blanc entre le bg et le footer */
+}
+
+.footer-bottom {
+  background-color: #00558b;
+}
+
+.copyright a {
+  color: var(--white);
+}
+
+.copyright a:hover {
+  border-bottom: 1px dotted var(--white);
+}
+
+body:not(.front) .region-wrapper:not(.paragraph-region-2742) {
+  padding-bottom: 0;
+}
+
+/* ------------------------------------ *\
+  ==BORDER STYLES
+\* ------------------------------------ */
+
+.border-radius {
+  border-radius: 15px;
+}
+
+.paragraph-block.border-shadow,
+.paragraph-block.border-shadow.accordion-mode:not(.is-active) .block-header {
+  box-shadow: 0 3px 6px #00000029;
+}
+
+/* ------------------------------------ *\
+  ==BLOCKQUOTES
+\* ------------------------------------ */
+.paragraph_text__paragraph-content blockquote {
+  border-left: none;
+  position: relative;
+  z-index: 0;
+}
+
+.paragraph_text__paragraph-content blockquote p {
+  color: #444;
+  font-size: 1.05rem;
+}
+
+.paragraph_text__paragraph-content blockquote:before {
+  position: absolute;
+  content: "\f10d";
+  font-family: "Font Awesome 5 pro", sans-serif;
+  color: var(--blue);
+  font-weight: 900;
+}
+
+div:not(.paragraph-2743) .paragraph_text__paragraph-content blockquote ul {
+  color: #444;
+}
+
+div:not(.paragraph-2743) .paragraph_text__paragraph-content blockquote:before {
+  top: 0;
+  left: 0;
+}
+
+/* == Mot de la direction -------- *\
+\* ------------------------------- */
+div.paragraph-2743 .paragraph_text__paragraph-content blockquote:before {
+  font-size: 4rem;
+  top: -2.5rem;
+  left: 1rem;
+}
+
+.paragraph-2743 blockquote p:first-child {
+  text-indent: 3.5rem;
+}
+
+.paragraph-2743 .paragraph_text__paragraph-content > p {
+  padding: 0 1rem;
+  font-style: italic;
+}
+
+.paragraph-2743 .paragraph_text__paragraph-content > p:first-of-type {
+  margin-bottom: 1rem;
+}
+
+.paragraph-2755 {
+  margin-bottom: 1.5rem;
+}
+
+/* ------------------------------------ *\
+  ==LISTES
+\* ------------------------------------ */
+ul {
+  line-height: 1.4;
+}
+
+.paragraph-text li,
+.link-list-item,
+.paragraph-link-list .list-title {
+  font-size: 1.05rem;
+}
+
+li.link-list-item .paragraph-link-media {
+  margin-left: -.2rem;
+}
+
+ul.color-bullet--yellow.list li.link-list-item::marker,
+ul.color-bullet--blue.list li.link-list-item::marker {
+  font-size: 1.3rem;
+}
+
+/* ------------------------------------ *\
+  ==MEDIA QUERIES
+\* ------------------------------------ */
+@media screen and (max-width: 39.9375em) {
+  .paragraph-text li,
+  .link-list-item,
+  .paragraph-link-list .list-title {
+    font-size: .875rem;
+  }
+
+  .paragraph-text ul.color-bullet li::before {
+    font-size: .875rem;
+    margin-left: -1.2rem;
+  }
+
+  ul.color-bullet--yellow.list li.link-list-item::marker,
+  ul.color-bullet--blue.list li.link-list-item::marker {
+    font-size: 1rem;
+  }
+
+  .page > .content {
+    padding-bottom: 7rem;
+  }
+}
+
+@media screen and (max-width: 63.9375em) {
+  /* Mot de la direction */
+  .paragraph-2743 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media print {
+  .title-bar,
+  .site-header,
+  .breadcrumbs,
+  .studizz-container,
+  .footer-bottom {
+    display: none;
+  }
+}
