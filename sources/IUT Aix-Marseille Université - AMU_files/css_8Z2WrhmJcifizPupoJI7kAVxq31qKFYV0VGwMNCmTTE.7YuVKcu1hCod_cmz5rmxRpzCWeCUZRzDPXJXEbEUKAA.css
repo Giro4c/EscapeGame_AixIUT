@@ -1,0 +1,30 @@
+.amu_copyright_block .logo {
+  width: 300px;
+  max-width: 60%;
+  margin: 1rem auto;
+}
+
+.amu_copyright_block .copyright {
+  font-size: .9rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.amu_copyright_block .copyright__list {
+  list-style: none;
+  margin: 0;
+}
+
+.amu_copyright_block .copyright__list li {
+  display: inline-block;
+}
+
+.amu_copyright_block .copyright__list li:not(:first-child):before {
+  content: "-";
+}
+
+@media screen and (max-width: 39.9375em) {
+  .amu_copyright_block .logo {
+    max-width: 80%;
+  }
+}
