@@ -1,0 +1,11 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS............You’re reading it!
+ */
+
+.tabs-item--content-components .content:last-of-type {
+  margin-bottom: 0;
+}

@@ -1,0 +1,1181 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS............You’re reading it!
+ * HEADINGS..............................
+ * BACKGROUND COLORS.....................
+ * FA COLORS..............................
+ * BLOCK BORDER COLORS....................
+ * LINKS..................................
+ * ACCORDION..............................
+ * TAB....................................
+ * CTA ...................................
+ * BLOC PICTOGRAMME.......................
+ * SIDEBAR................................
+ */
+
+/* ------------------------------------ *\
+  HEADINGS
+\* ------------------------------------ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+h1.page-title {
+  font-size: 1.85rem;
+  line-height: 1.9rem;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+.content h2 {
+  font-size: 1.65rem;
+  line-height: 1.4;
+  margin-top: .4rem;
+  margin-bottom: .55rem;
+}
+
+.heading.fancy {
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+  line-height: 1.39rem;
+}
+
+.heading.fancy:after {
+  content: "";
+  display: block;
+  margin: .5rem 0 0;
+  width: 30px;
+}
+
+.heading.fancy.titre-1:after {
+  border-color: #00558b;
+  border-width: 0 0 .15rem;
+  border-style: solid;
+}
+
+.heading.fancy.titre-2:after {
+  border-color: #000;
+  border-width: 0 0 .15rem;
+  border-style: solid;
+}
+
+.underline-partial:after {
+  content: "";
+  display: block;
+  margin: .5rem 0 0;
+  width: 30px;
+  border-color: #000;
+  border-width: 0 0 .15rem;
+  border-style: solid;
+}
+
+.header-text--center.underline-partial:after {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content h3 {
+  font-size: 1.35rem;
+  line-height: 1.39rem;
+  margin-top: .2rem;
+  margin-bottom: .45rem;
+}
+
+.content h4 {
+  font-size: 1.26rem;
+  line-height: 1.2rem;
+  margin-top: .15rem;
+  margin-bottom: .35rem;
+}
+
+.content h5 {
+  font-size: 1.15rem;
+  line-height: 1.2rem;
+  margin-top: .15rem;
+  margin-bottom: .35rem;
+}
+
+.content h2 > strong,
+.content h3 > strong,
+.content h4 > strong,
+.content h5 > strong {
+  font-weight: normal;
+}
+
+.paragraph-block.with-bg .content ul:last-child,
+.paragraph-block.with-border .content ul:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 39.9375em) {
+  h1 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  h1.page-title {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .content h2 {
+    font-size: 1.125rem;
+  }
+
+  h2 {
+    font-size: 1.125rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  h5,
+  h4 {
+    font-size: .95rem;
+  }
+}
+
+/* ------------------------------------ *\
+  BACKGROUND COLORS
+\* ------------------------------------ */
+.bg-white:not(.region-stack),
+.bg-white.region-stack:before,
+.content-hover.bg-hv-white:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.bg-lightgrey:not(.region-stack),
+.bg-lightgrey.region-stack:before,
+.content-hover.bg-hv-lightgrey:hover {
+  background-color: rgba(230, 230, 230, 1);
+}
+
+.bg-darkgrey:not(.region-stack),
+.bg-darkgrey.region-stack:before,
+.content-hover.bg-hv-darkgrey:hover {
+  background-color: rgba(100, 100, 100, 1);
+}
+
+.bg-darkblue:not(.region-stack),
+.bg-darkblue.region-stack:before,
+.content-hover.bg-hv-darkblue:hover {
+  background-color: rgba(0, 85, 139, 1);
+}
+
+.bg-skyblue:not(.region-stack),
+.bg-skyblue.region-stack:before,
+.content-hover.bg-hv-skyblue:hover {
+  background-color: rgba(35, 185, 235, 1);
+}
+
+.content-hover.bg-hv-lochmarablue:hover {
+  background-color: #0071b9;
+}
+
+.content-hover.bg-hv-lochmarablue:hover * {
+  color: #fff;
+  background-color: unset;
+}
+
+.bg-picton:not(.region-stack),
+.bg-picton.region-stack:before {
+  background-color: #25bbe8;
+}
+
+.bg-lochmara:not(.region-stack),
+.bg-lochmara.region-stack:before {
+  background-color: #0071b9;
+}
+
+.bg-steelblue:not(.region-stack),
+.bg-steelblue.region-stack:before,
+.content-hover.bg-hv-steelblue:hover {
+  background-color: rgba(220, 226, 234, 1);
+}
+
+.bg-darkgreen:not(.region-stack),
+.bg-darkgreen.region-stack:before,
+.content-hover.bg-hv-darkgreen:hover {
+  background-color: rgba(87, 188, 111, 1);
+}
+
+.bg-gold:not(.region-stack),
+.bg-gold.region-stack:before,
+.content-hover.bg-hv-gold:hover {
+  background-color: rgba(235, 184, 24, 1);
+}
+
+.bg-brown:not(.region-stack),
+.bg-brown.region-stack:before,
+.content-hover.bg-hv-brown:hover {
+  background-color: rgba(165, 42, 42, 1);
+}
+
+.op-6 .bg-white {
+  background-color: rgba(255, 255, 255, .6);
+}
+
+.op-7 .bg-white {
+  background-color: rgba(255, 255, 255, .7);
+}
+
+.op-8 .bg-white {
+  background-color: rgba(255, 255, 255, .8);
+}
+
+.op-9 .bg-white {
+  background-color: rgba(255, 255, 255, .9);
+}
+
+.op-6 .bg-lightgrey {
+  background-color: rgba(230, 230, 230, .6);
+}
+
+.op-7 .bg-lightgrey {
+  background-color: rgba(230, 230, 230, .7);
+}
+
+.op-8 .bg-lightgrey {
+  background-color: rgba(230, 230, 230, .8);
+}
+
+.op-9 .bg-lightgrey {
+  background-color: rgba(230, 230, 230, .9);
+}
+
+.op-6 .bg-darkgrey {
+  background-color: rgba(122, 122, 122, .6);
+}
+
+.op-7 .bg-darkgrey {
+  background-color: rgba(122, 122, 122, .7);
+}
+
+.op-8 .bg-darkgrey {
+  background-color: rgba(122, 122, 122, .8);
+}
+
+.op-9 .bg-darkgrey {
+  background-color: rgba(122, 122, 122, .9);
+}
+
+.op-6 .bg-darkblue {
+  background-color: rgba(0, 85, 139, .6);
+}
+
+.op-7 .bg-darkblue {
+  background-color: rgba(0, 85, 139, .7);
+}
+
+.op-8 .bg-darkblue {
+  background-color: rgba(0, 85, 139, .8);
+}
+
+.op-9 .bg-darkblue {
+  background-color: rgba(0, 85, 139, .9);
+}
+
+.op-6 .bg-skyblue {
+  background-color: rgba(35, 185, 235, .6);
+}
+
+.op-7 .bg-skyblue {
+  background-color: rgba(35, 185, 235, .7);
+}
+
+.op-8 .bg-skyblue {
+  background-color: rgba(35, 185, 235, .8);
+}
+
+.op-9 .bg-skyblue {
+  background-color: rgba(35, 185, 235, .9);
+}
+
+.op-6 .bg-steelblue {
+  background-color: rgba(220, 226, 234, .6);
+}
+
+.op-7 .bg-steelblue {
+  background-color: rgba(220, 226, 234, .7);
+}
+
+.op-8 .bg-steelblue {
+  background-color: rgba(220, 226, 234, .8);
+}
+
+.op-9 .bg-steelblue {
+  background-color: rgba(220, 226, 234, .9);
+}
+
+.op-6 .bg-darkgreen {
+  background-color: rgba(87, 188, 111, .6);
+}
+
+.op-7 .bg-darkgreen {
+  background-color: rgba(87, 188, 111, .7);
+}
+
+.op-8 .bg-darkgreen {
+  background-color: rgba(87, 188, 111, .8);
+}
+
+.op-9 .bg-darkgreen {
+  background-color: rgba(87, 188, 111, .9);
+}
+
+.op-6 .bg-gold {
+  background-color: rgba(235, 184, 24, .6);
+}
+
+.op-7 .bg-gold {
+  background-color: rgba(235, 184, 24, .7);
+}
+
+.op-8 .bg-gold {
+  background-color: rgba(235, 184, 24, .8);
+}
+
+.op-9 .bg-gold {
+  background-color: rgba(235, 184, 24, .9);
+}
+
+.op-6 .bg-brown {
+  background-color: rgba(165, 42, 42, .6);
+}
+
+.op-7 .bg-brown {
+  background-color: rgba(165, 42, 42, .7);
+}
+
+.op-8 .bg-brown {
+  background-color: rgba(165, 42, 42, .8);
+}
+
+.op-9 .bg-brown {
+  background-color: rgba(165, 42, 42, .9);
+}
+
+/* ------------------------------------ *\
+  FA COLORS
+\* ------------------------------------ */
+
+.color-white i {
+  color: #fff;
+}
+
+.color-lightgrey i {
+  color: #a7a7a7;
+}
+
+.color-darkgrey i {
+  color: #7a7a7a;
+}
+
+.color-skyblue i {
+  color: #23b9eb;
+}
+
+.color-darkblue i {
+  color: #00558b;
+}
+
+.color-gold i {
+  color: #ebb818;
+}
+
+.color-darkgreen i {
+  color: #57bc6f;
+}
+
+.color-brown i {
+  color: #a52a2a;
+}
+
+.colour-blue-lochmara i {
+  color: #0071b9;
+}
+
+/* ------------------------------------ *\
+  BLOCK BORDER COLORS
+\* ------------------------------------ */
+
+/* si le style souligné est choisi , c'est l'after qui est appliqué */
+.border-white,
+.border-white:after {
+  border-color: #fff;
+}
+
+.border-lightgrey,
+.border-lightgrey:after {
+  border-color: #e6e6e6;
+}
+
+.border-darkgrey,
+.border-darkgrey:after {
+  border-color: #7a7a7a;
+}
+
+.border-darkblue,
+.border-darkblue:after {
+  border-color: #00558b;
+}
+
+.border-skyblue,
+.border-skyblue:after {
+  border-color: #23b9eb;
+}
+
+.border-steelblue,
+.border-steelblue:after {
+  border-color: #dce2ea;
+}
+
+.border-darkgreen,
+.border-darkgreen:after {
+  border-color: #57bc6f;
+}
+
+.border-gold,
+.border-gold:after {
+  border-color: #ebb818;
+}
+
+.border-brown,
+.border-brown:after {
+  border-color: #a52a2a;
+}
+
+.border-picton,
+.border-picton:after {
+  border-color: #25bbe8;
+}
+
+.border-lochmara,
+.border-lochmara:after {
+  border-color: #0071b9;
+}
+
+.content-hover.bg-hv-lochmarablue:hover .cta-lochmara > a {
+  border: 1px solid #fff;
+}
+
+.content-hover.bg-hv-lochmarablue:hover .block-header:after {
+  border-color: #fff;
+}
+
+/* ------------------------------------ *\
+  LINKS
+\* ------------------------------------ */
+.bg-light .link-list-item a:not([class*="cta-"]),
+.bg-light .paragraph-link-page a:not([class*="cta-"]),
+.bg-light .paragraph-link-media a:not([class*="cta-"]),
+.bg-light.bg-lighter .no-bg .paragraph-link-media a:not([class*="cta-"]),
+.bg-light.bg-lighter .no-bg .paragraph-link-external a:not([class*="cta-"]),
+.bg-light.bg-lighter .no-bg .paragraph-link-internal a:not([class*="cta-"]) {
+  color: #1568d5;
+  text-decoration: none;
+}
+
+.bg-hv-light.bg-hv-light--dark:hover .content a:not(.cta-link):hover,
+.bg-hv-light.bg-hv-light--light:hover .content a:not(.cta-link):hover,
+.paragraph a:not([class*="cta-"]):not(.accordion-title):not(.tab-title--link):hover,
+.paragraph a:not([class*="cta-"]):not(.accordion-title):not(.tab-title--link):focus,
+.paragraph-text ul.not-underline li a:not([class*="cta-"]):hover,
+.paragraph-text ul.not-underline li a:not([class*="cta-"]):focus,
+.paragraph-link-list a:not([class*="cta-"]):hover,
+.paragraph-link-list a:not([class*="cta-"]):focus {
+  text-decoration: underline solid;
+}
+
+.no-bg,
+.bg-light,
+.bg-hv-light:hover .content,
+.no-bg .no-bg,
+.bg-light .no-bg,
+.bg-light.bg-slightly-dark a,
+.bg-dark a.bg-slightly-dark,
+.bg-light.bg-slightly-dark .no-bg a,
+.bg-light .no-bg .no-bg,
+.bg-dark .bg-light .no-bg,
+.bg-light .bg-dark .accordion-item a,
+.bg-hv-light.bg-hv-light--dark:hover .content a:not(.cta-link),
+.bg-light.bg-slightly-dark a:not([class*="cta-"]),
+.bg-light.bg-slightly-dark .no-bg .no-bg a {
+  color: #000;
+}
+
+.bg-light a:not(.accordion-title),
+.bg-light.bg-hv-light--dark a:not(.accordion-title) {
+  color: #00449e;
+}
+
+.bg-light.bg-lighter .no-bg a,
+.no-bg a,
+.no-bg .no-bg a,
+.bg-lighter .no-bg .no-bg a {
+  color: #1568d5;
+  text-decoration: none;
+}
+
+.bg-dark,
+.bg-dark a,
+.bg-hv-dark:hover .content,
+.bg-dark .no-bg,
+.bg-dark .no-bg .no-bg,
+.bg-dark .no-bg .no-bg a {
+  color: #fff;
+}
+
+.bg-light.bg-slightly-dark a:not([class*="cta-"]):not(.tab-title--link):not(.accordion-title),
+.bg-hv-light.bg-hv-light--dark:hover .content a:not(.cta-link):not(.accordion-title) {
+  text-decoration: underline dotted;
+}
+
+.bg-light.bg-slightly-dark a:not([class*="cta-"]):not(.tab-title--link):not(.accordion-title):hover,
+.bg-hv-light.bg-hv-light--dark:hover .content a:not(.cta-link):not(.accordion-title):hover {
+  text-decoration: underline solid;
+}
+
+.bg-hv-light.bg-hv-light--light:hover .content a:not(.cta-link):not(.accordion-title) {
+  text-decoration: none;
+  color: #1568d5;
+}
+
+.bg-hv-light.bg-hv-light--light:hover .content a:not(.cta-link):not(.accordion-title):hover {
+  text-decoration: underline solid;
+  color: #1568d5;
+}
+
+.main-content .bg-dark a:not([class*="cta-"]):not(.tab-title--link):not(.accordion-title),
+.main-content .bg-dark .no-bg a:not([class*="cta-"]):not(.tab-title--link):not(.accordion-title),
+.main-content .bg-light .bg-dark a:not([class*="cta-"]):not(.accordion-title),
+.main-content .bg-hv-dark:hover .content a:not([class*="cta-"]):not(.accordion-title) {
+  text-decoration: underline dotted;
+  color: #fff;
+}
+
+.main-content .bg-dark a:not([class*="cta-"]):not(.tab-title--link):not(.accordion-title):hover,
+.main-content .bg-dark .no-bg a:not([class*="cta-"]):not(.tab-title--link):not(.accordion-title):hover,
+.main-content .bg-light .bg-dark a:not([class*="cta-"]):not(.accordion-title):hover,
+.main-content .bg-hv-dark:hover .content a:not([class*="cta-"]):not(.accordion-title):hover {
+  text-decoration: underline solid;
+}
+
+.main-content .bg-dark .not-underline li a:not([class*="cta-"]):not(.tab-title--link):not(.accordion-title),
+.main-content .bg-dark .no-bg .not-underline li a:not([class*="cta-"]):not(.tab-title--link):not(.accordion-title),
+.main-content .bg-light .bg-dark .not-underline li a:not([class*="cta-"]),
+.main-content .bg-hv-dark:hover .content a:not([class*="cta-"]) .not-underline li a {
+  text-decoration: none;
+}
+
+.main-content .bg-dark .not-underline li a:not([class*="cta-"]):not(.tab-title--link):not(.accordion-title):hover,
+.main-content .bg-dark .no-bg .not-underline li a:not([class*="cta-"]):not(.tab-title--link):not(.accordion-title):hover,
+.main-content .bg-light .bg-dark .not-underline li a:not([class*="cta-"]):hover,
+.main-content .bg-hv-dark:hover .content a:not([class*="cta-"]) .not-underline li a:hover {
+  text-decoration: underline solid;
+}
+
+.cta a.external-link:not(.stretched-link) {
+  padding: 1rem;
+}
+
+a.external-link:not(.stretched-link):after {
+  content: "\f35d";
+  position: relative;
+  font-size: .8rem;
+  bottom: .05rem;
+  left: 5px;
+  font-family: "Font Awesome 5 Pro", sans-serif;
+  margin-right: .4rem;
+}
+
+.tabs-title > a:focus,
+.tabs-title > a[aria-selected="true"] {
+  color: #136398;
+}
+
+/* retrait padding sur lien page interne des listes de liens d'un accordéon */
+.accordion-content .list .paragraph-link-page {
+  padding: 0 0 1rem;
+}
+
+.accordion-content .paragraph-link-page {
+  padding: 0 1rem;
+}
+
+/* Lien edit media */
+.paragraph-link-media {
+  padding-bottom: 1rem;
+}
+
+.paragraph-link-media .edit-media,
+.paragraph-link-media .edit-media:hover {
+  color: #e17f0e;
+  font-size: .85rem;
+  display: inline-block;
+}
+
+.paragraph.paragraph-link-media.cta a.edit-media {
+  display: none;
+}
+
+/* File Link */
+span.file-link {
+  display: inline-block;
+  position: relative;
+  padding: 0 .2rem;
+  font-size: .6rem;
+  background-color: #f6f6f6;
+  color: #6a6a6a;
+  border-radius: .2rem;
+  margin: 0 .25rem;
+  border: solid 1px #e7e7e7;
+}
+
+.gallery-item-image-link span.file-link {
+  display: none;
+}
+
+/* Link with description */
+.link-desc {
+  display: block;
+  font-style: oblique;
+  font-size: .92rem;
+  margin-top: -.2rem;
+}
+
+/* ------------------------------------ *\
+  ACCORDION
+\* ------------------------------------ */
+
+/* ---------------accordion bloc styles-------------------- */
+.accordion--bloc > .accordion-item {
+  margin-bottom: 1rem;
+}
+
+.accordion--bloc > .accordion-item > .accordion-title,
+.accordion--bloc > .accordion-item > .accordion-content {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.accordion--bloc .accordion-content {
+  border-top: 0;
+}
+
+/* ---------------Hover styles-------------------- */
+.accordion.with-bg .accordion-title.bg-white:hover,
+.accordion.with-bg .accordion-title.bg-white:focus {
+  background-color: #f5f5f5;
+}
+
+.accordion.with-bg .accordion-title.bg-lightgrey:hover,
+.accordion.with-bg .accordion-title.bg-lightgrey:focus {
+  background-color: #f5f5f5;
+}
+
+.accordion.with-bg .accordion-title.bg-darkgrey:hover,
+.accordion.with-bg .accordion-title.bg-darkgrey:focus {
+  background-color: #cacaca;
+}
+
+.accordion.with-bg .accordion-title.bg-skyblue:hover,
+.accordion.with-bg .accordion-title.bg-skyblue:focus {
+  background-color: #a7e3f7;
+}
+
+.accordion.with-bg .accordion-title.bg-steelblue:hover,
+.accordion.with-bg .accordion-title.bg-steelblue:focus {
+  background-color: #f1f3f7;
+}
+
+.accordion.with-bg .accordion-title.bg-darkblue:hover,
+.accordion.with-bg .accordion-title.bg-darkblue:focus {
+  background-color: #99bbd1;
+}
+
+.accordion.with-bg .accordion-title.bg-darkgreen:hover,
+.accordion.with-bg .accordion-title.bg-darkgreen:focus {
+  background-color: #bce4c5;
+}
+
+.accordion.with-bg .accordion-title.bg-gold:hover,
+.accordion.with-bg .accordion-title.bg-gold:focus {
+  background-color: #f7e3a3;
+}
+
+.accordion.with-bg .accordion-title.bg-brown:hover,
+.accordion.with-bg .accordion-title.bg-brown:focus {
+  background-color: #dbaaaa;
+}
+
+/* ------------------------------------ *\
+  TAB
+\* ------------------------------------ */
+.paragraph-tabs {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.tabs-title .section-title {
+  font-size: inherit;
+  margin: inherit;
+}
+
+.tabs-title {
+  border: none;
+  margin: 0;
+  padding: 0;
+  border-right: solid 1px #e6e6e6;
+}
+
+.tabs-title a {
+  font-size: 1.05rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1.25rem 1.5rem;
+  outline: 0;
+  height: 100%;
+}
+
+.tabs-title.is-active,
+.tabs-title > a:focus,
+.tabs-title > a[aria-selected=true] {
+  cursor: default;
+}
+
+.tabs-title:not(.is-active) a {
+  color: #000;
+  background-color: transparent;
+}
+
+/* .......................style 1................. */
+
+.tabs-style-1 .tabs {
+  border: none;
+  background-color: inherit;
+}
+
+.tabs-style-1 .tabs-title {
+  border: solid 1px #e6e6e6;
+}
+
+.tabs-style-1 .tabs-title.is-active {
+  border-bottom: solid 1px #fff;
+}
+
+.tabs-style-1 .tabs-title.is-active,
+.tabs-style-1 .tabs-title > a:focus,
+.tabs-style-1 .tabs-title > a[aria-selected=true] {
+  background-color: #fff;
+}
+
+.tabs-style-1 .tabs-title:not(.is-active) {
+  background-color: #f5f5f5;
+}
+
+.tabs-style-1 .tabs-title:not(.is-active):hover {
+  background-color: #e9e9e9;
+}
+
+.tabs-style-1 .tabs-content {
+  border: none;
+  background-color: transparent;
+  color: inherit;
+}
+
+.tabs-style-1 .tabs-content .tabs-panel {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* .......................tabs onglet................. */
+.tabs-onglet .tabs {
+  justify-content: center;
+  border: 0;
+  border-bottom: solid 1px #d3d3d3;
+  background-color: transparent;
+}
+
+.tabs-onglet .tabs-content {
+  border: 0;
+}
+
+.tabs-onglet .tabs-title {
+  border: solid 1px #d3d3d3;
+}
+
+.tabs-onglet .tabs-title.is-active {
+  margin-bottom: -1px;
+  border-bottom: 0;
+  background-color: white;
+}
+
+.tabs-onglet .tabs-title > a[aria-selected="true"] {
+  color: #096bac;
+  background-color: #fff;
+}
+
+.tabs-onglet .tabs-title:not(.is-active) a {
+  background-color: #eee;
+  color: #575757;
+}
+
+.tabs-onglet .tabs-title:not(.is-active) > a:hover {
+  color: #4d4d4d;
+  background-color: #d2d2d2;
+}
+
+/* .......................style darkgrey................. */
+.tabs-style-darkgrey .tabs-title.is-active,
+.tabs-style-darkgrey .tabs-title > a:focus,
+.tabs-style-darkgrey .tabs-title > a[aria-selected=true] {
+  background-color: #757676;
+  color: #fff;
+}
+
+.tabs-style-darkgrey .tabs-title:not(.is-active):hover {
+  background-color: #cacaca;
+}
+
+/* .......................style skyblue................. */
+.tabs-style-skyblue .tabs-title.is-active,
+.tabs-style-skyblue .tabs-title > a:focus,
+.tabs-style-skyblue .tabs-title > a[aria-selected=true] {
+  background-color: #23b9eb;
+  color: #000;
+}
+
+.tabs-style-skyblue .tabs-title:not(.is-active):hover {
+  background-color: #a7e3f7;
+}
+
+/* .......................style darkblue................. */
+.tabs-style-darkblue .tabs-title.is-active,
+.tabs-style-darkblue .tabs-title > a:focus,
+.tabs-style-darkblue .tabs-title > a[aria-selected=true] {
+  background-color: #0071b9;
+  color: #fff;
+}
+
+.tabs-style-darkblue .tabs-title:not(.is-active):hover {
+  background-color: #99bbd1;
+}
+
+/* .......................style darkgreen................. */
+.tabs-style-darkgreen .tabs-title.is-active,
+.tabs-style-darkgreen .tabs-title > a:focus,
+.tabs-style-darkgreen .tabs-title > a[aria-selected=true] {
+  background-color: #57bc6f;
+  color: #000;
+}
+
+.tabs-style-darkgreen .tabs-title:not(.is-active):hover {
+  background-color: #bce4c5;
+}
+
+/* .......................style gold................. */
+.tabs-style-gold .tabs-title.is-active,
+.tabs-style-gold .tabs-title > a:focus,
+.tabs-style-gold .tabs-title > a[aria-selected=true] {
+  background-color: #ebb818;
+  color: #000;
+}
+
+.tabs-style-gold .tabs-title:not(.is-active):hover {
+  background-color: #f7e3a3;
+}
+
+/* .......................style brown................. */
+.tabs-style-brown .tabs-title.is-active,
+.tabs-style-brown .tabs-title > a:focus,
+.tabs-style-brown .tabs-title > a[aria-selected=true] {
+  background-color: #a52a2a;
+  color: #fff;
+}
+
+.tabs-style-brown .tabs-title:not(.is-active):hover {
+  background-color: #dbaaaa;
+}
+
+/* ------------------------------------ *\
+  CTA
+\* ------------------------------------ */
+
+.cta a {
+  padding: .6rem 1rem;
+  margin: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  font-size: .8rem;
+  letter-spacing: .05rem;
+  border-style: solid;
+  border-width: 1px;
+  display: inline-block;
+}
+
+.cta .cta-inline.cta-s0,
+.paragraph.cta.cta-s0 > a {
+  border-color: #fff;
+  background-color: #fff;
+  color: #0071b9;
+}
+
+.paragraph.cta.cta-s0.cta-reverse > a {
+  border-color: #fff;
+  background-color: transparent;
+  color: #fff;
+  font-weight: inherit;
+}
+
+.cta .cta-inline.cta-s0:hover,
+.paragraph.cta.cta-s0 > a:hover {
+  border-color: #ccc;
+  background-color: #fff;
+  color: #0071b9;
+}
+
+.cta .cta-inline.cta-s0:hover,
+.paragraph.cta.cta-s0 > a {
+  border-color: #fff;
+  background-color: #fff;
+  color: #0071b9;
+}
+
+.paragraph.cta.cta-s0.cta-reverse > a:hover {
+  background-color: inherit;
+  color: #fff;
+}
+
+.cta .cta-inline.cta-s1,
+.cta .cta-inline.cta-s1:hover,
+.paragraph.cta.cta-s1 > a,
+.paragraph.cta.cta-s1.cta-reverse > a,
+.paragraph.cta.cta-s1 > a:hover {
+  color: #0068aa;
+}
+
+.cta .cta-inline.cta-s1,
+.paragraph.cta.cta-s1 > a {
+  border-color: #ccc;
+}
+
+.cta .cta-inline.cta-s1,
+.paragraph.cta.cta-s1 > a,
+.paragraph.cta.cta-s1.cta-reverse > a:hover {
+  background-color: rgba(238, 238, 238, 1);
+}
+
+.cta .cta-inline.cta-s2,
+.paragraph.cta.cta-s2 > a {
+  border-color: #00558b;
+  background-color: rgba(0, 85, 139, 1);
+  color: #fff;
+}
+
+.paragraph.cta.cta-s2.cta-reverse > a {
+  color: #00558b;
+}
+
+.paragraph.cta.cta-s2.cta-reverse > a:hover {
+  background-color: rgba(0, 85, 139, 1);
+  color: #fff;
+}
+
+.cta .cta-inline.cta-s3,
+.paragraph.cta.cta-s3 > a {
+  border-color: #23b9eb;
+  background-color: rgba(35, 185, 235, .9);
+  color: #000;
+}
+
+.paragraph.cta.cta-s3.cta-reverse > a:hover {
+  background-color: rgba(35, 185, 235, .9);
+}
+
+.cta .cta-inline.cta-s4,
+.paragraph.cta.cta-s4 > a {
+  border-color: #57bc6f;
+  background-color: rgba(87, 188, 111, 1);
+  color: #000;
+}
+
+.paragraph.cta.cta-s4.cta-reverse > a:hover {
+  background-color: rgba(87, 188, 111, 1);
+}
+
+.cta .cta-inline.cta-s5,
+.paragraph.cta.cta-s5 > a {
+  border-color: #ebb818;
+  background-color: rgba(235, 184, 24, 1);
+  color: #000;
+}
+
+.paragraph.cta.cta-s5.cta-reverse > a:hover {
+  background-color: rgba(235, 184, 24, 1);
+}
+
+.cta .cta-inline.cta-s6,
+.paragraph.cta.cta-s6 > a {
+  border-color: #a52a2a;
+  background-color: rgba(165, 42, 42, 1);
+  color: #fff;
+}
+
+.paragraph.cta.cta-s6.cta-reverse > a:hover {
+  background-color: rgba(165, 42, 42, 1);
+  color: #fff;
+}
+
+.paragraph .cta.cta-lochmara a,
+.paragraph.cta.cta-lochmara a,
+.paragraph.cta.cta-lochmara .cta-link {
+  background-color: #0071b9;
+  color: #fff;
+  border: 1px solid #0071b9;
+}
+
+.paragraph .cta.cta-lochmara a:hover,
+.paragraph.cta.cta-lochmara a:hover,
+.paragraph.cta.cta-lochmara .cta-link:hover {
+  background-color: #fff;
+  color: #0071b9;
+}
+
+.paragraph .cta.cta-picton a,
+.paragraph.cta.cta-picton a {
+  background-color: #25bbe8;
+  color: #124d6a;
+  border-color: #25bbe8;
+}
+
+.paragraph .cta.cta-picton a:hover,
+.paragraph.cta.cta-picton a:hover {
+  background-color: #124d6a;
+  color: #25bbe8;
+}
+
+.paragraph .cta.cta-reverse.cta-picton a,
+.paragraph.cta.cta-reverse.cta-picton a,
+.paragraph .cta.cta-reverse.cta-lochmara a,
+.paragraph.cta.cta-reverse.cta-lochmara a {
+  background-color: unset;
+  color: unset;
+}
+
+.paragraph .cta.cta-reverse.cta-lochmara a:hover {
+  background-color: #0071b9;
+  color: #fff;
+}
+
+.paragraph .cta.cta-reverse.cta-picton a:hover {
+  background-color: #25bbe8;
+  color: #124d6a;
+}
+
+.cta a[class*="cta-"].bg-dark {
+  color: #fff;
+}
+
+.cta a[class*="cta-"].bg-dark:hover,
+.cta a[class*="cta-"].bg-light.bg-slightly-dark {
+  color: #000;
+}
+
+.cta a[class*="cta-"].bg-light {
+  color: #000;
+}
+
+.cta a[class*="cta-"]:hover,
+.paragraph.cta > a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.paragraph.cta.cta-reverse a {
+  background-color: #fff;
+}
+
+.paragraph .cta.cta-reverse.cta-lochmara a {
+  color: #1779ba;
+}
+
+.paragraph .cta.cta-s6.cta-reverse a {
+  color: #a52a2a;
+}
+
+.paragraph.cta.cta-radius > a {
+  border-radius: 1.5rem;
+}
+
+.paragraph.cta.cta-shadow > a {
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, .35);
+}
+
+.paragraph.cta.cta-shadow > a:hover {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, .35);
+}
+
+.paragraph.cta.cta-lowercase > a {
+  text-transform: none;
+  font-size: 1rem;
+}
+
+.paragraph.cta.link-fa > * {
+  display: inline-block;
+}
+
+.paragraph.cta.link-fa > a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.paragraph.cta.link-fa i {
+  font-size: 1.2rem;
+  padding-right: .22rem;
+}
+
+.cta-left {
+  margin-right: auto;
+}
+
+.cta-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-right {
+  margin-left: auto;
+}
+
+/* ------------------------------------ *\
+  BLOC PICTOGRAMME
+\* ------------------------------------ */
+
+.paragraph-pictogramme i {
+  font-size: 4rem;
+}
+
+/* ------------------------------------ *\
+  SIDEBAR
+\* ------------------------------------ */
+
+.sidebar.bg-shadow {
+  box-shadow: 4px 4px 5px #c9c9c9;
+}
+
+.sidebar-second.sidebar-with-border {
+  border-left-width: 5px;
+  border-left-style: solid;
+}

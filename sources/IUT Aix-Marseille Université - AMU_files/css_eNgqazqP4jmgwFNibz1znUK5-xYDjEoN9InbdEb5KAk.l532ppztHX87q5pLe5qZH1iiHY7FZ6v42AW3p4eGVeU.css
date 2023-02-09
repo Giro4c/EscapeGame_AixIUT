@@ -1,0 +1,177 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * GENERAL
+ * MODELE 1
+ */
+
+/* ------------------------------------ *\
+  ==GENERAL
+\* ------------------------------------ */
+
+.paragraph.carrousel {
+  display: none;
+}
+
+.slick-initialized .slick-slide {
+  position: relative;
+}
+
+.carrousel .prev-arrow,
+.carrousel .next-arrow {
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carrousel .prev-arrow {
+  left: -1.5625rem;
+}
+
+.carrousel .next-arrow {
+  right: -3.625rem;
+}
+
+.carrousel--model1 .slick-dots li button .slick-dot-icon {
+  color: #fff;
+}
+
+.slick-dots li button:focus .slick-dot-icon::before,
+.slick-dots li.slick-active button .slick-dot-icon {
+  color: #ffa500;
+}
+
+.slick-dots li button .slick-dot-icon {
+  opacity: 1;
+}
+
+.carrousel .slick-dots {
+  bottom: 1rem;
+  right: 5rem;
+  width: 30%;
+  text-align: center;
+}
+
+.carrousel .slick-slider.slick-dotted {
+  margin: 0;
+}
+
+.carrousel .slick-dots li button::before {
+  font-size: .8rem;
+}
+
+@media screen and (min-width: 0)  and (max-width: 63.9375em) {
+  .carrousel .slick-dots {
+    bottom: 1rem;
+    width: 100%;
+  }
+
+  .carrousel-item img {
+    max-width: 100%;
+    min-height: unset;
+  }
+}
+
+/* ------------------------------------ *\
+  ==MODELE 1
+\* ------------------------------------ */
+
+.carrousel--model1 .slick-dots {
+  width: 20%;
+  background-color: #023c60cc;
+  border-radius: 20px;
+}
+
+.carrousel--model1 {
+  padding: 0;
+}
+
+.carrousel--model1 .grid-container {
+  background: #023c60;
+}
+
+.carrousel--model1 .carrousel-item {
+  margin: 0;
+  background-color: #06598e;
+  position: relative;
+}
+
+.carrousel--model1 .carrousel-item__text {
+  background: #06598e;
+  color: #fff;
+  padding: 1rem 2.5rem 1rem 1rem;
+  font-style: normal;
+  font-size: 1.05rem;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.carrousel--model1 .carrousel-item__title {
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.carrousel--model1 .prev-arrow,
+.carrousel--model1 .next-arrow {
+  background-color: #023c60;
+  color: #fff;
+  font-size: 2rem;
+  transition: all .2s;
+  position: absolute;
+}
+
+.carrousel--model1 .prev-arrow:hover,
+.carrousel--model1 .next-arrow:hover {
+  background-color: #8fb1c6;
+  color: #000;
+}
+
+.carrousel--model1 .prev-arrow {
+  left: 0;
+  width: 2rem;
+}
+
+.carrousel--model1 .next-arrow {
+  right: 0;
+  width: 2rem;
+}
+
+.carrousel--model1 .carrousel-item__image {
+  height: 100%;
+  padding: 0 2rem;
+}
+
+@media screen and (max-width: 63.9375em) {
+  .carrousel--model1 img {
+    max-width: 100%;
+  }
+
+  .carrousel--model1 .carrousel-item__image {
+    padding: 0;
+  }
+
+  .carrousel--model1 .slick-dots {
+    width: 40%;
+  }
+
+  .carrousel--model1 .carrousel-item__text {
+    padding: .5rem 1rem 1.5rem;
+  }
+
+  .carrousel .slick-dots {
+    bottom: -.5rem;
+    right: unset;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.carrousel--model1 .slick-slide img {
+  display: inline;
+}
