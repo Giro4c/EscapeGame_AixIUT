@@ -1,0 +1,7 @@
+faux_site.html
+    "Voici donc ce que le hacker compte faire du site. Il est indispenssable de combler la brèche de sécurité avant qu'il ne mette son plan à exécution ! 
+    Peut-être le hacker aurait-t-il oublié d'enlever un lien important quelque part. Cherchez la faille."
+
+home_hack.html
+    "Vous êtes arrivés dans ce qui semblerait être le home du hacker mais il ne semble pas y avoir grand chose... Peut-être en cherchant un peu plus, il serait possible d'accéder à d'autres fichiers ?"
+
