@@ -1,0 +1,12 @@
+/**
+ * @file
+ * Front librairies.
+ */
+
+jQuery($ => {
+  $(document).ready(() => {
+    $(".content :header").each(function() {
+      $(this).addClass("heading");
+    });
+  });
+});

@@ -1,0 +1,184 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS............You’re reading it!
+ * HEADINGS..............................
+ * PARAGRAPHS............................
+ * LIST..................................
+ * TABLE.................................
+ * STYLES CHIFFRES CLES (CKEDITOR) ......
+ */
+
+/* ------------------------------------ *\
+  PARAGRAPHS
+\* ------------------------------------ */
+
+.paragraph-text {
+  margin-bottom: .8rem;
+}
+
+.valign--center .paragraph-text {
+  margin-bottom: 0;
+}
+
+.paragraph-text p {
+  margin-bottom: .85rem;
+  font-size: 1.05rem;
+  line-height: 1.45rem;
+}
+
+.paragraph-text *:last-child {
+  margin-bottom: 0;
+}
+
+.paragraph-text p.ck-no-margin {
+  margin-bottom: .1rem;
+}
+
+/* ------------------------------------ *\
+  LIST
+\* ------------------------------------ */
+.paragraph-text ul ul,
+.paragraph-text ol ol {
+  margin-bottom: inherit;
+}
+
+.paragraph-text ul > li,
+.paragraph-text ol > li {
+  line-height: 1.2rem;
+  padding: .2rem 0;
+}
+
+.paragraph-text ul > li:last-child,
+.paragraph-text ol > li:last-child {
+  padding-bottom: 0;
+}
+
+.paragraph-text ul {
+  list-style: disc;
+}
+
+.paragraph-text ul > li > ul {
+  list-style: circle;
+}
+
+.paragraph-text ul > li > ul > li > ul {
+  list-style: square;
+}
+
+.paragraph-text ul,
+.paragraph-text ol {
+  margin-bottom: .8rem;
+  font-size: inherit;
+}
+
+/* ---------------custom bullets unordered list------------------ */
+ul.color-bullet.white > li::marker {
+  color: #fff;
+}
+
+ul.color-bullet.lightgrey > li::marker {
+  color: #a7a7a7;
+}
+
+ul.color-bullet.darkgrey > li::marker {
+  color: #7a7a7a;
+}
+
+ul.color-bullet.skyblue > li::marker {
+  color: #23b9eb;
+}
+
+ul.color-bullet.darkblue > li::marker {
+  color: #00558b;
+}
+
+ul.color-bullet.gold > li::marker {
+  color: #ebb818;
+}
+
+ul.color-bullet.darkgreen > li::marker {
+  color: #57bc6f;
+}
+
+ul.color-bullet.darkred > li::marker {
+  color: #a52a2a;
+}
+
+/* ---------------custom counter ordered list------------------ */
+.paragraph-text ol.custom-counter > li {
+  padding-bottom: .8rem;
+}
+
+.paragraph-text ol.custom-counter.style-1 > li .counter {
+  display: inline-block;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  color: #0071b9;
+}
+
+.paragraph-text ol.custom-counter.style-1 .inner-content {
+  border-left: dotted 2px #246d9a;
+  min-height: 100%;
+  padding-left: 1rem;
+}
+
+.paragraph-text ol.custom-counter.style-2 > li .counter {
+  display: inline-block;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  border-bottom: 3px solid #666;
+  color: #0071b9;
+}
+
+/* ------------------------------------ *\
+  ==STYLES CHIFFRES CLES (CKEDITOR)
+\* ------------------------------------ */
+
+p.highlight:first-of-type {
+  font-weight: bold;
+  text-align: center;
+}
+
+.highlight {
+  text-align: center;
+}
+
+.highlight.highlight--small {
+  font-size: 2rem;
+  margin-bottom: .5rem;
+}
+
+.highlight.highlight--medium {
+  font-size: 3.5rem;
+}
+
+.highlight.highlight--large {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ------------------------------------ *\
+  TABLE
+\* ------------------------------------ */
+table caption {
+  font-size: .9rem;
+  font-style: italic;
+  font-weight: bold;
+  padding-bottom: 0;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .paragraph-text p {
+    line-height: 1.4;
+    font-size: .875rem;
+  }
+
+  .paragraph-text ul > li,
+  .paragraph-text ol > li {
+    line-height: 1.4;
+    font-size: .875rem;
+  }
+}

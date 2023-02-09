@@ -1,0 +1,6 @@
+faux_site.html
+    Indice : "ASCII HEXA"
+
+home_hack.html
+    Indice : Turing
+

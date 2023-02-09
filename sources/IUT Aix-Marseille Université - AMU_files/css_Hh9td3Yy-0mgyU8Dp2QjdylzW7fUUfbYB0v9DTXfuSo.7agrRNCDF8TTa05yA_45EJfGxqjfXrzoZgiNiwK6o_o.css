@@ -1,0 +1,343 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS ..........................You’re reading it!
+ * VARIABLES ..........................................
+ * .... Transparency color set (blocks over region) ...
+ * yellow ...........................................
+ * .... Tabs styles ...................................
+ * .... Background styles .............................
+ * .... Accordions styles .............................
+ * .... Border styles .................................
+ * .... CTA Styles ....................................
+ *
+*/
+
+/**
+ * Taxonomies à créer par color style
+ *   Tab styles: tabs-style-yellow tabs-bg-dark/tabs-bg-light
+ *   Background colors: bg-yellow bg-dark/bg-light
+ *   Background Hover colors: bg-hv-yellow bg-hv-light/bg-hv-dark
+ *   Border colors: border-yellow
+ *   Link Color Style: cta cta-yellow cta-dark/cta-light
+ *   Text Color Style: color-yellow color-dark/color-light
+ *   List Link Styles: color-bullet--yellow
+ *   CKEDITOR styles: ul.color-bullet.yellow|Liste yellow
+*/
+
+/* ------------------------------------ *\
+  == VARIABLES
+\* ------------------------------------ */
+:root {
+  /* Specific colors scheme */
+  --yellow: #e8ce7e;
+  --yellow-hv: #d7bb60;
+}
+
+/* == Transparency color set (blocks over region) -------------------- *\
+\* ------------------------------------------------------------------ */
+.op-6 .bg-yellow,
+.op-7 .bg-yellow,
+.op-8 .bg-yellow,
+.op-9 .bg-yellow {
+  --op-6: rgba(232 206 126 / 60%);
+  --op-7: rgba(232 206 126 / 70%);
+  --op-8: rgba(232 206 126 / 80%);
+  --op-9: rgba(232 206 126 / 90%);
+}
+
+/* ------------------------------------ *\
+* == yellow
+\* ------------------------------------ */
+
+/* == Tabs styles -------------------- *\
+\* ----------------------------------- */
+
+/* Taxo. Tab styles: tabs-style-yellow */
+
+/* style des tabs avec animation */
+.tabs-style-yellow.tabs-bg-light .tabs:before,
+.tabs-style-yellow.tabs-bg-dark .tabs:before {
+  color: var(--yellow);
+  border-bottom: 5px solid var(--yellow);
+}
+
+/* == Background styles -------------------- *\
+\* ----------------------------------------- */
+
+/**
+ * Taxo. Background colors: bg-yellow bg-dark/bg-light
+ * Taxo. Background Hover colors: bg-hv-yellow bg-hv-light/bg-hv-dark
+*/
+.bg-yellow,
+.content-hover.bg-hv-yellow:hover {
+  background-color: var(--yellow);
+}
+
+.op-6 .bg-yellow {
+  background-color: var(--op-6);
+}
+
+.op-7 .bg-yellow {
+  background-color: var(--op-7);
+}
+
+.op-8 .bg-yellow {
+  background-color: var(--op-8);
+}
+
+.op-9 .bg-yellow {
+  background-color: var(--op-9);
+}
+
+/* == Accordions styles -------------------- *\
+\* ----------------------------------------- */
+.accordion.with-bg .accordion-title.bg-yellow:hover,
+.accordion.with-bg .accordion-title.bg-yellow:focus {
+  background-color: var(--yellow-hv);
+}
+
+.accordion.with-bg .accordion-title.bg-yellow.bg-dark:hover,
+.accordion.with-bg .accordion-title.bg-yellow.bg-dark:focus {
+  color: var(--white);
+}
+
+.accordion.with-bg .accordion-title.bg-yellow.bg-light:hover,
+.accordion.with-bg .accordion-title.bg-yellow.bg-light:focus {
+  color: var(--black);
+}
+
+.accordion.with-bg .accordion-title.bg-yellow.bg-dark {
+  color: var(--white);
+  border: 0;
+}
+
+.accordion.with-bg .accordion-title.bg-yellow.bg-light {
+  color: var(--black);
+  border: 0;
+}
+
+/* == Text elements -------------------- *\
+\* ----------------------------------------- */
+
+/* Taxo. Text Color Style: color-yellow color-light/color-light */
+
+/* FA color */
+.color-yellow i {
+  color: var(--yellow);
+}
+
+.bg-yellow.bg-dark .color-yellow i,
+.content-hover.bg-hv-yellow.bg-hv-dark:hover i {
+  color: var(--white);
+}
+
+.bg-yellow.bg-light .color-yellow i,
+.content-hover.bg-hv-yellow.bg-hv-light:hover i {
+  color: var(--black);
+}
+
+/* Puces colorées */
+.bg-yellow.bg-dark ul li::marker,
+.bg-yellow.bg-hv-dark ul li::marker,
+.content-hover.bg-hv-yellow.bg-hv-dark:hover ul li::marker {
+  color: var(--white);
+}
+
+.bg-yellow.bg-light ul li::marker,
+.bg-yellow.bg-hv-light ul li::marker,
+.content-hover.bg-hv-yellow.bg-hv-light:hover ul li::marker {
+  color: var(--black);
+}
+
+ul.color-bullet--yellow.list li.link-list-item::marker,
+ul.color-bullet.yellow > li::marker,
+ul.color-bullet.yellow > li::before {
+  color: var(--yellow);
+}
+
+/* == Border styles -------------------- *\
+\* ------------------------------------- */
+
+/* Taxo. Border colors: border-yellow */
+.border-yellow,
+.border-yellow:after {
+  border-color: var(--yellow);
+}
+
+/* == CTA Styles --------------------------- *\
+\* ----------------------------------------- */
+
+/* Taxo. Link Color Style: cta cta-yellow */
+.paragraph .cta.cta-yellow a,
+.paragraph.cta.cta-yellow a,
+.paragraph.cta.cta-yellow .cta-link {
+  background-color: var(--yellow);
+  border: 1px solid var(--yellow);
+  padding: .5rem 2rem;
+}
+
+.paragraph .cta.cta-yellow i,
+.paragraph.cta.cta-yellow i {
+  color: var(--yellow);
+}
+
+.paragraph .cta.cta-yellow.cta-dark i,
+.paragraph.cta.cta-yellow.cta-dark i,
+.paragraph .cta.cta-yellow.cta-dark a,
+.paragraph.cta.cta-yellow.cta-dark a,
+.paragraph.cta.cta-yellow.cta-dark .cta-link {
+  color: var(--white);
+}
+
+.paragraph .cta.cta-yellow.cta-light i,
+.paragraph.cta.cta-yellow.cta-light i,
+.paragraph .cta.cta-yellow.cta-light a,
+.paragraph.cta.cta-yellow.cta-light a,
+.paragraph.cta.cta-yellow.cta-light .cta-link {
+  color: var(--black);
+}
+
+.paragraph .cta.cta-yellow a:focus,
+.paragraph.cta.cta-yellow a:focus,
+.paragraph.cta.cta-yellow .cta-link:focus,
+.paragraph .cta.cta-yellow a:hover,
+.paragraph.cta.cta-yellow a:hover,
+.paragraph.cta.cta-yellow .cta-link:hover {
+  background-color: var(--white);
+}
+
+.paragraph .cta.cta-yellow.cta-dark a:focus i,
+.paragraph.cta.cta-yellow.cta-dark a:focus i,
+.paragraph.cta.cta-yellow.cta-dark .cta-link:focus i,
+.paragraph .cta.cta-yellow.cta-dark a:hover i,
+.paragraph.cta.cta-yellow.cta-dark a:hover i,
+.paragraph.cta.cta-yellow.cta-dark .cta-link:hover i,
+.paragraph .cta.cta-yellow.cta-dark a:focus,
+.paragraph.cta.cta-yellow.cta-dark a:focus,
+.paragraph.cta.cta-yellow.cta-dark .cta-link:focus,
+.paragraph .cta.cta-yellow.cta-dark a:hover,
+.paragraph.cta.cta-yellow.cta-dark a:hover,
+.paragraph.cta.cta-yellow.cta-dark .cta-link:hover {
+  color: var(--yellow);
+}
+
+.paragraph .cta.cta-yellow.cta-light a:focus i,
+.paragraph.cta.cta-yellow.cta-light a:focus i,
+.paragraph.cta.cta-yellow.cta-light .cta-link:focus i,
+.paragraph .cta.cta-yellow.cta-light a:hover i,
+.paragraph.cta.cta-yellow.cta-light a:hover i,
+.paragraph.cta.cta-yellow.cta-light .cta-link:hover i,
+.paragraph .cta.cta-yellow.cta-light a:focus,
+.paragraph.cta.cta-yellow.cta-light a:focus,
+.paragraph.cta.cta-yellow.cta-light .cta-link:focus,
+.paragraph .cta.cta-yellow.cta-light a:hover,
+.paragraph.cta.cta-yellow.cta-light a:hover,
+.paragraph.cta.cta-yellow.cta-light .cta-link:hover {
+  color: var(--black);
+}
+
+.paragraph .cta.cta-reverse.cta-yellow a,
+.paragraph.cta.cta-reverse.cta-yellow a {
+  background-color: var(--white);
+}
+
+.paragraph .cta.cta-reverse.cta-yellow.cta-dark i,
+.paragraph.cta.cta-reverse.cta-yellow.cta-dark i,
+.paragraph .cta.cta-reverse.cta-yellow.cta-dark a,
+.paragraph.cta.cta-reverse.cta-yellow.cta-dark a {
+  color: var(--yellow);
+}
+
+.paragraph .cta.cta-reverse.cta-yellow.cta-light a,
+.paragraph.cta.cta-reverse.cta-yellow.cta-light a {
+  color: var(--black);
+}
+
+.paragraph .cta.cta-reverse.cta-yellow a:focus,
+.paragraph .cta.cta-reverse.cta-yellow a:hover {
+  background-color: var(--yellow);
+}
+
+.paragraph .cta.cta-reverse.cta-yellow.cta-dark a:focus i,
+.paragraph.cta.cta-reverse.cta-yellow.cta-dark a:focus i,
+.paragraph.cta.cta-reverse.cta-yellow.cta-dark .cta-link:focus i,
+.paragraph .cta.cta-reverse.cta-yellow.cta-dark a:hover i,
+.paragraph.cta.cta-reverse.cta-yellow.cta-dark a:hover i,
+.paragraph.cta.cta-reverse.cta-yellow.cta-dark .cta-link:hover i,
+.paragraph .cta.cta-reverse.cta-yellow.cta-dark a:focus,
+.paragraph.cta.cta-reverse.cta-yellow.cta-dark a:focus,
+.paragraph.cta.cta-reverse.cta-yellow.cta-dark .cta-link:focus,
+.paragraph .cta.cta-reverse.cta-yellow.cta-dark a:hover,
+.paragraph.cta.cta-reverse.cta-yellow.cta-dark a:hover,
+.paragraph.cta.cta-reverse.cta-yellow.cta-dark .cta-link:hover {
+  color: var(--white);
+}
+
+.bg-yellow .cta.cta-reverse.cta-yellow.cta-dark a:focus i,
+.bg-yellow .paragraph.cta.cta-reverse.cta-yellow.cta-dark a:focus i,
+.bg-yellow .paragraph.cta.cta-reverse.cta-yellow.cta-dark .cta-link:focus i,
+.bg-yellow .paragraph .cta.cta-reverse.cta-yellow.cta-dark a:hover i,
+.bg-yellow .paragraph.cta.cta-reverse.cta-yellow.cta-dark a:hover i,
+.bg-yellow .paragraph.cta.cta-reverse.cta-yellow.cta-dark .cta-link:hover i,
+.bg-yellow .cta.cta-reverse.cta-yellow.cta-dark a:focus,
+.bg-yellow .paragraph.cta.cta-reverse.cta-yellow.cta-dark a:focus,
+.bg-yellow .paragraph.cta.cta-reverse.cta-yellow.cta-dark .cta-link:focus,
+.bg-yellow .paragraph .cta.cta-reverse.cta-yellow.cta-dark a:hover,
+.bg-yellow .paragraph.cta.cta-reverse.cta-yellow.cta-dark a:hover,
+.bg-yellow .paragraph.cta.cta-reverse.cta-yellow.cta-dark .cta-link:hover {
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+
+.bg-yellow .cta.cta-reverse.cta-yellow.cta-light a:focus,
+.bg-yellow .paragraph.cta.cta-reverse.cta-yellow.cta-light a:focus,
+.bg-yellow .paragraph.cta.cta-reverse.cta-yellow.cta-light .cta-link:focus,
+.bg-yellow .paragraph .cta.cta-reverse.cta-yellow.cta-light a:hover,
+.bg-yellow .paragraph.cta.cta-reverse.cta-yellow.cta-light a:hover,
+.bg-yellow .paragraph.cta.cta-reverse.cta-yellow.cta-light .cta-link:hover {
+  color: var(--black);
+  border: 1px solid var(--black);
+}
+
+.paragraph .cta.cta-reverse.cta-yellow.cta-light a:focus,
+.paragraph.cta.cta-reverse.cta-yellow.cta-light a:focus,
+.paragraph.cta.cta-reverse.cta-yellow.cta-light .cta-link:focus,
+.paragraph .cta.cta-reverse.cta-yellow.cta-light a:hover,
+.paragraph.cta.cta-reverse.cta-yellow.cta-light a:hover,
+.paragraph.cta.cta-reverse.cta-yellow.cta-light .cta-link:hover {
+  color: var(--black);
+}
+
+/** cta on yellow bg */
+.bg-hv-yellow.bg-hv-dark:hover .paragraph .cta.cta-yellow a,
+.bg-hv-yellow.bg-hv-dark:hover .paragraph.cta.cta-yellow a,
+.bg-hv-yellow.bg-hv-dark:hover .paragraph.cta.cta-yellow .cta-link,
+.bg-yellow.bg-dark .paragraph .cta.cta-yellow a,
+.bg-yellow.bg-dark .paragraph.cta.cta-yellow a,
+.bg-yellow.bg-dark .paragraph.cta.cta-yellow .cta-link {
+  border: 1px solid var(--white);
+}
+
+.bg-hv-yellow.bg-hv-light:hover .paragraph .cta.cta-yellow a,
+.bg-hv-yellow.bg-hv-light:hover .paragraph.cta.cta-yellow a,
+.bg-hv-yellow.bg-hv-light:hover .paragraph.cta.cta-yellow .cta-link,
+.bg-yellow.bg-light .paragraph .cta.cta-yellow a,
+.bg-yellow.bg-light .paragraph.cta.cta-yellow a,
+.bg-yellow.bg-light .paragraph.cta.cta-yellow .cta-link {
+  border: 1px solid var(--black);
+}
+
+.paragraph.cta.cta-reverse.link-fa.cta-yellow a:hover > i::before,
+.paragraph.cta.link-fa.cta-yellow a > i::before {
+  background-color: var(--white);
+  color: var(--blue);
+}
+
+.paragraph.cta.cta-reverse.link-fa.cta-yellow a > i::before,
+.paragraph.cta.link-fa.cta-yellow a:hover > i::before {
+  background-color: var(--yellow);
+  color: var(--black);
+}

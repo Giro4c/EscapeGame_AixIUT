@@ -1,0 +1,76 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS............You’re reading it!
+ */
+body:not(.front) main {
+  margin-top: 1.4rem;
+}
+
+@media screen and (min-width: 63.9375em) {
+  .main-content {
+    min-height: 30rem;
+  }
+
+  .sidebar-second,
+  .sidebar-first {
+    margin-bottom: 2rem;
+  }
+
+  .sidebar-second {
+    padding-left: 1.8rem;
+  }
+
+  .sidebar-second .custom-block,
+  .sidebar-first .custom-block {
+    margin-bottom: .9rem;
+  }
+
+  .sidebar.bg-light:not(.bg-white),
+  .sidebar.bg-dark {
+    padding-right: 1.8rem;
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+  }
+
+  .sidebar-first {
+    padding-right: 1.8rem;
+  }
+
+  .sidebar-with-bg,
+  .sidebar-with-border {
+    padding-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 63.9375em) {
+  .main-content {
+    min-height: 10rem;
+  }
+}
+
+.logo__baseline .logo__baseline-image {
+  text-align: right;
+}
+
+.logo__baseline .logo__baseline-text {
+  text-align: left;
+  border-left: 2px solid white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 63.9375em) {
+  .logo__baseline .logo__baseline-image {
+    text-align: center;
+  }
+
+  .logo__baseline .logo__baseline-text {
+    justify-content: center;
+    border-left: 0;
+    padding: 0;
+  }
+}

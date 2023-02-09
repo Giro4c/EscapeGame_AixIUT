@@ -1,0 +1,14 @@
+/**
+ * @file
+ * CTA librairies.
+ */
+
+jQuery($ => {
+  $(document).ready(() => {
+    $('a[class*="cta-s"]').each(function() {
+      $(this)
+        .addClass("cta-inline")
+        .wrap("<div class='grid-y cta'><div class='align-center'></div></div>");
+    });
+  });
+});

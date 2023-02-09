@@ -1,0 +1,355 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS..........................You’re reading it!
+ * VARIABLES ..........................................
+ * .... Transparency color set (blocks over region) ...
+ * gd-iut-saffron.........................................
+ * .... Tabs styles ...................................
+ * .... Background styles .............................
+ * .... Accordions styles .............................
+ * .... Border styles .................................
+ * .... CTA Styles ....................................
+ *
+ */
+
+/**
+ * Taxonomies à créer par color style
+ *   Tab styles: tabs-style-gd-iut-saffron tabs-bg-dark/tabs-bg-light
+ *   Background colors: bg-gd-iut-saffron bg-dark/bg-light
+ *   Background Hover colors: bg-hv-gd-iut-saffron bg-hv-light/bg-hv-dark
+ *   Border colors: border-gd-iut-saffron
+ *   Link Color Style: cta cta-gd-iut-saffron cta-dark/cta-light
+ *   Text Color Style: color-gd-iut-saffron color-dark/color-light
+ *   List Link Styles: color-bullet--gd-iut-saffron
+ *   CKEDITOR styles: ul.color-bullet.gd-iut-saffron|Liste gd-iut-saffron
+*/
+
+/* ------------------------------------ *\
+  ==VARIABLES
+\* ------------------------------------ */
+:root {
+  /* Specific colors scheme */
+  --gd-iut-saffron: linear-gradient(180deg, #f8b835, #fcd379);
+  --gd-iut-saffron-hv: linear-gradient(180deg, #f8b836, #fcd683);
+  --gd-iut-saffron-bg-dark: #f8b835;
+  --gd-iut-saffron-brd: #f8b835;
+}
+
+/* == Transparency color set (blocks over region) -------------------- *\
+\* ------------------------------------------------------------------- */
+.op-6 .bg-gd-iut-saffron,
+.op-7 .bg-gd-iut-saffron,
+.op-8 .bg-gd-iut-saffron,
+.op-9 .bg-gd-iut-saffron {
+  --op-6: rgba(248 184 53 / 60%);
+  --op-7: rgba(248 184 53 / 70%);
+  --op-8: rgba(248 184 53 / 80%);
+  --op-9: rgba(248 184 53 / 90%);
+}
+
+/* ------------------------------------ *\
+* == iut-saffron
+\* ------------------------------------ */
+
+/* == Tabs styles -------------------- *\
+\* ----------------------------------- */
+
+/* Taxo. Tab styles: tabs-style-gd-iut-saffron */
+
+/* style des tabs avec animation */
+.tabs-style-gd-iut-saffron.tabs-bg-light .tabs:before,
+.tabs-style-gd-iut-saffron.tabs-bg-dark .tabs:before {
+  color: var(--gd-iut-saffron-bg-dark);
+  border-bottom: 5px solid var(--gd-iut-saffron-bg-dark);
+}
+
+/* == Background styles -------------------- *\
+\* ----------------------------------------- */
+
+/**
+ * Taxo. Background colors: bg-gd-iut-saffron bg-dark/bg-light
+ * Taxo. Background Hover colors: bg-hv-gd-iut-saffron bg-hv-light/bg-hv-dark
+*/
+
+.bg-gd-iut-saffron,
+.content-hover.bg-hv-gd-iut-saffron:hover {
+  background: var(--gd-iut-saffron);
+}
+
+.op-6 .bg-gd-iut-saffron {
+  background: var(--op-6);
+}
+
+.op-7 .bg-gd-iut-saffron {
+  background: var(--op-7);
+}
+
+.op-8 .bg-gd-iut-saffron {
+  background: var(--op-8);
+}
+
+.op-9 .bg-gd-iut-saffron {
+  background: var(--op-9);
+}
+
+/* == Accordions styles -------------------- *\
+\* ----------------------------------------- */
+.accordion.with-bg .accordion-title.bg-gd-iut-saffron:hover,
+.accordion.with-bg .accordion-title.bg-gd-iut-saffron:focus {
+  background: var(--gd-iut-saffron-hv);
+}
+
+.accordion.with-bg .accordion-title.bg-gd-iut-saffron.bg-dark:hover,
+.accordion.with-bg .accordion-title.bg-gd-iut-saffron.bg-dark:focus {
+  color: var(--white);
+}
+
+.accordion.with-bg .accordion-title.bg-gd-iut-saffron.bg-light:hover,
+.accordion.with-bg .accordion-title.bg-gd-iut-saffron.bg-light:focus {
+  color: var(--black);
+}
+
+.accordion.with-bg .accordion-title.bg-gd-iut-saffron.bg-dark {
+  color: var(--white);
+  border-color: transparent;
+}
+
+.accordion.with-bg .accordion-title.bg-gd-iut-saffron.bg-light {
+  color: var(--black);
+  border-color: transparent;
+}
+
+.accordion.with-bg .accordion-content {
+  border-color: transparent;
+}
+
+/* == Text elements -------------------- *\
+\* ----------------------------------------- */
+
+/* Taxo. Text Color Style: color-gd-iut-saffron color-light/color-light */
+
+/* FA color */
+.color-gd-iut-saffron i {
+  color: var(--gd-iut-saffron);
+}
+
+.bg-gd-iut-saffron.bg-dark .color-gd-iut-saffron i,
+.content-hover.bg-hv-gd-iut-saffron.bg-hv-dark:hover i {
+  color: var(--white);
+}
+
+.bg-gd-iut-saffron.bg-light .color-gd-iut-saffron i,
+.content-hover.bg-hv-gd-iut-saffron.bg-hv-light:hover i {
+  color: var(--black);
+}
+
+/* Puces colorées */
+.bg-gd-iut-saffron.bg-dark ul li::marker,
+.bg-gd-iut-saffron.bg-hv-dark ul li::marker,
+.content-hover.bg-hv-gd-iut-saffron.bg-hv-dark:hover ul li::marker {
+  color: var(--white);
+}
+
+.bg-gd-iut-saffron.bg-light ul li::marker,
+.bg-gd-iut-saffron.bg-hv-light ul li::marker,
+.content-hover.bg-hv-gd-iut-saffron.bg-hv-light:hover ul li::marker {
+  color: var(--black);
+}
+
+ul.color-bullet--gd-iut-saffron.list li.link-list-item::marker,
+ul.color-bullet.gd-iut-saffron > li::marker,
+ul.color-bullet.gd-iut-saffron > li::before {
+  color: var(--gd-iut-saffron);
+}
+
+/* == Border styles -------------------- *\
+\* ------------------------------------- */
+
+/* Taxo. Border colors: border-gd-iut-saffron */
+.border-gd-iut-saffron,
+.border-gd-iut-saffron:after {
+  border-color: var(--gd-iut-saffron-bg-dark);
+}
+
+/* == CTA Styles --------------------------- *\
+\* ----------------------------------------- */
+
+/* Taxo. Link Color Style: cta cta-gd-iut-saffron */
+.paragraph .cta.cta-gd-iut-saffron a,
+.paragraph.cta.cta-gd-iut-saffron a,
+.paragraph.cta.cta-gd-iut-saffron .cta-link {
+  background: var(--gd-iut-saffron);
+  border: 1px solid var(--gd-iut-saffron-brd);
+  padding: .5rem 2rem;
+}
+
+.paragraph .cta.cta-gd-iut-saffron i,
+.paragraph.cta.cta-gd-iut-saffron i {
+  color: var(--gd-iut-saffron);
+}
+
+.paragraph .cta.cta-gd-iut-saffron.cta-dark i,
+.paragraph.cta.cta-gd-iut-saffron.cta-dark i,
+.paragraph .cta.cta-gd-iut-saffron.cta-dark a,
+.paragraph.cta.cta-gd-iut-saffron.cta-dark a,
+.paragraph.cta.cta-gd-iut-saffron.cta-dark .cta-link {
+  color: var(--white);
+}
+
+.paragraph .cta.cta-gd-iut-saffron.cta-light i,
+.paragraph.cta.cta-gd-iut-saffron.cta-light i,
+.paragraph .cta.cta-gd-iut-saffron.cta-light a,
+.paragraph.cta.cta-gd-iut-saffron.cta-light a,
+.paragraph.cta.cta-gd-iut-saffron.cta-light .cta-link {
+  color: var(--black);
+}
+
+.paragraph .cta.cta-gd-iut-saffron a:focus,
+.paragraph.cta.cta-gd-iut-saffron a:focus,
+.paragraph.cta.cta-gd-iut-saffron .cta-link:focus,
+.paragraph .cta.cta-gd-iut-saffron a:hover,
+.paragraph.cta.cta-gd-iut-saffron a:hover,
+.paragraph.cta.cta-gd-iut-saffron .cta-link:hover {
+  background: var(--white);
+  border-color: var(--gd-iut-saffron-brd);
+  color: var(--gd-iut-saffron-bg-dark);
+}
+
+.paragraph .cta.cta-gd-iut-saffron.cta-dark a:focus i,
+.paragraph.cta.cta-gd-iut-saffron.cta-dark a:focus i,
+.paragraph.cta.cta-gd-iut-saffron.cta-dark .cta-link:focus i,
+.paragraph .cta.cta-gd-iut-saffron.cta-dark a:hover i,
+.paragraph.cta.cta-gd-iut-saffron.cta-dark a:hover i,
+.paragraph.cta.cta-gd-iut-saffron.cta-dark .cta-link:hover i,
+.paragraph .cta.cta-gd-iut-saffron.cta-dark a:focus,
+.paragraph.cta.cta-gd-iut-saffron.cta-dark a:focus,
+.paragraph.cta.cta-gd-iut-saffron.cta-dark .cta-link:focus,
+.paragraph .cta.cta-gd-iut-saffron.cta-dark a:hover,
+.paragraph.cta.cta-gd-iut-saffron.cta-dark a:hover,
+.paragraph.cta.cta-gd-iut-saffron.cta-dark .cta-link:hover {
+  color: var(--gd-iut-saffron-bg-dark);
+  border-color: var(--gd-iut-saffron-brd);
+  box-shadow: unset;
+}
+
+.paragraph .cta.cta-gd-iut-saffron.cta-light a:focus i,
+.paragraph.cta.cta-gd-iut-saffron.cta-light a:focus i,
+.paragraph.cta.cta-gd-iut-saffron.cta-light .cta-link:focus i,
+.paragraph .cta.cta-gd-iut-saffron.cta-light a:hover i,
+.paragraph.cta.cta-gd-iut-saffron.cta-light a:hover i,
+.paragraph.cta.cta-gd-iut-saffron.cta-light .cta-link:hover i,
+.paragraph .cta.cta-gd-iut-saffron.cta-light a:focus,
+.paragraph.cta.cta-gd-iut-saffron.cta-light a:focus,
+.paragraph.cta.cta-gd-iut-saffron.cta-light .cta-link:focus,
+.paragraph .cta.cta-gd-iut-saffron.cta-light a:hover,
+.paragraph.cta.cta-gd-iut-saffron.cta-light a:hover,
+.paragraph.cta.cta-gd-iut-saffron.cta-light .cta-link:hover {
+  color: var(--black);
+}
+
+.paragraph .cta.cta-reverse.cta-gd-iut-saffron a,
+.paragraph.cta.cta-reverse.cta-gd-iut-saffron a {
+  background: var(--white);
+}
+
+.paragraph .cta.cta-reverse.cta-gd-iut-saffron.cta-dark i,
+.paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-dark i,
+.paragraph .cta.cta-reverse.cta-gd-iut-saffron.cta-dark a,
+.paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-dark a {
+  color: var(--gd-iut-saffron-bg-dark);
+  border-color: var(--gd-iut-saffron-brd);
+  box-shadow: unset;
+}
+
+.paragraph .cta.cta-reverse.cta-gd-iut-saffron.cta-light a,
+.paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-light a {
+  color: var(--black);
+}
+
+.paragraph .cta.cta-reverse.cta-gd-iut-saffron a:focus,
+.paragraph .cta.cta-reverse.cta-gd-iut-saffron a:hover {
+  background: var(--gd-iut-saffron);
+  border-color: transparent;
+}
+
+.paragraph .cta.cta-reverse.cta-gd-iut-saffron.cta-dark a:focus i,
+.paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-dark a:focus i,
+.paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-dark .cta-link:focus i,
+.paragraph .cta.cta-reverse.cta-gd-iut-saffron.cta-dark a:hover i,
+.paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-dark a:hover i,
+.paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-dark .cta-link:hover i,
+.paragraph .cta.cta-reverse.cta-gd-iut-saffron.cta-dark a:focus,
+.paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-dark a:focus,
+.paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-dark .cta-link:focus,
+.paragraph .cta.cta-reverse.cta-gd-iut-saffron.cta-dark a:hover,
+.paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-dark a:hover,
+.paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-dark .cta-link:hover {
+  color: var(--white);
+  border-color: transparent;
+}
+
+.bg-gd-iut-saffron .cta.cta-reverse.cta-gd-iut-saffron.cta-dark a:focus i,
+.bg-gd-iut-saffron .paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-dark a:focus i,
+.bg-gd-iut-saffron .paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-dark .cta-link:focus i,
+.bg-gd-iut-saffron .paragraph .cta.cta-reverse.cta-gd-iut-saffron.cta-dark a:hover i,
+.bg-gd-iut-saffron .paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-dark a:hover i,
+.bg-gd-iut-saffron .paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-dark .cta-link:hover i,
+.bg-gd-iut-saffron .cta.cta-reverse.cta-gd-iut-saffron.cta-dark a:focus,
+.bg-gd-iut-saffron .paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-dark a:focus,
+.bg-gd-iut-saffron .paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-dark .cta-link:focus,
+.bg-gd-iut-saffron .paragraph .cta.cta-reverse.cta-gd-iut-saffron.cta-dark a:hover,
+.bg-gd-iut-saffron .paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-dark a:hover,
+.bg-gd-iut-saffron .paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-dark .cta-link:hover {
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+
+.bg-gd-iut-saffron .cta.cta-reverse.cta-gd-iut-saffron.cta-light a:focus,
+.bg-gd-iut-saffron .paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-light a:focus,
+.bg-gd-iut-saffron .paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-light .cta-link:focus,
+.bg-gd-iut-saffron .paragraph .cta.cta-reverse.cta-gd-iut-saffron.cta-light a:hover,
+.bg-gd-iut-saffron .paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-light a:hover,
+.bg-gd-iut-saffron .paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-light .cta-link:hover {
+  color: var(--black);
+  border: 1px solid var(--black);
+}
+
+.paragraph .cta.cta-reverse.cta-gd-iut-saffron.cta-light a:focus,
+.paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-light a:focus,
+.paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-light .cta-link:focus,
+.paragraph .cta.cta-reverse.cta-gd-iut-saffron.cta-light a:hover,
+.paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-light a:hover,
+.paragraph.cta.cta-reverse.cta-gd-iut-saffron.cta-light .cta-link:hover {
+  color: var(--black);
+}
+
+/** cta on gd-iut-saffron bg */
+.bg-hv-gd-iut-saffron.bg-hv-dark:hover .paragraph .cta.cta-gd-iut-saffron a,
+.bg-hv-gd-iut-saffron.bg-hv-dark:hover .paragraph.cta.cta-gd-iut-saffron a,
+.bg-hv-gd-iut-saffron.bg-hv-dark:hover .paragraph.cta.cta-gd-iut-saffron .cta-link,
+.bg-gd-iut-saffron.bg-dark .paragraph .cta.cta-gd-iut-saffron a,
+.bg-gd-iut-saffron.bg-dark .paragraph.cta.cta-gd-iut-saffron a,
+.bg-gd-iut-saffron.bg-dark .paragraph.cta.cta-gd-iut-saffron .cta-link {
+  border: 1px solid var(--white);
+}
+
+.bg-hv-gd-iut-saffron.bg-hv-light:hover .paragraph .cta.cta-gd-iut-saffron a,
+.bg-hv-gd-iut-saffron.bg-hv-light:hover .paragraph.cta.cta-gd-iut-saffron a,
+.bg-hv-gd-iut-saffron.bg-hv-light:hover .paragraph.cta.cta-gd-iut-saffron .cta-link,
+.bg-gd-iut-saffron.bg-light .paragraph .cta.cta-gd-iut-saffron a,
+.bg-gd-iut-saffron.bg-light .paragraph.cta.cta-gd-iut-saffron a,
+.bg-gd-iut-saffron.bg-light .paragraph.cta.cta-gd-iut-saffron .cta-link {
+  border: 1px solid var(--black);
+}
+
+.paragraph.cta.link-fa.cta-gd-iut-saffron a > i::before {
+  background-color: var(--medium-gray);
+}
+
+.paragraph.cta.link-fa.cta-gd-iut-saffron a:hover > i::before {
+  background-color: var(--medium-gray);
+  color: var(--black);
+}

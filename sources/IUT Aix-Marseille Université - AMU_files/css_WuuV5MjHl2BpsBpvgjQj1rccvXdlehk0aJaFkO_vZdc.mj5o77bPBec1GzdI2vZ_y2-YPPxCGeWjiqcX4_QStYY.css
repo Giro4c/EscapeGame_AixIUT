@@ -1,0 +1,71 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS............You’re reading it!
+ */
+.paragraph-link-list.content {
+  padding: 0;
+  margin-bottom: .8rem;
+}
+
+.paragraph-link-list .list {
+  margin-bottom: 0;
+}
+
+/* list-style modifié pour appliquer le style dans les accordéons */
+.list-link {
+  list-style: initial;
+  line-height: 1.2rem;
+  padding: .2rem 0;
+}
+
+.list.list-link--default.list-link--black {
+  list-style: initial;
+}
+
+.list-link.list-black .link-list-item a {
+  color: #000;
+}
+
+.list-link.list-inside {
+  list-style-position: inside;
+}
+
+.paragraph-link-list .paragraph.cta.link-fa > a {
+  display: inline-block;
+  flex-direction: unset;
+  align-items: unset;
+}
+
+.paragraph-link-list .list-link--row,
+.paragraph-link-list .list-link--column {
+  list-style: none;
+  margin: 0;
+}
+
+.paragraph-link-list .list-link--column:not(.text-center) {
+  margin-left: 0;
+}
+
+.paragraph-link-list .paragraph-link-list.list-link--row.content {
+  padding-top: 0;
+}
+
+.paragraph-link-list .list-link--column .paragraph-link-page a {
+  width: fit-content;
+}
+
+.paragraph-link-list .list-link--row .cta > a:first-of-type {
+  margin-left: 0;
+}
+
+.paragraph-link-list .list-link--row li {
+  display: inline-block;
+  padding: .1rem .5rem;
+}
+
+.paragraph-link-list .list-title {
+  margin-bottom: .2rem;
+}

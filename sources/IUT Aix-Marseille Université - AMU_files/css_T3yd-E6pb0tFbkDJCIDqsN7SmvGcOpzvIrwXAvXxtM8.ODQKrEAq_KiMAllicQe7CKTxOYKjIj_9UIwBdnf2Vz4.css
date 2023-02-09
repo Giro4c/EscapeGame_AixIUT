@@ -1,0 +1,19 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS............You’re reading it!
+ * PICTOS............
+ */
+.picto-size--small i {
+  font-size: 2rem;
+}
+
+.picto-size--medium i {
+  font-size: 2.5rem;
+}
+
+.picto-size--large i {
+  font-size: 3rem;
+}

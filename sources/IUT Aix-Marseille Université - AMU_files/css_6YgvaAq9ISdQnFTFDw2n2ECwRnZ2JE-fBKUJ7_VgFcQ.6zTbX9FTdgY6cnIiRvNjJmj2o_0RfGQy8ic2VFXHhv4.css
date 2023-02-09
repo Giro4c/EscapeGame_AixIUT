@@ -1,0 +1,158 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS..........................You’re reading it!
+ * TABS ..............................................
+ * MEDIA QUERIES .....................................
+*/
+
+/* ------------------------------------ *\
+  == TABS
+\* ------------------------------------ */
+.tabs {
+  position: relative;
+  z-index: 0;
+  background-clip: padding-box;
+  will-change: transform;
+
+  --i: -1;
+}
+
+.tabs-content {
+  border: none;
+  background: unset;
+}
+
+.tabs-panel {
+  padding: 1rem 0;
+}
+
+.tabs li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tabs-title:not(.is-active) a {
+  color: var(--black);
+}
+
+.tabs-title {
+  border-right: none;
+}
+
+/* tabs par défaut */
+.tabs-style-1 .tabs-title,
+.tabs-style-1 .tabs-title.is-active {
+  border: none;
+}
+
+.tabs-style-1 .tabs-title.is-active,
+.tabs-style-1 .tabs-title > a:focus,
+.tabs-style-1 .tabs-title > a[aria-selected="true"],
+.tabs-style-1 .tabs-title:not(.is-active),
+.tabs-style-1 .tabs-title:not(.is-active):hover {
+  background-color: transparent;
+}
+
+.tabs-style-1 .tabs:before {
+  color: var(--yellow);
+  border-bottom: 5px solid var(--yellow);
+}
+
+.tabs-title a {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-transform: unset;
+}
+
+.tabs h2.section-title.heading {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+/* sliding tabs */
+.filters:before,
+div[class*="tabs-style-"] .tabs:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: var(--left-slide);
+  width: var(--width-slide);
+  top: 3px;
+  height: 100%;
+  transition: .2s ease-in-out;
+}
+
+.tabs .tabs-title {
+  min-width: calc(100% / var(--tab-nb));
+  position: relative;
+  z-index: 2;
+  float: left;
+  text-align: center;
+  text-shadow: none;
+}
+
+.tabs-title > a:focus,
+.tabs-title > a[aria-selected="true"] {
+  background: none;
+}
+
+.filters {
+  position: relative;
+  border-width: 0 0 2px;
+  border-style: solid;
+  border-color: var(--medium-gray);
+  margin-bottom: 2rem;
+}
+
+.filters a {
+  font-size: 1.05rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1.25rem 1.5rem;
+  outline: 0;
+  height: 100%;
+}
+
+div[class*="tabs-style-"] .tabs {
+  border-width: 0 0 2px;
+  border-style: solid;
+  border-color: var(--medium-gray);
+}
+
+/* ------------------------------------ *\
+  ==MEDIA QUERIES
+\* ------------------------------------ */
+@media only screen and (max-width: 64em) {
+  .filters .filter-link {
+    padding: .5rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+  }
+
+  .filters {
+    border: 0;
+    padding: 0 4rem;
+  }
+
+  .filters:before {
+    display: none;
+  }
+
+  .filters .filter-link.is-active {
+    transition: all ease-in-out .3s;
+    background-color: var(--white);
+    border-bottom: 4px solid var(--blue);
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .paragraph-tabs > .accordion {
+    --i: -1;
+  }
+}

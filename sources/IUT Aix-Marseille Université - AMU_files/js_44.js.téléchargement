@@ -1,0 +1,72 @@
+"use strict";
+(function () {
+    /* Transforme une SelectList en liste de liens */
+    function transformFilter() {
+        const form = (document.querySelector('.js-form-type-select'));
+        const filter = (document.querySelector('.views-exposed-form select'));
+        const container = (document.createElement('div'));
+        form === null || form === void 0 ? void 0 : form.classList.add('grid-x', 'align-center');
+        container === null || container === void 0 ? void 0 : container.classList.add('filters', 'grid-x', 'large-12', 'medium-5', 'small-10');
+        container === null || container === void 0 ? void 0 : container.setAttribute('id', 'filters');
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const linkID = urlParams.get('target_id');
+        const QueryUrlPage = window.location.pathname.split('?');
+        const urlPage = QueryUrlPage[0];
+        Array.from(document.querySelectorAll('.views-exposed-form select option'))
+            .forEach((el) => {
+            const link = (document.createElement('a'));
+            link === null || link === void 0 ? void 0 : link.classList.add('filter-link', 'large-auto', 'medium-12', 'small-12');
+            link === null || link === void 0 ? void 0 : link.setAttribute('data-value', el.getAttribute('value'));
+            link === null || link === void 0 ? void 0 : link.setAttribute('href', `${urlPage}?target_id=${el.getAttribute('value')}#filters`);
+            link.text = el.text;
+            container === null || container === void 0 ? void 0 : container.append(link);
+            if (linkID === null && el.getAttribute('value') === 'All') {
+                link === null || link === void 0 ? void 0 : link.classList.add('is-active');
+            }
+            if (el.getAttribute('value') === linkID) {
+                link === null || link === void 0 ? void 0 : link.classList.add('is-active');
+            }
+        });
+        filter === null || filter === void 0 ? void 0 : filter.after(container);
+    }
+    /* Simulation du clique sur une thématique */
+    function clickFilter() {
+        Array.from(document.querySelectorAll('.views-exposed-form .filters a.filter-link'))
+            .forEach((el) => {
+            el.addEventListener('click', () => {
+                const activeList = (document.querySelector('.filters .is-active'));
+                activeList === null || activeList === void 0 ? void 0 : activeList.classList.remove('is-active');
+                el.classList.add('is-active');
+                const selectList = document.querySelector('.views-exposed-form select');
+                selectList.value = el.getAttribute('data-value');
+                const button = document.querySelector('.js-form-submit');
+                button.click();
+            });
+        });
+    }
+    function moveSlide(el, num, pos) {
+        el.addEventListener('click', ((j) => function () {
+            document.documentElement.style.setProperty('--left-slide', `${pos}`);
+        })(num));
+    }
+    /* Effet tabs Slider sur le select list des vues actualités */
+    function sliderInit() {
+        const selSlide = (document.querySelectorAll('.filter-link'));
+        const nbTabs = selSlide.length;
+        const widthSlide = `${100 / nbTabs}%`;
+        document.documentElement.style.setProperty('--width-slide', `${widthSlide}`);
+        for (let i = 0; i < nbTabs; i++) {
+            if (selSlide[i].classList.contains('is-active')) {
+                const posSlide = `${(100 / nbTabs) * i}%`;
+                document.documentElement.style.setProperty('--left-slide', `${posSlide}`);
+            }
+            const posSlide = `${(100 / nbTabs) * i}%`;
+            moveSlide(selSlide[i], i, posSlide);
+        }
+    }
+    transformFilter();
+    clickFilter();
+    sliderInit();
+}());
+//# sourceMappingURL=amu_iut_filter_select.js.map

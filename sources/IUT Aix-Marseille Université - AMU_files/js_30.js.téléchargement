@@ -1,0 +1,56 @@
+"use strict";
+(function () {
+    /**
+     * Effet Slider sur un element tabTrigger via sa classe (ex: tabs, selecteur de filtres exposés..)
+     * Initialise ou met à jour la position du slider en fonction de l'élement actif
+     */
+    function sliderInit(tabTrigger) {
+        const selSlide = (document.querySelectorAll(tabTrigger));
+        const nbTabs = selSlide.length;
+        const widthSlide = `${100 / nbTabs}%`;
+        document.documentElement.style.setProperty('--width-slide', `${widthSlide}`);
+        for (let i = 0; i < nbTabs; i++) {
+            if (selSlide[i].classList.contains('is-active')) {
+                const posSlide = `${(100 / nbTabs) * i}%`;
+                document.documentElement.style.setProperty('--left-slide', `${posSlide}`);
+            }
+        }
+    }
+    /**
+     * Surveille le click sur les éléments avec effet slider et actualise la position via sliderInit
+     * parentClick : Classe du container du lien
+     * activeClick : Classe du lien cliqué
+     * */
+    function clickTab(parentClick, activeClick) {
+        Array.from(document.querySelectorAll(`${activeClick}`))
+            .forEach((el) => {
+            el.addEventListener('click', ((event) => {
+                const activeList = (document.querySelector('.filters .is-active'));
+                activeList === null || activeList === void 0 ? void 0 : activeList.classList.remove('is-active');
+                event.preventDefault();
+                el.classList.add('is-active');
+                setTimeout(() => {
+                    sliderInit(parentClick);
+                }, 5);
+            }));
+        });
+    }
+    /**
+     * Initialise les functions de l'effet slide une fois la page chargée
+     */
+    document.addEventListener('DOMContentLoaded', () => {
+        const isThereTabs = (document.querySelectorAll('.tabs'));
+        const isThereFilter = (document.querySelectorAll('.filters'));
+        if (isThereTabs.length > 0) {
+            setTimeout(() => {
+                sliderInit('.tabs-title');
+            }, 350);
+            clickTab('.tabs-title', '.tabs-title a');
+        }
+        if (isThereFilter.length > 0) {
+            sliderInit('.filter-link');
+            clickTab('.filter-link', '.filter-link');
+        }
+    });
+}());
+//# sourceMappingURL=amu_iut_tabs.js.map

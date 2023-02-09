@@ -1,0 +1,10 @@
+jQuery($ => {
+  $(document).ready(() => {
+    $("table>thead>tr>th").each(function() {
+      $(this).attr("scope", "col");
+    });
+    $("table>tbody>tr>th").each(function() {
+      $(this).attr("scope", "row");
+    });
+  });
+});

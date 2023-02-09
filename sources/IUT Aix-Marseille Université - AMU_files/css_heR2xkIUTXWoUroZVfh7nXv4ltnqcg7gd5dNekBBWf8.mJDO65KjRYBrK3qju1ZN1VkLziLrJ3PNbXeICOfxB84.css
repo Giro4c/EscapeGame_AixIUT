@@ -1,0 +1,24 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS............You’re reading it!
+ */
+
+.page-breadcrumb {
+  padding: 1.2rem 0 0;
+}
+
+.breadcrumbs {
+  margin: 0;
+}
+
+.breadcrumbs a.current-page {
+  color: inherit;
+  cursor: text;
+}
+
+.breadcrumbs a.current-page:hover {
+  text-decoration: none;
+}

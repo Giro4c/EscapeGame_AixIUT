@@ -1,0 +1,264 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS............You’re reading it!
+ * AFFICHAGE FULL......
+ * AFFICHAGE COLONNE...
+ * AFFICHAGE LIGNE.....
+ * AFFICHAGE LIST.....
+ * AFFICHAGE TIMELINE..
+ * AGENDA..............
+ * RGAA................
+ * MEDIA QUERIES ......
+ */
+
+.actus {
+  padding: 0 2rem;
+}
+
+.actus ul {
+  margin-left: 0;
+}
+
+.actus > ul > li {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.actus .actu--teaser .card,
+.actus .actu--list .card {
+  border: 0;
+  height: 100%;
+}
+
+.actus .actu--teaser .card-section,
+.actus .actu--list .card-section {
+  padding-left: 0;
+}
+
+/* ------------------------------------ *\
+  ==AFFICHAGE FULL
+\* ------------------------------------ */
+
+.actu--full .actu__image-actu {
+  margin: 1rem 0;
+}
+
+.actu--full .actu__image-actu img {
+  float: left;
+  margin-right: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ------------------------------------ *\
+  ==AFFICHAGE COLONNE
+\* ------------------------------------ */
+.actu--teaser.actu--col {
+  position: relative;
+  padding: 1rem;
+  border: 1px solid #000;
+}
+
+.actu--teaser.actu--col h2 {
+  font-size: 1.5rem;
+}
+
+.actu--teaser.actu--col .actu__date-texte {
+  font-size: .75rem;
+}
+
+.actu--teaser .actu__title:after {
+  border: 1px solid #000;
+  content: "";
+  display: block;
+  margin: .3rem 0 0;
+  width: 3.4rem;
+}
+
+.actu--teaser.actu--col .actu__more-link {
+  text-align: center;
+}
+
+.actu--teaser.actu--col .actu__more-link span {
+  padding: .5rem;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+@media screen and (min-width: 64em) {
+  .actu--teaser.actu--col .actu__more-link {
+    text-align: right;
+  }
+
+  .actu--teaser.actu--col .actu__image {
+    width: 170px;
+  }
+}
+
+/* ------------------------------------ *\
+  ==AFFICHAGE LIGNE
+\* ------------------------------------ */
+
+.actu--teaser.actu--row {
+  height: 100%;
+  position: relative;
+}
+
+.actu--teaser.actu--row .actu__title {
+  color: #000;
+  font-size: 1.25rem;
+}
+
+.actu--teaser.actu--row .actu__more-link {
+  position: absolute;
+  bottom: 0;
+}
+
+.actu--teaser.actu--row .actu__body {
+  margin-bottom: .5rem;
+}
+
+/* ------------------------------------ *\
+  ==AFFICHAGE LIST
+\* ------------------------------------ */
+
+.actu--list {
+  height: 100%;
+  position: relative;
+}
+
+.actu--list .actu__title {
+  color: #000;
+  font-size: 1.25rem;
+}
+
+.actu--list .actu__more-link {
+  position: absolute;
+  bottom: 0;
+}
+
+.actu--list .actu__body {
+  margin-bottom: .5rem;
+}
+
+/* ------------------------------------ *\
+  ==AFFICHAGE TIMELINE
+\* ------------------------------------ */
+
+.actu--timeline .actu__date-texte {
+  text-align: left;
+}
+
+.actu--timeline .actu__title {
+  color: #101227;
+  font-weight: bold;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.actus .views-timeline {
+  border-left: 2px solid #ccc;
+  list-style: none;
+  padding: 0 50px;
+  margin-left: 1rem; /* Pour le scroll et le responsive sinon collé */
+}
+
+.bg-light.bg-lighter .no-bg .views-timeline,
+.bg-light.bg-lighter .no-bg .views-timeline a {
+  color: #4c4c4c;
+}
+
+.bg-light.bg-lighter .no-bg .views-timeline .actu__title--link {
+  color: #0071b9;
+  margin-top: 0;
+}
+
+.bg-light.bg-lighter .no-bg .views-timeline .actu--timeline:hover .actu__title--link {
+  text-decoration: underline;
+}
+
+.views-timeline li {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.views-timeline > li:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border: none;
+}
+
+.views-timeline > li:after {
+  position: absolute;
+  display: block;
+  top: 5px;
+  left: -57px;
+  background: #0071b9;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  content: "";
+}
+
+/* ------------------------------------ *\
+  ==AGENDA
+\* ------------------------------------ */
+
+.fc-head table {
+  margin-bottom: 0;
+}
+
+.fc-event {
+  border: 0;
+}
+
+.fc-event a {
+  color: #fff;
+}
+
+.fc-event:hover a {
+  color: #fff;
+  border-bottom: 1px dotted #fff;
+}
+
+/* ------------------------------------ *\
+  ==RGAA
+\* ------------------------------------ */
+.actu--teaser a:focus::before,
+.actu--timeline a:focus::before,
+.actu--list a:focus::before {
+  outline: 0;
+  box-shadow: 0 0 0 3px #000;
+  border-radius: .375rem;
+}
+
+.actu--teaser.actu--row:hover .actu__more-link span,
+.actu--teaser.actu--col:hover .actu__more-link span,
+.actu--list:hover .actu__more-link span {
+  text-decoration: underline;
+}
+
+.actu__more-link span::before {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* ------------------------------------ *\
+  ==MEDIA QUERIES
+\* ------------------------------------ */
+@media screen and (max-width: 39.9375em) {
+  .actus {
+    padding: 0;
+  }
+
+  .actus .views-timeline {
+    padding: 0 2rem;
+  }
+
+  .views-timeline > li::after {
+    left: -2.43rem;
+  }
+}

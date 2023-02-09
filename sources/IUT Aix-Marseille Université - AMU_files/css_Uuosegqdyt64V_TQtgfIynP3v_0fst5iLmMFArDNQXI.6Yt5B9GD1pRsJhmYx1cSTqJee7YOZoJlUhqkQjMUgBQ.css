@@ -1,0 +1,37 @@
+.edit-link-wrapper {
+  position: relative;
+}
+
+.edit-link-wrapper:hover,
+.edit-link-wrapper:hover figure *,
+.bg-dark.bg-hv-light .edit-link-wrapper:hover figure *,
+.bg-dark.bg-hv-light .edit-link-wrapper:hover {
+  background-color: #f8ee88;
+}
+
+.bg-dark .edit-link-wrapper:hover,
+.bg-dark .edit-link-wrapper:hover figure *,
+.bg-hv-dark .edit-link-wrapper:hover figure *,
+.bg-hv-dark .edit-link-wrapper:hover {
+  background-color: cornflowerblue;
+}
+
+.paragraph.paragraph-text .edit-link-wrapper:hover .edit-link {
+  visibility: visible;
+}
+
+.paragraph.paragraph-text .edit-link-wrapper a.edit-link {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #f0f0f0;
+  visibility: hidden;
+  display: block;
+  font-size: .85rem;
+  padding: .18rem;
+  background-color: #4f4e4e;
+}
+
+.paragraph.paragraph-text .edit-link-wrapper a.edit-link:hover {
+  text-decoration: none;
+}

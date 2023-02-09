@@ -1,0 +1,23 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS..............You’re reading it!
+ * VARIABLES ..............................
+*/
+
+/* ------------------------------------ *\
+  ==VARIABLES
+\* ------------------------------------ */
+:root {
+  /* Basic color scheme */
+  --light-gray: #fcfcfc;
+  --medium-gray: #eee;
+  --dark-gray: #4b4b4b;
+  --black: #101227;
+  --white: #fff;
+  --gold: #e8ce7e;
+  --midblue: #146090;
+  --indigo: #5458c9;
+}

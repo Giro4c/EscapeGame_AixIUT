@@ -1,0 +1,437 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS............You’re reading it!
+ * CARD DEFAUT .............................
+ * .... CARD CONTAINER .....................
+ * .... CARD LINK ..........................
+ * .... CARD CONTENT .......................
+
+ * STYLE 1 ..................................
+ * .... STYLE 1 CARD CONTAINER ..............
+ * .... STYLE 1 CARD CONTENT ................
+ * .... STYLE 1 CARD LINK ...................
+ * .... STYLE 1 CARD HOVERS .................
+
+ * STYLE 2 ..................................
+ * .... STYLE 2 CARD CONTAINER ..............
+ * .... STYLE 2 CARD CONTENT ................
+ * .... STYLE 2 CARD LINK ...................
+ * .... STYLE 2 CARD HOVERS .................
+
+ * STYLE 3 ..................................
+ * .... STYLE 3 CARD CONTAINER ..............
+ * .... STYLE 3 CARD CONTENT ................
+ * .... STYLE 3 CARD LINK ...................
+ * .... STYLE 3 CARD IMAGE ..................
+ * .... STYLE 3 CARD HOVERS .................
+
+ * STYLE 4 ..............................
+ * .... STYLE 3 CARD CONTAINER ..............
+ * .... STYLE 3 CARD CONTENT ................
+ * .... STYLE 3 CARD LINK ...................
+ * .... STYLE 3 CARD HOVERS .................
+
+ * MEDIA QUERIES ........................
+
+*/
+
+/* ------------------------------------ *\
+  == CARD DEFAULT
+\* ------------------------------------ */
+
+/* == CARD CONTAINER -------------------- *\
+\* -------------------------------------- */
+.card {
+  position: relative;
+}
+
+.card--model1.card {
+  position: relative;
+  border: unset;
+  background-color: transparent;
+}
+
+/* == CARD LINK ------------------------- *\
+\* -------------------------------------- */
+.card--model1 .card__link:focus ~ .card__content .card__header,
+.card--model1 .card__link:hover ~ .card__content .card__header,
+.card--model1 .card__link:focus ~ .card__content,
+.card--model1 .card__link:hover ~ .card__content {
+  background-color: rgba(0, 0, 0, .5);
+}
+
+/* == CARD CONTENT ---------------------- *\
+\* -------------------------------------- */
+.card--model1 .card__content {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+}
+
+.card--model1 .card__content p {
+  margin-bottom: .2rem;
+}
+
+.card--model1 .card__header {
+  padding: .3rem;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.card--model1 .card__footer {
+  position: absolute;
+  bottom: 0;
+  padding: .2rem .5rem 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+/* headings */
+.card--model1 .card__content .card__header h2,
+.card--model1 .card__content .card__header h3,
+.card--model1 .card__content .card__header h4 {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+/* ------------------------------------ *\
+  ==STYLE 1
+\* ------------------------------------ */
+
+/* == CARD CONTENT ---------------------- *\
+\* -------------------------------------- */
+.card--model1.card--style1 .card__header {
+  margin: 1rem;
+  padding: .3rem;
+  text-align: center;
+  background-color: rgba(0, 85, 139, .9);
+}
+
+.card--model1.card--style1 .card__footer {
+  text-align: center;
+  background-color: rgba(56, 62, 76, .9);
+}
+
+.card--model1.card--style1 .card__header h2::after,
+.card--model1.card--style1 .card__header h3::after,
+.card--model1.card--style1 .card__header h4::after {
+  position: relative;
+  display: block;
+  margin: .2rem auto .5rem;
+  width: 50px;
+  border-color: #fff;
+  border-width: 0 0 .1em;
+  border-style: solid;
+  content: "";
+}
+
+/* == CARD LINK ------------------------- *\
+\* -------------------------------------- */
+.card--model1.card--style1 .card__link {
+  text-align: center;
+  font-size: 3rem;
+}
+
+/* == CARD HOVER ------------------------- *\
+\* --------------------------------------- */
+.card--model1.card--style1 .card__link:focus ~ .card__content .card__header,
+.card--model1.card--style1 .card__link:hover ~ .card__content .card__header,
+.card--model1.card--style1 .card__link:focus ~ .card__content,
+.card--model1.card--style1 .card__link:hover ~ .card__content {
+  background-color: #383e4c;
+}
+
+.card--model1.card--style1 .card__link:focus::before,
+.card--model1.card--style1 .card__link:hover::before {
+  font-family: "Font Awesome 5 pro", sans-serif;
+  font-weight: 100;
+  content: "\f055";
+  color: #fff;
+  padding-top: 40%;
+}
+
+/* ------------------------------------ *\
+  ==STYLE 2
+\* ------------------------------------ */
+
+/* == CARD CONTENT ---------------------- *\
+\* -------------------------------------- */
+.card--model1.card--style2 .card__header {
+  margin: 1rem;
+  padding: .3rem;
+  text-align: center;
+  background-color: rgba(84, 128, 80, .9);
+}
+
+.card--model1.card--style2 .card__footer {
+  bottom: -10%;
+  text-align: center;
+  opacity: 0;
+  background-color: #558151;
+  transition: all 1s;
+}
+
+.card--model1.card--style2 .card__header h2::after,
+.card--model1.card--style2 .card__header h3::after,
+.card--model1.card--style2 .card__header h4::after {
+  position: relative;
+  display: block;
+  margin: .2rem auto .5rem;
+  width: 50px;
+  border-color: #fff;
+  border-width: 0 0 .1em;
+  border-style: solid;
+  content: "";
+}
+
+/* == CARD LINK ------------------------- *\
+\* -------------------------------------- */
+.card--model1.card--style2 .card__link {
+  text-align: center;
+  font-size: 3rem;
+}
+
+/* == CARD HOVER ------------------------- *\
+\* --------------------------------------- */
+.card--model1.card--style2 .card__link:focus ~ .card__content .card__header,
+.card--model1.card--style2 .card__link:hover ~ .card__content .card__header,
+.card--model1.card--style2 .card__link:focus ~ .card__content,
+.card--model1.card--style2 .card__link:hover ~ .card__content {
+  background-color: #558151;
+}
+
+.card--model1.card--style2 .card__link:focus::before,
+.card--model1.card--style2 .card__link:hover::before {
+  font-family: "Font Awesome 5 pro", sans-serif;
+  font-weight: 100;
+  content: "\f055";
+  color: #fff;
+  padding-top: 40%;
+}
+
+.card--model1.card--style2 .card__link:focus ~ .card__content .card__footer,
+.card--model1.card--style2 .card__link:hover ~ .card__content .card__footer {
+  bottom: 5rem;
+  opacity: 1;
+}
+
+/* ------------------------------------ *\
+  ==STYLE 3
+\* ------------------------------------ */
+
+/* == CARD CONTENT ---------------------- *\
+\* -------------------------------------- */
+.card--model1.card--style3 .card__header {
+  margin: 1rem;
+  padding: .3rem;
+  text-align: center;
+  background-color: rgba(69, 6, 0, .83);
+}
+
+.card--model1.card--style3 .card__footer {
+  text-align: center;
+  color: #000;
+  opacity: 1;
+  background-color: rgba(255, 255, 255, .5);
+  transition: all 1s;
+  border-bottom: 3px solid rgba(132, 12, 0, .83);
+}
+
+.card--model1.card--style3 .card__header h2::after,
+.card--model1.card--style3 .card__header h3::after,
+.card--model1.card--style3 .card__header h4::after {
+  position: relative;
+  display: block;
+  margin: .2rem auto .5rem;
+  width: 50px;
+  border-color: #fff;
+  border-width: 0 0 .1em;
+  border-style: solid;
+  content: "";
+}
+
+/* == CARD LINK ------------------------- *\
+\* -------------------------------------- */
+.card--model1.card--style3 .card__link {
+  text-align: center;
+  font-size: 3rem;
+}
+
+/* == CARD HOVER ------------------------- *\
+\* --------------------------------------- */
+.card--model1.card--style3 .card__link:focus ~ .card__content .card__header,
+.card--model1.card--style3 .card__link:hover ~ .card__content .card__header {
+  background-color: rgba(69, 6, 0, .83);
+}
+
+.card--model1.card--style3 .card__link:focus ~ .card__content,
+.card--model1.card--style3 .card__link:hover ~ .card__content {
+  background-color: rgba(132, 12, 0, .3);
+  transition: all 1s;
+}
+
+.card--model1.card--style3 .card__link::before {
+  padding-top: 30%;
+  opacity: 0;
+  transition: padding-top 1s, opacity 1s;
+}
+
+.card--model1.card--style3 .card__link:focus::before,
+.card--model1.card--style3 .card__link:hover::before {
+  font-family: "Font Awesome 5 Duotone", sans-serif;
+  font-weight: 800;
+  content: "\f055";
+  color: #fff;
+  padding-top: 80%;
+  opacity: 1;
+}
+
+.card--model1.card--style3 .card__link:focus ~ .card__content .card__footer,
+.card--model1.card--style3 .card__link:hover ~ .card__content .card__footer {
+  bottom: -50%;
+  opacity: 0;
+}
+
+.card--model1.card--style3 .card__link:focus ~ .card__img-container img,
+.card--model1.card--style3 .card__link:hover ~ .card__img-container img {
+  filter: blur(2px);
+}
+
+/* ------------------------------------ *\
+  ==STYLE 4
+\* ------------------------------------ */
+
+/* == CARD CONTAINER -------------------- *\
+\* -------------------------------------- */
+.card--model1.card--style4.card {
+  border-radius: 30px;
+}
+
+/* == CARD CONTENT ---------------------- *\
+\* -------------------------------------- */
+.card--model1.card--style4 .card__img-container {
+  overflow: hidden;
+}
+
+.card--model1.card--style4 .card__img-container img {
+  transition: all .5s;
+}
+
+.card--model1.card--style4 .card__header {
+  position: absolute;
+  margin: 0;
+  top: 60%;
+  width: 100%;
+  transition: all .5s;
+  background-color: rgba(0, 85, 139, .9);
+  text-align: center;
+}
+
+.card--model1.card--style4 .card__footer {
+  opacity: 0;
+  bottom: -50%;
+  transition: all .5s;
+  background-color: rgba(56, 62, 76, .9);
+  text-align: center;
+}
+
+.card--model1.card--style4 .card__header h2::after,
+.card--model1.card--style4 .card__header h3::after,
+.card--model1.card--style4 .card__header h4::after {
+  position: relative;
+  display: block;
+  margin: .2rem auto .5rem;
+  width: 50px;
+  border-color: #fff;
+  border-width: 0 0 .1em;
+  border-style: solid;
+  content: "";
+}
+
+/* == CARD LINK ------------------------- *\
+\* -------------------------------------- */
+.card--model1.card--style4 .card__link {
+  text-align: center;
+  font-size: 3rem;
+  opacity: 1;
+  transition: all .5s;
+  z-index: 1;
+}
+
+.card--model1.card--style4 .card__link::before {
+  font-family: "Font Awesome 5 Duotone", sans-serif;
+  font-weight: 800;
+  content: "\f102";
+  color: #fff;
+  padding-top: 40%;
+  transition: padding-top 1s, opacity 1s;
+}
+
+.card--model1.card--style4 .card__link:focus::before,
+.card--model1.card--style4 .card__link:hover::before {
+  color: #fff;
+  padding-top: 0;
+}
+
+.card--model1.card--style4 .card__link:focus,
+.card--model1.card--style4 .card__link:hover {
+  padding: 0 .2rem;
+  opacity: 0;
+}
+
+/* == CARD HOVER ------------------------- *\
+\* --------------------------------------- */
+.card--model1.card--style4 .card__link:focus ~ .card__content .card__header,
+.card--model1.card--style4 .card__link:hover ~ .card__content .card__header {
+  top: 20%;
+  background-color: rgba(0, 85, 139, .9);
+}
+
+.card--model1.card--style4 .card__link:focus ~ .card__content .card__footer,
+.card--model1.card--style4 .card__link:hover ~ .card__content .card__footer {
+  opacity: 1;
+  bottom: 0;
+}
+
+.card--model1.card--style4 .card__link:focus ~ .card__content,
+.card--model1.card--style4 .card__link:hover ~ .card__content {
+  background-color: unset;
+}
+
+.card--model1.card--style4 .card__link:focus ~ .card__img-container img,
+.card--model1.card--style4 .card__link:hover ~ .card__img-container img {
+  transform: scale(1.2);
+  filter: blur(3px);
+}
+
+/* ------------------------------------ *\
+  ==MEDIA QUERIES
+\* ------------------------------------ */
+@media screen and (max-width: 39.9375em) {
+  .card--model1.card--style1.card {
+    background-color: rgba(0, 85, 139, .9);
+  }
+
+  .card--model1.card--style1.card .card__content .card__header {
+    background-color: transparent;
+    margin: 0;
+  }
+
+  .card--model1.card--style1.card .card__footer {
+    min-height: 2rem;
+  }
+
+  .card--model1 .card__img-container {
+    display: none;
+  }
+
+  .card--model1 .card__content .card__footer,
+  .card--model1 .card__content .card__header,
+  .card--model1 .card__content {
+    position: relative;
+  }
+}

@@ -1,0 +1,50 @@
+.accessdirect__label {
+  margin-top: 1rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.accessdirect__label span i {
+  margin: .5rem;
+}
+
+.accessdirect__label span {
+  border: 1px solid #0071b9;
+  padding: .5rem;
+  color: #0071b9;
+}
+
+.block-pieddepage {
+  border-top: 2px dotted #ccc;
+  margin-top: 40px;
+}
+
+.block-pieddepage .menu {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0 2rem;
+  justify-content: center;
+}
+
+.block-pieddepage .menu > li {
+  margin-bottom: 1.5rem;
+}
+
+.block-pieddepage .menu li > span {
+  font-weight: bold;
+  color: #0a0a0a;
+  text-transform: uppercase;
+}
+
+.block-pieddepage .menu li ul {
+  list-style: none;
+}
+
+.menu ul {
+  margin: 0;
+}
+
+.block-pieddepage .menu a {
+  color: #00558a;
+  padding: .2rem 0;
+}

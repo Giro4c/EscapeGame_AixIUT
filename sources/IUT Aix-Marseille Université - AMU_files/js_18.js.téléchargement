@@ -1,0 +1,74 @@
+jQuery($ => {
+  $(document).ready(() => {
+    $(".paragraph-block.accordion-mode:not(.border-fieldset) .block-header").on(
+      "click",
+      function(e) {
+        $(this)
+          .parent()
+          .find(".content")
+          .toggle();
+        $(this)
+          .closest(".accordion-mode")
+          .toggleClass("is-active");
+      }
+    );
+
+    $(".paragraph-block.accordion-mode.border-fieldset .block-header").on(
+      "click",
+      function(e) {
+        $(this)
+          .parent()
+          .find(".content")
+          .next()
+          .toggle();
+        $(this)
+          .closest(".accordion-mode")
+          .toggleClass("is-active");
+      }
+    );
+
+    $(".paragraph-block.accordion-mode .block-header").on("click", function(e) {
+      $(this)
+        .attr("aria-expanded", (i, attr) =>
+          attr === "true" ? "false" : "true"
+        )
+        .attr("aria-selected", (i, attr) =>
+          attr === "true" ? "false" : "true"
+        );
+
+      $(this)
+        .closest(".accordion-mode")
+        .find(".content")
+        .attr("aria-hidden", (i, attr) => (attr === "true" ? "false" : "true"));
+    });
+
+    $(".accordion-title :header").each(function() {
+      const parent = $(this).parent();
+      if (window.top.location.hash.substr(1)) {
+        if (
+          $(this).attr("id") === window.top.location.hash.substr(1) &&
+          !parent.parent().hasClass("is-active")
+        ) {
+          const target = $(this)
+            .parent()
+            .next();
+          target.toggle();
+          target.attr("aria-hidden", "false");
+          parent.attr({
+            "aria-expanded": "true",
+            "aria-hidden": "false",
+            "aria-selected": "true"
+          });
+          parent.focus();
+          window.scrollBy(0, -160);
+        }
+      }
+    });
+    if ($(".accordion-item").attr("role") === "presentation") {
+      $(".accordion-item").attr("role", "");
+    }
+    if ($(".tabs-title").attr("role") === "presentation") {
+      $(".tabs-title").attr("role", "tab");
+    }
+  });
+});

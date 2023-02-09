@@ -1,0 +1,318 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS............You’re reading it!
+ */
+
+.site-header {
+  background-color: #00558b;
+}
+
+.logo-wrapper {
+  padding: 1rem;
+}
+
+.logo-wrapper img {
+  width: 380px;
+}
+
+.top-bar {
+  z-index: 100;
+}
+
+/* ........................Top bar menu - Bottom position ................ */
+.top-bar--bottom,
+.top-bar--bottom ul:not(.submenu) {
+  background-color: #cae0ee;
+}
+
+.top-bar--bottom ul.submenu {
+  background-color: #efefef;
+  list-style: none;
+  margin-left: 0;
+  width: max-content;
+  margin-top: .25rem;
+}
+
+.top-bar--bottom .top-bar-left {
+  justify-content: center;
+}
+
+.top-bar--bottom .top-bar-left li a {
+  border: solid 1px transparent;
+  text-transform: uppercase;
+}
+
+.top-bar--bottom .top-bar-left .menu > li > a {
+  color: #000;
+}
+
+.top-bar--bottom .top-bar-left li.is-submenu-item a {
+  text-transform: inherit;
+  color: inherit;
+}
+
+.top-bar--bottom .top-bar-left li a:hover,
+.top-bar--bottom .top-bar-left li.is-dropdown-submenu-parent.is-active > a {
+  border: solid 1px #00558b;
+}
+
+.top-bar--bottom .top-bar-left li.is-submenu-item a:hover {
+  border: solid 1px transparent;
+  background-color: #e4e4e4;
+}
+
+.top-bar--bottom .menu .active > a {
+  background-color: inherit;
+  border-color: #00558b;
+  border-style: dotted;
+}
+
+.site-top-header.large-order-1.clone .block-menu {
+  width: 100%;
+}
+
+.site-top-header.large-order-1.clone .title-bar-left .menu:not(.social-icon) {
+  display: block;
+}
+
+/* ........................Top bar menu - Aside position ................ */
+.top-bar--aside,
+.top-bar--aside ul {
+  background-color: inherit;
+}
+
+.top-bar--aside ul.submenu {
+  background-color: #efefef;
+  list-style: none;
+  margin-left: 0;
+  width: max-content;
+  margin-top: .25rem;
+}
+
+.top-bar--aside .top-bar-left {
+  justify-content: right;
+}
+
+.top-bar--aside .top-bar-left li a {
+  text-transform: uppercase;
+  border: dotted 1px transparent;
+}
+
+.bg-dark.top-bar--aside .top-bar-left > ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.bg-light.top-bar--aside .top-bar-left li a {
+  color: #000;
+}
+
+.top-bar--aside .top-bar-left li.is-submenu-item a {
+  text-transform: inherit;
+  color: #000;
+}
+
+.bg-dark.top-bar--aside .top-bar-left .menu > li.is-dropdown-submenu-parent > a:focus {
+  color: #fff;
+}
+
+.bg-light.top-bar--aside .top-bar-left .menu > li.is-dropdown-submenu-parent > a:focus {
+  color: #000;
+}
+
+.bg-dark.top-bar--aside .top-bar-left .menu > li.is-dropdown-submenu-parent > a::after {
+  border-top-color: #fff;
+}
+
+.bg-light.top-bar--aside .top-bar-left .menu > li.is-dropdown-submenu-parent > a::after {
+  border-top-color: #000;
+}
+
+.bg-dark.top-bar--aside .top-bar-left li a:hover,
+.bg-dark.top-bar--aside .top-bar-left li.is-dropdown-submenu-parent.is-active > a {
+  border: dotted 1px #fff;
+}
+
+.bg-light.top-bar--aside .top-bar-left li a:hover,
+.bg-light.top-bar--aside .top-bar-left li.is-dropdown-submenu-parent.is-active > a {
+  border: dotted 1px #000;
+}
+
+.top-bar--aside .top-bar-left li.is-submenu-item a:hover {
+  background-color: #e4e4e4;
+}
+
+.top-bar .top-bar-left .is-dropdown-submenu-item a {
+  padding: .45rem 1rem;
+}
+
+.title-bar {
+  background-color: #e6e6e6;
+}
+
+.top-bar--aside .menu .active > a {
+  background-color: inherit;
+  border-color: #1779ba;
+  border-style: dotted;
+  color: inherit;
+}
+
+.bg-dark.top-bar--aside .menu .active > a {
+  background-color: inherit;
+  border-color: #fff;
+  border-style: dotted;
+}
+
+/* ........................TOP header................ */
+.site-top-header {
+  background-color: #e6e6e6;
+}
+
+.site-top-header .title-bar {
+  background-color: inherit;
+  padding: 0;
+}
+
+.site-top-header .title-bar .menu li a {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.site-top-header .menu a {
+  padding: .7rem .5rem;
+}
+
+.title-bar .menu-icon.open::after {
+  position: absolute;
+  height: 0;
+  top: -.5rem;
+  right: 1rem;
+  color: #000;
+  content: "\f00d";
+  font-family: "Font Awesome 5 pro", sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  box-shadow: unset;
+}
+
+/* ........................BOTTOM header................ */
+.site-bottom-header ul {
+  margin: inherit;
+}
+
+/* ........................Title bar (mobile display)................ */
+@media screen and (max-width: 63.9375em) {
+
+  .title-bar.main-menu-responsive {
+    position: relative;
+    padding: 0;
+    height: 2.5rem;
+  }
+
+  .title-bar .menu-icon {
+    width: 30px;
+    display: block;
+    top: .8rem;
+  }
+
+  .title-bar .menu-icon::after {
+    background: #222;
+    box-shadow: 0 7px 0 #222, 0 14px 0 #222;
+  }
+
+  .user-logged-inin .top-bar {
+    top: 4.5rem;
+  }
+
+  .top-bar {
+    position: absolute;
+    top: 2.5rem;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: dotted 1px #b8b8b8;
+    box-shadow: 0 4px 6px -2px gray;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .top-bar > div {
+    width: 100%;
+  }
+
+  .top-bar--bottom .top-bar-left,
+  .top-bar--aside .top-bar-left {
+    justify-content: unset;
+  }
+
+  .top-bar-left > nav,
+  .top-bar-left > nav .menu,
+  .top-bar-left > nav .submenu {
+    width: 100%;
+    background: #fff;
+  }
+
+  .title-bar .menu-icon,
+  .top-bar-left *:focus,
+  .top-bar-left *:active {
+    outline: none;
+  }
+
+  .top-bar--bottom .top-bar-left li a:hover {
+    border-bottom: solid 1px transparent;
+  }
+
+  .top-bar ul,
+  .drilldown a {
+    background-color: inherit;
+  }
+
+  .drilldown .is-drilldown-submenu {
+    min-height: 100vh;
+  }
+
+  .bg-dark.top-bar--aside .top-bar-left li.is-submenu-item a,
+  .bg-light.top-bar--aside .top-bar-left li.is-submenu-item a {
+    text-transform: inherit;
+    color: #000;
+  }
+
+  .bg-dark.top-bar--aside .top-bar-left li a,
+  .bg-dark.top-bar--bottom .top-bar-left li a,
+  .bg-light.top-bar--aside .top-bar-left li a,
+  .bg-light.top-bar--bottom .top-bar-left li a {
+    color: #000;
+  }
+
+  .site-top-header.clone .title-bar {
+    background-color: #fff;
+    display: block;
+    border-top: dotted 1px #b8b8b8;
+    padding-left: 0;
+  }
+
+  .site-top-header.clone .title-bar .menu {
+    display: block;
+    padding: 1rem 0 0;
+  }
+
+  .site-top-header.clone .title-bar > .cell {
+    text-align: left;
+  }
+
+  .site-top-header.clone .title-bar .menu li,
+  .site-top-header.clone .title-bar .menu li:first-of-type {
+    border: unset;
+  }
+
+  .site-top-header:not(.clone) {
+    display: none;
+  }
+
+  .site-top-header.clone .title-bar .menu li a:hover {
+    background: unset;
+  }
+}

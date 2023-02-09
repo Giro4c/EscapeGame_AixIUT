@@ -1,0 +1,166 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS............You’re reading it!
+ */
+.align-right,
+.align-left {
+  float: none;
+}
+
+.region-wrapper {
+  padding-top: 4.2rem;
+  padding-bottom: 4.2rem;
+  display: flex;
+}
+
+@media screen and (max-width: 63.9375em) {
+  .region-wrapper {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.region-wrapper > .grid-container {
+  width: 100%;
+}
+
+.paragraph.region {
+  display: flex;
+}
+
+.region-wrapper:first-of-type.bg-white {
+  padding-top: 0;
+}
+
+/**
+* ................Backgrounds Image................
+*/
+.region-wrapper.with-bg-img {
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 63.9375em) {
+  .mobile-order-1 {
+    order: 1;
+  }
+
+  .mobile-order-2 {
+    order: 2;
+  }
+
+  .mobile-order-3 {
+    order: 3;
+  }
+
+  .mobile-order-4 {
+    order: 4;
+  }
+
+  .mobile-order-5 {
+    order: 5;
+  }
+
+  .mobile-order-6 {
+    order: 6;
+  }
+
+  .mobile-order-7 {
+    order: 7;
+  }
+
+  .mobile-order-8 {
+    order: 8;
+  }
+
+  .mobile-order-9 {
+    order: 9;
+  }
+
+  .mobile-order-10 {
+    order: 10;
+  }
+
+  .mobile-order-11 {
+    order: 11;
+  }
+
+  .mobile-order-12 {
+    order: 12;
+  }
+
+  .mobile-order-13 {
+    order: 13;
+  }
+
+  .mobile-order-14 {
+    order: 14;
+  }
+
+  .mobile-order-15 {
+    order: 15;
+  }
+
+  .mobile-order-16 {
+    order: 16;
+  }
+
+  .mobile-order-17 {
+    order: 17;
+  }
+
+  .mobile-order-18 {
+    order: 18;
+  }
+
+  .mobile-order-19 {
+    order: 19;
+  }
+
+  .mobile-order-20 {
+    order: 20;
+  }
+}
+
+.region-stack {
+  position: relative;
+  padding: 0;
+}
+
+.region-stack .region {
+  margin-bottom: 2rem;
+}
+
+.region-stack::before {
+  content: " ";
+  width: 100%;
+  max-height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.region-wrapper.centered-bg.region-stack::before,
+.region-wrapper.centered-bg.with-bg-img {
+  background-position: center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+/* Annule le propriétés de décalage de contenu dans les régions sur mobile */
+@media screen and (max-width: 39.9375em) {
+  main .page-components .paragraph.region {
+    margin-top: unset;
+  }
+
+  main .page-components .region-stack::before {
+    height: 100%;
+  }
+}

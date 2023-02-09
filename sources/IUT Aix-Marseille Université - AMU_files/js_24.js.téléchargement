@@ -1,0 +1,31 @@
+(function() {
+  /* changement du picto menu burger au click */
+  function iconMenu() {
+    const menuIcon = document.querySelector(".menu-icon");
+    const menuResponsive = document.querySelector("#main-menu-responsive");
+
+    if (window.matchMedia("(max-width: 63.9375em)").matches) {
+      menuIcon.addEventListener("click", () => {
+        if (menuIcon.classList.contains("open")) {
+          menuIcon.classList.remove("open");
+          menuIcon.classList.add("closed");
+        } else {
+          menuIcon.classList.add("open");
+          menuIcon.classList.remove("closed");
+        }
+      });
+      window.addEventListener("resize", () => {
+        const menuDisplay = window.getComputedStyle(menuResponsive).display;
+        if (menuDisplay === "none") {
+          menuIcon.classList.remove("open");
+          menuIcon.classList.add("closed");
+        } else {
+          menuIcon.classList.add("open");
+          menuIcon.classList.remove("closed");
+        }
+      });
+    }
+  }
+
+  iconMenu();
+})();

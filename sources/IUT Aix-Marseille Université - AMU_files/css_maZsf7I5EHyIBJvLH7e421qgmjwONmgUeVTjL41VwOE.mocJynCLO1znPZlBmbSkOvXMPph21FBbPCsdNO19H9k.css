@@ -1,0 +1,534 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS............You’re reading it!
+ */
+
+/* ------------------------------------ *\
+  BLOCK BASE STYLE
+\* ------------------------------------ */
+.align-right,
+.align-left {
+  float: none;
+}
+
+.accordion .paragraph-block {
+  margin-top: 0;
+}
+
+.paragraph-block {
+  margin-top: .9rem;
+  margin-bottom: .9rem;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .paragraph-block {
+    margin: .3rem auto;
+  }
+}
+
+.paragraph-block.large-12:last-of-type {
+  margin-bottom: 0;
+}
+
+.paragraph-block .content:last-of-type {
+  margin-bottom: 0;
+}
+
+/* ------------------------------------ *\
+  BLOCK BORDERS
+\* ------------------------------------ */
+.paragraph-block.with-border > .content {
+  padding: .8rem .8rem 0;
+}
+
+.paragraph-block.with-border .paragraph-text:last-of-type {
+  margin-bottom: 0;
+}
+
+.paragraph-block.with-border.border-fieldset .paragraph-text:last-of-type {
+  margin-bottom: .8rem;
+}
+
+.paragraph-block.with-border.with-header .content:not(.large-12) {
+  padding-top: 0;
+}
+
+.paragraph-block.with-border.with-header .content.large-12:first-child {
+  padding-top: 0;
+}
+
+.paragraph-block .block-header.with-bg,
+.paragraph-block .block-header.with-border {
+  margin-bottom: .7rem;
+}
+
+.paragraph-block.with-border > .content:last-of-type {
+  padding-bottom: .8rem;
+}
+
+.paragraph-block.with-border {
+  border-width: 1px;
+}
+
+.paragraph-block.border-solid,
+.paragraph-block.border-left {
+  border-style: solid;
+}
+
+.paragraph-block.border-dotted {
+  border-style: dotted;
+}
+
+.paragraph-block.header-width--auto.accordion-mode .block-header,
+.paragraph-block.header-width--auto:not(.accordion-mode) .block-header .title {
+  display: inline-block;
+}
+
+.paragraph-block.accordion-mode.header-width--auto.border-solid:not(.is-active) .block-header {
+  border-bottom-style: solid;
+}
+
+.paragraph-block.accordion-mode.header-width--auto.border-dotted:not(.is-active) .block-header {
+  border-bottom-style: dotted;
+}
+
+.paragraph-block.border-left.border-large {
+  border-left-width: 30px;
+}
+
+.paragraph-block.border-left.border-thin {
+  border-left-width: 12px;
+}
+
+.paragraph-block.border-shadow,
+.paragraph-block.border-shadow.accordion-mode:not(.is-active) .block-header {
+  box-shadow: 4px 4px 5px #c9c9c9;
+}
+
+.paragraph-block.border-shadow.accordion-mode:not(.is-active) {
+  box-shadow: unset;
+}
+
+.paragraph-block.border-radius {
+  border-radius: 15px;
+  padding: .5rem;
+}
+
+/* ------------------------------------ *\
+  FIELDSET STYLE
+\* ------------------------------------ */
+.paragraph-block.with-header.border-fieldset {
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+.paragraph-block.with-border.accordion-mode:not(.is-active) {
+  border: unset;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .paragraph-block.with-border.accordion-mode:not(.is-active) {
+    margin: .3rem auto;
+  }
+}
+
+.paragraph-block.with-border.border-solid.accordion-mode:not(.is-active) .block-header {
+  border: solid 1px;
+}
+
+.paragraph-block.with-border.border-dotted.accordion-mode:not(.is-active) .block-header {
+  border: dotted 1px;
+}
+
+.paragraph-block.with-border.accordion-mode:not(.is-active) .block-header {
+  border-bottom-width: 0;
+}
+
+.paragraph-block.accordion-mode:not(.is-active) {
+  background: none;
+}
+
+.paragraph-block.with-header.border-fieldset.border-solid > .content {
+  padding-top: 1.8rem;
+}
+
+.paragraph-block.with-header.border-fieldset.border-dotted > .content {
+  padding-top: 1.8rem;
+}
+
+.paragraph-block.with-header.border-fieldset.accordion-mode:not(.is-active) > .content {
+  display: block;
+  width: 100%;
+}
+
+.paragraph-block.with-header.border-fieldset.accordion-mode:not(.is-active) > .content > div {
+  display: none;
+}
+
+.paragraph-block.with-header.border-fieldset > .block-header {
+  display: inline-block;
+  position: absolute;
+  left: 1rem;
+  top: -1rem;
+  padding: 0;
+  border-color: transparent;
+  overflow: hidden;
+  max-width: 90%;
+  max-height: 3rem;
+}
+
+.paragraph-block.with-header.border-fieldset .block-header .title {
+  padding: .3rem .6rem;
+  display: inline-block;
+  line-height: 1.3rem;
+}
+
+.paragraph-block.with-header.border-fieldset .block-header:not(.with-bg) {
+  background-color: #fff;
+}
+
+/* ------------------------------------ *\
+  BLOCK BACKGROUNDS
+\* ------------------------------------ */
+.paragraph-block.with-bg > .content,
+.paragraph-block.content-hover > .content,
+.paragraph-block.with-bg.no_header > .content {
+  padding: .8rem;
+}
+
+.paragraph-block.with-bg.with-header .content.large-12:first-child {
+  padding-top: 0;
+  margin-top: .25rem;
+}
+
+.paragraph-block.with-bg > .content {
+  padding-top: .8rem;
+}
+
+.paragraph-block.with-bg > .content:last-of-type {
+  padding-bottom: .8rem;
+}
+
+/* ------------------------------------ *\
+  BLOCK HEADINGS
+\* ------------------------------------ */
+.paragraph-block .block-header {
+  margin: 0;
+}
+
+.with-header.no-bg.no-border .block-header:not(.with-bg):not(.with-border) {
+  line-height: 1.39rem;
+  padding-bottom: .7rem;
+  padding-top: .3rem;
+}
+
+.with-header.no-bg.no-border .block-header:not(.with-bg):not(.with-border) .title {
+  margin-top: .3rem;
+}
+
+div.block-header {
+  font-size: 1.35rem;
+}
+
+.with-header.with-bg div.block-header,
+.with-header.with-border div.block-header {
+  padding-left: 1rem;
+  padding-top: .8rem;
+  padding-right: .8rem;
+}
+
+.with-header.with-bg h1.block-header,
+.with-header.with-border h1.block-header {
+  padding-left: 1rem;
+  padding-top: 1.2rem;
+  padding-right: 1.2rem;
+}
+
+.with-header.with-bg h2.block-header,
+.with-header.with-border h2.block-header {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: .5rem;
+}
+
+.with-header.with-bg h3.block-header,
+.with-header.with-border h3.block-header {
+  padding-left: 1rem;
+  padding-top: .8rem;
+  padding-right: .8rem;
+}
+
+.block-header.with-bg,
+.block-header.with-border {
+  padding-bottom: 1rem;
+}
+
+.paragraph-block.with-border .block-header.with-border,
+.block-header.border-bottom--solid,
+.block-header.border-bottom--dotted {
+  border-bottom-width: 1px;
+}
+
+.border-solid .block-header.with-border,
+.block-header.border-bottom--solid {
+  border-bottom-style: solid;
+}
+
+.border-dotted.with-border,
+.block-header.border-bottom--dotted {
+  border-bottom-style: dotted;
+}
+
+.with-header.no-bg.no-border .block-header.border-bottom--solid,
+.with-header.no-bg.no-border .block-header.border-bottom--dotted {
+  border-width: 2px;
+}
+
+/* --------------------header-width--auto------------------- */
+.header-width--auto:not(.with-bg):not(.with-border) .block-header.with-bg,
+.header-width--auto:not(.with-border):not(.with-bg) .block-header.with-border {
+  display: inline-block;
+  width: fit-content;
+}
+
+.with-bg .block-header,
+.with-border .block-header,
+.block-header.with-bg,
+.block-header.with-border,
+.border-fieldset .block-header {
+  padding: .75rem .8rem;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  font-family: "Roboto", sans-serif;
+  text-transform: unset;
+}
+
+.with-header.no-bg.no-border .block-header.with-border,
+.with-header.no-bg.no-border .block-header.with-bg {
+  margin-bottom: .75rem;
+}
+
+.with-header.no-bg.no-border .block-header.with-border.no-bg.with-fa {
+  padding-bottom: .7rem;
+}
+
+.block-header.with-bg.with-fa .title,
+.block-header.with-border.with-fa .title {
+  padding-top: .3rem;
+}
+
+.block-header.with-bg.with-fa.header-text--center:not(.header-fa-align--left) i,
+.block-header.with-border.with-fa.header-text--center i {
+  margin-bottom: .6rem;
+}
+
+.no-bg.no-border .block-header.with-border.no-bg,
+.no-bg.no-border .block-header.no-border.no-bg {
+  padding-left: 0;
+}
+
+.no-bg.no-border .block-header.with-border:not(.with-bg),
+.no-bg.no-border .block-header.with-title.no-border.no-bg {
+  padding-top: .8rem;
+}
+
+.no-bg.no-border .block-header.with-title.no-border.no-bg .title {
+  margin-top: 0;
+}
+
+.with-header.with-border:not(.header-width--auto) .block-header.with-title:not(.with-fa) .title,
+.with-header:not(.header-width--auto) .block-header.with-title.with-bg:not(.with-fa) .title,
+.with-header:not(.header-width--auto) .block-header.with-title.with-border:not(.with-fa) .title {
+  padding: .23rem;
+}
+
+.with-header.no-bg.no-border .block-header.with-title.no-bg:not(.with-fa) .title,
+.block-header.with-title.no-border.no-bg:not(.with-fa) .title {
+  padding-left: 0;
+}
+
+.no-bg.no-border .block-header.with-title.no-border.no-bg.with-fa .title {
+  padding-top: .3rem;
+}
+
+.no-bg.no-border h1.block-header.with-border:not(.with-bg),
+.no-bg.no-border h1.block-header.no-border.no-bg {
+  font-size: 1.75rem;
+  line-height: 1.9rem;
+  margin-top: .7rem;
+  margin-bottom: .65rem;
+  text-transform: unset;
+}
+
+.no-bg.no-border h2.block-header.with-border:not(.with-bg),
+.no-bg.no-border h2.block-header.no-border.no-bg {
+  font-size: 1.65rem;
+  line-height: 1.68rem;
+  margin-top: .4rem;
+  margin-bottom: .55rem;
+}
+
+.no-bg.no-border h3.block-header.with-border:not(.with-bg),
+.no-bg.no-border h3.block-header.no-border.no-bg {
+  font-size: 1.35rem;
+  line-height: 1.39rem;
+  margin-top: .2rem;
+  margin-bottom: .45rem;
+}
+
+.no-bg.no-border h4.block-header.with-border:not(.with-bg),
+.no-bg.no-border h4.block-header.no-border.no-bg {
+  font-size: 1.26rem;
+  line-height: 1.2rem;
+  margin-top: .15rem;
+  margin-bottom: .45rem;
+}
+
+.no-bg.no-border h5.block-header.with-border:not(.with-bg),
+.no-bg.no-border h5.block-header.no-border.no-bg {
+  font-size: 1.15rem;
+  line-height: 1.2rem;
+  margin-top: .15rem;
+  margin-bottom: .45rem;
+}
+
+/* ................Headers alignment................ */
+.block-header.header-text--center {
+  text-align: center;
+}
+
+.block-header.header-text--left {
+  text-align: left;
+}
+
+.paragraph-block .block-header.no-fa {
+  padding: .54rem;
+}
+
+.block-header:not(.no-fa).header-fa-align--left .title {
+  display: flex;
+}
+
+/* ................Headers fa style................ */
+.block-header.header-text--center i,
+.block-header.header-text--left i {
+  padding: 0 .5rem;
+}
+
+.block-header.header-fa-align--left:not(.with-fa) .title {
+  display: inline-block;
+}
+
+.block-header.header-fa-align--left i {
+  padding-left: .6rem;
+  float: left;
+}
+
+.block-header.header-fa-align--top i,
+.block-header.header-fa-align--left {
+  display: block;
+}
+
+.block-header.header-fa-align--top i {
+  margin-top: .2rem;
+  margin-bottom: .5rem;
+}
+
+.paragraph-block:not(.header-width--auto) .block-header.header-fa-align--left.header-text--center i,
+.paragraph-block:not(.header-width--auto) .block-header.header-fa-align--left.header-text--center .title {
+  float: none;
+  display: inline-block;
+}
+
+.paragraph-block:not(.header-width--auto) .block-header.header-fa-align--left.header-text--center .title {
+  padding-top: 0;
+  padding-left: 0;
+}
+
+.block-header.no-title i {
+  float: none;
+}
+
+.paragraph-block .block-header.with-fa.no-title.no-bg.no-border {
+  margin-bottom: 0;
+}
+
+.block-header.with-fa i {
+  font-size: 2rem;
+}
+
+/* ------------------------------------ *\
+  BLOCK ACCORDION STYLES
+\* ------------------------------------ */
+
+.paragraph-block.accordion-mode .block-header {
+  cursor: pointer;
+}
+
+.paragraph-block.accordion-mode:not(.header-width--auto) .block-header {
+  position: relative;
+}
+
+.paragraph-block.accordion-mode.is-active:not(.header-width--auto) > .block-header::before {
+  content: "–";
+}
+
+.paragraph-block.accordion-mode:not(.is-active):not(.header-width--auto) > .block-header::before {
+  content: "+";
+}
+
+.paragraph-block.accordion-mode:not(.header-width--auto) .block-header::before {
+  position: absolute;
+  top: 22%;
+  right: 1rem;
+}
+
+.paragraph-block.accordion-mode.header-width--auto .block-header .title::after {
+  font-family: "Font Awesome 5 Pro", serif;
+  content: "\f0d7";
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin-left: .9rem;
+  display: inline-block;
+}
+
+.paragraph-block.accordion-mode.header-width--auto.is-active .block-header .title::after {
+  content: "\f0d8";
+}
+
+.paragraph-block.accordion-mode:not(.is-active):not(.border-fieldset) .content {
+  display: none;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .with-bg .block-header,
+  .with-border .block-header,
+  .block-header.with-bg,
+  .block-header.with-border,
+  .border-fieldset .block-header {
+    font-size: 1.125rem;
+  }
+}
+
+/* ------------------------------------ *\
+  Alignements
+\* ------------------------------------ */
+
+.align-center.flex-dir-column {
+  align-items: center;
+}
+
+.valign--top {
+  align-items: start;
+}
+
+.valign--center {
+  align-items: center;
+}
+
+.valign--bottom {
+  align-items: end;
+}

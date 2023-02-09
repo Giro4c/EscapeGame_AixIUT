@@ -1,0 +1,357 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS..........................You’re reading it!
+ * VARIABLES ..........................................
+ * .... Transparency color set (blocks over region) ...
+ * gd-iut-tango.........................................
+ * .... Tabs styles ...................................
+ * .... Background styles .............................
+ * .... Accordions styles .............................
+ * .... Border styles .................................
+ * .... CTA Styles ....................................
+ *
+ */
+
+/**
+ * Taxonomies à créer par color style
+ *   Tab styles: tabs-style-gd-iut-tango tabs-bg-dark/tabs-bg-light
+ *   Background colors: bg-gd-iut-tango bg-dark/bg-light
+ *   Background Hover colors: bg-hv-gd-iut-tango bg-hv-light/bg-hv-dark
+ *   Border colors: border-gd-iut-tango
+ *   Link Color Style: cta cta-gd-iut-tango cta-dark/cta-light
+ *   Text Color Style: color-gd-iut-tango color-dark/color-light
+ *   List Link Styles: color-bullet--gd-iut-tango
+ *   CKEDITOR styles: ul.color-bullet.gd-iut-tango|Liste gd-iut-tango
+*/
+
+/* ------------------------------------ *\
+  ==VARIABLES
+\* ------------------------------------ */
+:root {
+  /* Specific colors scheme */
+  --gd-iut-tango: linear-gradient(180deg, #f07d16, #f6a255);
+  --gd-iut-tango-hv: linear-gradient(180deg, #f07e19, #f6a255);
+  --gd-iut-tango-bg-dark: #f07d16;
+  --gd-iut-tango-brd: #f07d16;
+}
+
+/* == Transparency color set (blocks over region) -------------------- *\
+\* ------------------------------------------------------------------- */
+.op-6 .bg-gd-iut-tango,
+.op-7 .bg-gd-iut-tango,
+.op-8 .bg-gd-iut-tango,
+.op-9 .bg-gd-iut-tango {
+  --op-6: rgba(240 125 22 / 60%);
+  --op-7: rgba(240 125 22 / 70%);
+  --op-8: rgba(240 125 22 / 80%);
+  --op-9: rgba(240 125 22 / 90%);
+}
+
+/* ------------------------------------ *\
+* == iut-tango
+\* ------------------------------------ */
+
+/* == Tabs styles -------------------- *\
+\* ----------------------------------- */
+
+/* Taxo. Tab styles: tabs-style-gd-iut-tango */
+
+/* style des tabs avec animation */
+.tabs-style-gd-iut-tango.tabs-bg-light .tabs:before,
+.tabs-style-gd-iut-tango.tabs-bg-dark .tabs:before {
+  color: var(--gd-iut-tango-bg-dark);
+  border-bottom: 5px solid var(--gd-iut-tango-bg-dark);
+}
+
+/* == Background styles -------------------- *\
+\* ----------------------------------------- */
+
+/**
+ * Taxo. Background colors: bg-gd-iut-tango bg-dark/bg-light
+ * Taxo. Background Hover colors: bg-hv-gd-iut-tango bg-hv-light/bg-hv-dark
+*/
+
+.bg-gd-iut-tango,
+.content-hover.bg-hv-gd-iut-tango:hover {
+  background: var(--gd-iut-tango);
+}
+
+.op-6 .bg-gd-iut-tango {
+  background: var(--op-6);
+}
+
+.op-7 .bg-gd-iut-tango {
+  background: var(--op-7);
+}
+
+.op-8 .bg-gd-iut-tango {
+  background: var(--op-8);
+}
+
+.op-9 .bg-gd-iut-tango {
+  background: var(--op-9);
+}
+
+/* == Accordions styles -------------------- *\
+\* ----------------------------------------- */
+.accordion.with-bg .accordion-title.bg-gd-iut-tango:hover,
+.accordion.with-bg .accordion-title.bg-gd-iut-tango:focus {
+  background: var(--gd-iut-tango-hv);
+}
+
+.accordion.with-bg .accordion-title.bg-gd-iut-tango.bg-dark:hover,
+.accordion.with-bg .accordion-title.bg-gd-iut-tango.bg-dark:focus {
+  color: var(--white);
+}
+
+.accordion.with-bg .accordion-title.bg-gd-iut-tango.bg-light:hover,
+.accordion.with-bg .accordion-title.bg-gd-iut-tango.bg-light:focus {
+  color: var(--black);
+}
+
+.accordion.with-bg .accordion-title.bg-gd-iut-tango.bg-dark {
+  color: var(--white);
+  border-color: transparent;
+}
+
+.accordion.with-bg .accordion-title.bg-gd-iut-tango.bg-light {
+  color: var(--black);
+  border-color: transparent;
+}
+
+.accordion.with-bg .accordion-content {
+  border-color: transparent;
+}
+
+/* == Text elements -------------------- *\
+\* ----------------------------------------- */
+
+/* Taxo. Text Color Style: color-gd-iut-tango color-light/color-light */
+
+/* FA color */
+.color-gd-iut-tango i {
+  color: var(--gd-iut-tango);
+}
+
+.bg-gd-iut-tango.bg-dark .color-gd-iut-tango i,
+.content-hover.bg-hv-gd-iut-tango.bg-hv-dark:hover i {
+  color: var(--white);
+}
+
+.bg-gd-iut-tango.bg-light .color-gd-iut-tango i,
+.content-hover.bg-hv-gd-iut-tango.bg-hv-light:hover i {
+  color: var(--black);
+}
+
+/* Puces colorées */
+.bg-gd-iut-tango.bg-dark ul li::marker,
+.bg-gd-iut-tango.bg-hv-dark ul li::marker,
+.content-hover.bg-hv-gd-iut-tango.bg-hv-dark:hover ul li::marker {
+  color: var(--white);
+}
+
+.bg-gd-iut-tango.bg-light ul li::marker,
+.bg-gd-iut-tango.bg-hv-light ul li::marker,
+.content-hover.bg-hv-gd-iut-tango.bg-hv-light:hover ul li::marker {
+  color: var(--black);
+}
+
+ul.color-bullet--gd-iut-tango.list li.link-list-item::marker,
+ul.color-bullet.gd-iut-tango > li::marker,
+ul.color-bullet.gd-iut-tango > li::before {
+  color: var(--gd-iut-tango);
+}
+
+/* == Border styles -------------------- *\
+\* ------------------------------------- */
+
+/* Taxo. Border colors: border-gd-iut-tango */
+.border-gd-iut-tango,
+.border-gd-iut-tango:after {
+  border-color: var(--gd-iut-tango-bg-dark);
+}
+
+/* == CTA Styles --------------------------- *\
+\* ----------------------------------------- */
+
+/* Taxo. Link Color Style: cta cta-gd-iut-tango */
+.paragraph .cta.cta-gd-iut-tango a,
+.paragraph.cta.cta-gd-iut-tango a,
+.paragraph.cta.cta-gd-iut-tango .cta-link {
+  background: var(--gd-iut-tango);
+  border: 1px solid var(--gd-iut-tango-brd);
+  padding: .5rem 2rem;
+}
+
+.paragraph .cta.cta-gd-iut-tango i,
+.paragraph.cta.cta-gd-iut-tango i {
+  color: var(--gd-iut-tango);
+}
+
+.paragraph .cta.cta-gd-iut-tango.cta-dark i,
+.paragraph.cta.cta-gd-iut-tango.cta-dark i,
+.paragraph .cta.cta-gd-iut-tango.cta-dark a,
+.paragraph.cta.cta-gd-iut-tango.cta-dark a,
+.paragraph.cta.cta-gd-iut-tango.cta-dark .cta-link {
+  color: var(--white);
+}
+
+.paragraph .cta.cta-gd-iut-tango.cta-light i,
+.paragraph.cta.cta-gd-iut-tango.cta-light i,
+.paragraph .cta.cta-gd-iut-tango.cta-light a,
+.paragraph.cta.cta-gd-iut-tango.cta-light a,
+.paragraph.cta.cta-gd-iut-tango.cta-light .cta-link {
+  color: var(--black);
+}
+
+.paragraph .cta.cta-gd-iut-tango a:focus,
+.paragraph.cta.cta-gd-iut-tango a:focus,
+.paragraph.cta.cta-gd-iut-tango .cta-link:focus,
+.paragraph .cta.cta-gd-iut-tango a:hover,
+.paragraph.cta.cta-gd-iut-tango a:hover,
+.paragraph.cta.cta-gd-iut-tango .cta-link:hover {
+  background: var(--white);
+  border-color: var(--gd-iut-tango-brd);
+  color: var(--gd-iut-tango-bg-dark);
+}
+
+.paragraph .cta.cta-gd-iut-tango.cta-dark a:focus i,
+.paragraph.cta.cta-gd-iut-tango.cta-dark a:focus i,
+.paragraph.cta.cta-gd-iut-tango.cta-dark .cta-link:focus i,
+.paragraph .cta.cta-gd-iut-tango.cta-dark a:hover i,
+.paragraph.cta.cta-gd-iut-tango.cta-dark a:hover i,
+.paragraph.cta.cta-gd-iut-tango.cta-dark .cta-link:hover i,
+.paragraph .cta.cta-gd-iut-tango.cta-dark a:focus,
+.paragraph.cta.cta-gd-iut-tango.cta-dark a:focus,
+.paragraph.cta.cta-gd-iut-tango.cta-dark .cta-link:focus,
+.paragraph .cta.cta-gd-iut-tango.cta-dark a:hover,
+.paragraph.cta.cta-gd-iut-tango.cta-dark a:hover,
+.paragraph.cta.cta-gd-iut-tango.cta-dark .cta-link:hover {
+  color: var(--gd-iut-tango-bg-dark);
+  border-color: var(--gd-iut-tango-brd);
+  box-shadow: unset;
+}
+
+.paragraph .cta.cta-gd-iut-tango.cta-light a:focus i,
+.paragraph.cta.cta-gd-iut-tango.cta-light a:focus i,
+.paragraph.cta.cta-gd-iut-tango.cta-light .cta-link:focus i,
+.paragraph .cta.cta-gd-iut-tango.cta-light a:hover i,
+.paragraph.cta.cta-gd-iut-tango.cta-light a:hover i,
+.paragraph.cta.cta-gd-iut-tango.cta-light .cta-link:hover i,
+.paragraph .cta.cta-gd-iut-tango.cta-light a:focus,
+.paragraph.cta.cta-gd-iut-tango.cta-light a:focus,
+.paragraph.cta.cta-gd-iut-tango.cta-light .cta-link:focus,
+.paragraph .cta.cta-gd-iut-tango.cta-light a:hover,
+.paragraph.cta.cta-gd-iut-tango.cta-light a:hover,
+.paragraph.cta.cta-gd-iut-tango.cta-light .cta-link:hover {
+  color: var(--black);
+}
+
+.paragraph .cta.cta-reverse.cta-gd-iut-tango a,
+.paragraph.cta.cta-reverse.cta-gd-iut-tango a {
+  background: var(--white);
+}
+
+.paragraph .cta.cta-reverse.cta-gd-iut-tango.cta-dark i,
+.paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-dark i,
+.paragraph .cta.cta-reverse.cta-gd-iut-tango.cta-dark a,
+.paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-dark a {
+  color: var(--gd-iut-tango-bg-dark);
+  border-color: var(--gd-iut-tango-brd);
+  box-shadow: unset;
+}
+
+.paragraph .cta.cta-reverse.cta-gd-iut-tango.cta-light a,
+.paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-light a {
+  color: var(--black);
+}
+
+.paragraph .cta.cta-reverse.cta-gd-iut-tango a:focus,
+.paragraph .cta.cta-reverse.cta-gd-iut-tango a:hover {
+  background: var(--gd-iut-tango);
+  border-color: transparent;
+}
+
+.paragraph .cta.cta-reverse.cta-gd-iut-tango.cta-dark a:focus i,
+.paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-dark a:focus i,
+.paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-dark .cta-link:focus i,
+.paragraph .cta.cta-reverse.cta-gd-iut-tango.cta-dark a:hover i,
+.paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-dark a:hover i,
+.paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-dark .cta-link:hover i,
+.paragraph .cta.cta-reverse.cta-gd-iut-tango.cta-dark a:focus,
+.paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-dark a:focus,
+.paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-dark .cta-link:focus,
+.paragraph .cta.cta-reverse.cta-gd-iut-tango.cta-dark a:hover,
+.paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-dark a:hover,
+.paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-dark .cta-link:hover {
+  color: var(--white);
+  border-color: transparent;
+}
+
+.bg-gd-iut-tango .cta.cta-reverse.cta-gd-iut-tango.cta-dark a:focus i,
+.bg-gd-iut-tango .paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-dark a:focus i,
+.bg-gd-iut-tango .paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-dark .cta-link:focus i,
+.bg-gd-iut-tango .paragraph .cta.cta-reverse.cta-gd-iut-tango.cta-dark a:hover i,
+.bg-gd-iut-tango .paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-dark a:hover i,
+.bg-gd-iut-tango .paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-dark .cta-link:hover i,
+.bg-gd-iut-tango .cta.cta-reverse.cta-gd-iut-tango.cta-dark a:focus,
+.bg-gd-iut-tango .paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-dark a:focus,
+.bg-gd-iut-tango .paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-dark .cta-link:focus,
+.bg-gd-iut-tango .paragraph .cta.cta-reverse.cta-gd-iut-tango.cta-dark a:hover,
+.bg-gd-iut-tango .paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-dark a:hover,
+.bg-gd-iut-tango .paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-dark .cta-link:hover {
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+
+.bg-gd-iut-tango .cta.cta-reverse.cta-gd-iut-tango.cta-light a:focus,
+.bg-gd-iut-tango .paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-light a:focus,
+.bg-gd-iut-tango .paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-light .cta-link:focus,
+.bg-gd-iut-tango .paragraph .cta.cta-reverse.cta-gd-iut-tango.cta-light a:hover,
+.bg-gd-iut-tango .paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-light a:hover,
+.bg-gd-iut-tango .paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-light .cta-link:hover {
+  color: var(--black);
+  border: 1px solid var(--black);
+}
+
+.paragraph .cta.cta-reverse.cta-gd-iut-tango.cta-light a:focus,
+.paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-light a:focus,
+.paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-light .cta-link:focus,
+.paragraph .cta.cta-reverse.cta-gd-iut-tango.cta-light a:hover,
+.paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-light a:hover,
+.paragraph.cta.cta-reverse.cta-gd-iut-tango.cta-light .cta-link:hover {
+  color: var(--black);
+}
+
+/** cta on gd-iut-tango bg */
+.bg-hv-gd-iut-tango.bg-hv-dark:hover .paragraph .cta.cta-gd-iut-tango a,
+.bg-hv-gd-iut-tango.bg-hv-dark:hover .paragraph.cta.cta-gd-iut-tango a,
+.bg-hv-gd-iut-tango.bg-hv-dark:hover .paragraph.cta.cta-gd-iut-tango .cta-link,
+.bg-gd-iut-tango.bg-dark .paragraph .cta.cta-gd-iut-tango a,
+.bg-gd-iut-tango.bg-dark .paragraph.cta.cta-gd-iut-tango a,
+.bg-gd-iut-tango.bg-dark .paragraph.cta.cta-gd-iut-tango .cta-link {
+  border: 1px solid var(--white);
+}
+
+.bg-hv-gd-iut-tango.bg-hv-light:hover .paragraph .cta.cta-gd-iut-tango a,
+.bg-hv-gd-iut-tango.bg-hv-light:hover .paragraph.cta.cta-gd-iut-tango a,
+.bg-hv-gd-iut-tango.bg-hv-light:hover .paragraph.cta.cta-gd-iut-tango .cta-link,
+.bg-gd-iut-tango.bg-light .paragraph .cta.cta-gd-iut-tango a,
+.bg-gd-iut-tango.bg-light .paragraph.cta.cta-gd-iut-tango a,
+.bg-gd-iut-tango.bg-light .paragraph.cta.cta-gd-iut-tango .cta-link {
+  border: 1px solid var(--black);
+}
+
+.paragraph.cta.cta-reverse.link-fa.cta-gd-iut-tango a:hover > i::before,
+.paragraph.cta.link-fa.cta-gd-iut-tango a > i::before {
+  background-color: var(--medium-gray);
+}
+
+.paragraph.cta.cta-reverse.link-fa.cta-gd-iut-tango a > i::before,
+.paragraph.cta.link-fa.cta-gd-iut-tango a:hover > i::before {
+  background-color: var(--medium-gray);
+  color: var(--black);
+}

@@ -1,0 +1,30 @@
+.reveal {
+  border-radius: 5px;
+}
+
+.reveal .close-button {
+  position: absolute;
+  border-radius: 50%;
+  padding: 0 .4rem;
+  color: white;
+}
+
+.reveal .close-button span {
+  color: white;
+}
+
+.reveal .close-button span::after {
+  position: absolute;
+  z-index: -1;
+  content: " ";
+  height: 2rem;
+  width: 2rem;
+  top: .3rem;
+  right: 0;
+  background-color: rgba(0, 0, 0, .7);
+  border-radius: 50%;
+}
+
+.reveal .close-button span:hover::after {
+  background-color: rgba(0, 0, 0, .9);
+}

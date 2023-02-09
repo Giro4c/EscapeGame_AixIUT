@@ -1,0 +1,101 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS............You’re reading it!
+ */
+
+.paragraph-gallery {
+  justify-content: inherit;
+}
+
+.gallery {
+  list-style: none;
+  margin: 0;
+  justify-content: inherit;
+}
+
+.paragraph-gallery.zoom-on .gallery-item---wrapper {
+  overflow: hidden;
+  display: block;
+}
+
+.paragraph-gallery.zoom-on .gallery-item img {
+  transition: transform .5s ease;
+}
+
+.paragraph-gallery.zoom-on .gallery-item:hover img {
+  transform: scale(1.2);
+}
+
+.picture-wrapper {
+  position: relative;
+}
+
+.gallery-item---wrapper {
+  display: block;
+  position: relative;
+  height: 100%;
+}
+
+.gallery-item {
+  padding: 0 1rem;
+}
+
+.paragraph-gallery.caption-display--onhover .gallery-item:hover .picture-caption-wrapper {
+  visibility: visible;
+}
+
+.paragraph-gallery.caption-display--onload .picture-caption-wrapper {
+  visibility: visible;
+}
+
+.paragraph-gallery.caption-display--onhover .picture-caption-wrapper {
+  visibility: hidden;
+}
+
+.paragraph-gallery.caption-display--none .picture-caption-wrapper {
+  display: none;
+}
+
+.paragraph-gallery .slick-arrow {
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  height: 100%;
+  align-items: center;
+  display: flex;
+}
+
+.paragraph-gallery .prev-arrow {
+  left: 1rem;
+}
+
+.paragraph-gallery .next-arrow {
+  right: 1rem;
+}
+
+.content .carrousel__images {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.paragraph-gallery .slick-dots {
+  bottom: -2rem;
+}
+
+.paragraph-gallery .slick-dots li button::before {
+  font-size: .8rem;
+}
+
+.paragraph-gallery .slick-list {
+  width: calc(100% - 4rem);
+  margin-left: 2rem;
+}
+
+.paragraph-gallery .slick-slider.slick-dotted,
+.paragraph-gallery .slick-dotted.slick-slider {
+  margin-bottom: 0;
+}

@@ -1,0 +1,254 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS..............You’re reading it!
+ * TIMELINE ................................
+ * ACTU ....................................
+ * ....PAGER ...............................
+ * MEDIA QUERIES ...........................
+*/
+
+/* ------------------------------------ *\
+  ==TIMELINE
+\* ------------------------------------ */
+.actus {
+  padding: 0;
+}
+
+.actus ul li {
+  margin-bottom: 2rem;
+}
+
+.region-wrapper.paragraph-region-2353 {
+  background-image: url("/sites/iut.univ-amu.fr/themes/amu_iut/css/../images/actu-background-polygon.png"), url("/sites/iut.univ-amu.fr/themes/amu_iut/css/../images/actu-background.png");
+  background-position: left center, left center;
+  background-repeat: no-repeat, repeat;
+  background-size: auto 100%, cover;
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+}
+
+.actus .views-timeline li {
+  padding-bottom: 0;
+  position: relative;
+  min-height: 100%;
+  margin: 0 .5rem;
+  max-width: 50%;
+}
+
+.actus .actu--timeline {
+  box-shadow: 0 3px 6px #00000029;
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: var(--white);
+  height: 100%;
+}
+
+.actus .views-timeline > li::after {
+  bottom: -3.6rem;
+  left: 50%;
+  top: unset;
+  background: var(--blue);
+  transform: translate(-50%, 0%);
+}
+
+.actus .views-timeline {
+  border-left: 0;
+  border-bottom: 2px solid var(--blue);
+  list-style: none;
+  padding: 0 0 3.125rem;
+  margin-left: .5rem;
+  justify-content: center;
+}
+
+.actu--timeline::after {
+  position: absolute;
+  content: "";
+  height: 0;
+  width: 0;
+  border-top: 17px solid var(--blue);
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 0%);
+}
+
+.actu--timeline .actu__title {
+  color: var(--blue);
+  font-size: 1rem;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+}
+
+.actu--timeline .actu__title::after {
+  border: 0;
+}
+
+.actu--timeline .card-section {
+  padding: 0;
+}
+
+.actu--timeline .actu__body {
+  margin-bottom: .5rem;
+  font-size: .9375rem;
+}
+
+.actu--timeline .actutimeline__date span {
+  color: var(--blue);
+}
+
+/* ------------------------------------ *\
+  ==ACTU
+\* ------------------------------------ */
+.actu .card,
+.actu--teaser.actu--row .card {
+  background-color: var(--white);
+  box-shadow: 3px 3px 10px #00000026;
+  border-radius: 15px;
+}
+
+.actu .card .card-section,
+.actu--teaser.actu--row .card-section {
+  padding: 1rem;
+}
+
+.actu .card .actu__more-link,
+.actu--teaser.actu--row .actu__more-link {
+  bottom: 1rem;
+  color: var(--blue);
+  font-family: Poppins, sans-serif;
+  font-size: 1rem;
+}
+
+.actu .card .actu__title::after,
+.actu--teaser .actu__title::after {
+  border: 0;
+}
+
+.actu .card .actu__body,
+.actu--teaser.actu--row .actu__body {
+  margin-bottom: 1.5rem;
+}
+
+.actu .card .actu__more-link span::after,
+.actu--teaser.actu--row .actu__more-link span::after {
+  font: var(--fa-font-solid);
+  content: "\f324";
+  background-color: var(--medium-gray);
+  color: var(--black);
+  padding: .4rem .4rem .4rem .5rem;
+  margin-left: .5rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.actu .card:hover .actu__more-link span::after,
+.actu--teaser.actu--row:hover .actu__more-link span::after {
+  font: var(--fa-font-solid);
+  content: "\f324";
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.view-actus {
+  position: relative;
+}
+
+.view-actus ul {
+  list-style: none;
+}
+
+.card .actu__body {
+  color: #444;
+}
+
+.actu--full .actu__image-actu img {
+  border-radius: 12px;
+}
+
+/* ==PAGER -------------------- *\
+\* ------------------------------- */
+.pager__arrow {
+  position: absolute;
+  top: 0;
+  width: 2rem;
+  height: 100%;
+  color: var(--blue);
+  text-align: center;
+  font-size: 3rem;
+}
+
+.pager__arrow a {
+  color: var(--blue);
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+}
+
+.pager__arrow a:hover i {
+  color: var(--yellow);
+}
+
+.pager__arrow.pager__arrow--next {
+  right: .5rem;
+}
+
+.pager__arrow.pager__arrow--prev {
+  left: 1.5rem;
+}
+
+.pager__arrow i {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+}
+
+.paragraph-block-view-ref .view-actus .actus {
+  max-width: calc(100% - 7rem);
+}
+
+.front .paragraph-block-view-ref .view-actus .actus {
+  max-width: 100%;
+}
+
+/* ------------------------------------ *\
+  ==MEDIA QUERIES
+\* ------------------------------------ */
+@media screen and  (max-width: 39.9375rem) {
+  .actus .views-timeline {
+    border-bottom: none;
+    border-left: 2px solid var(--white);
+  }
+
+  .actus .views-timeline li {
+    margin-bottom: 1rem;
+    max-width: 70%;
+  }
+
+  .actus .views-timeline > li::after {
+    bottom: 3.6rem;
+    left: -21.6%;
+    top: 45%;
+    background: var(--white);
+  }
+
+  .actu--timeline::after {
+    border-right: 17px solid var(--white);
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    left: -4%;
+    top: 35%;
+    transform: translate(-50%, 5%);
+  }
+}
+
+@media screen and (max-width: 63.9375rem) {
+  .front .paragraph-block-view-ref .view-actus .actus {
+    max-width: 100%;
+  }
+}

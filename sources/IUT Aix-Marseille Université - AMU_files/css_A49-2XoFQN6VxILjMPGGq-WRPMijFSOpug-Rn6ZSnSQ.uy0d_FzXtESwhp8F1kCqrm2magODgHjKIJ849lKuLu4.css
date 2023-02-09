@@ -1,0 +1,52 @@
+.ligne .liste_a_pictogramme__list-picto-elt {
+  display: flex;
+  padding: .5rem .5rem 0;
+}
+
+.paragraph-picto-list.ligne {
+  margin: .9375rem;
+  width: 100%;
+}
+
+.paragraph-picto-list.colonne {
+  margin: 0 .9375rem;
+}
+
+.paragraph-picto-list .grid-container {
+  padding: 0;
+}
+
+.paragraph-block.with-border .colonne .paragraph-elt-liste-pictogramme,
+.paragraph-block.with-border .colonne .paragraph-picto-list ul {
+  padding: 0;
+  margin: 0;
+}
+
+.paragraph-elt-liste-pictogramme {
+  list-style-type: none;
+}
+
+.paragraph-elt-liste-pictogramme i {
+  font-weight: bold;
+  min-width: 14px;
+}
+
+.colonne .paragraph-elt-liste-pictogramme i {
+  font-size: .75rem;
+  min-width: 1.2rem;
+  text-align: center;
+}
+
+.colonne .paragraph-elt-liste-pictogramme {
+  font-size: .8rem;
+}
+
+.ligne.paragraph-picto-list ul {
+  padding: .5rem 1rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.paragraph-picto-list.colonne > div {
+  flex-direction: column;
+}

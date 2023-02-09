@@ -1,0 +1,7 @@
+ul.local-tasks {
+  display: flex;
+}
+
+ul.local-tasks li {
+  list-style: none;
+}

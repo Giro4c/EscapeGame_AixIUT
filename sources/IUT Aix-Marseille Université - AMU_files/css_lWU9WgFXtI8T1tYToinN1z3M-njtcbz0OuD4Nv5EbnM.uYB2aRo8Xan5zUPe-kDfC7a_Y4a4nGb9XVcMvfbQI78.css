@@ -1,0 +1,7 @@
+.social-icon li {
+  display: inline-block;
+}
+
+.social-icon li a:hover {
+  color: #23b9eb;
+}
