@@ -1,0 +1,96 @@
+/* ------------------------------------ *\
+  CONTENTS
+\* ------------------------------------ */
+
+/**
+ * CONTENTS............You’re reading it!
+ */
+
+.paragraph-picture.large-12 {
+  padding-bottom: 1.5rem;
+}
+
+.caption-none .picture-caption-wrapper {
+  display: none;
+}
+
+.picture-caption-wrapper {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-style: oblique;
+  font-size: .85rem;
+  padding: .5rem;
+}
+
+.caption-inside .picture-wrapper {
+  position: relative;
+}
+
+.caption-inside .picture-caption-wrapper {
+  display: block;
+  padding: .2rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(90, 90, 90, .77);
+  color: white;
+  font-size: inherit;
+}
+
+.caption-none .picture-caption {
+  display: none;
+}
+
+.caption-inside .picture-caption-wrapper,
+.caption-bottom .picture-caption-wrapper {
+  visibility: visible;
+}
+
+.caption-none.display-picture-desc .picture-caption-wrapper {
+  display: inline-block;
+}
+
+.caption-bottom .picture-caption-wrapper button {
+  cursor: pointer;
+}
+
+.caption-inside .picture-caption-wrapper button {
+  color: #fff;
+  cursor: pointer;
+}
+
+.caption-inside .picture-showdesc a {
+  color: #fff;
+}
+
+.picture-showdesc {
+  font-style: normal;
+  display: none;
+}
+
+.display-picture-desc .picture-showdesc {
+  display: inline-block;
+}
+
+.paragraph-picture.paragraph-illustration--round-borders img {
+  border-radius: 12px;
+}
+
+.paragraph-picture .picture-showdesc button {
+  cursor: pointer;
+  color: #00449e;
+}
+
+.paragraph-picture.picture-zoom-effect {
+  overflow: hidden;
+}
+
+.paragraph-picture.picture-zoom-effect img {
+  transition: transform .5s ease-in-out;
+}
+
+.paragraph-picture.picture-zoom-effect img:hover {
+  transform: scale(1.2);
+}
