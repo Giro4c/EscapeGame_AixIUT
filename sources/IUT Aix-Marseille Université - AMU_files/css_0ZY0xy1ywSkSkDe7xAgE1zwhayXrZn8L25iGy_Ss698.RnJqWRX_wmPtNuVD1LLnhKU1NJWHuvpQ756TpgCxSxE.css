@@ -1,0 +1,17 @@
+.map__map-coordonates {
+  width: 100%;
+}
+
+.map__map-coordonates > div:first-of-type {
+  display: none;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+  border: unset;
+  background: transparent;
+}
