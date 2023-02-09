@@ -1,0 +1,19 @@
+jQuery($ => {
+  $(document).ready(() => {
+    $(".paragraph-text .custom-counter ").each(function() {
+      $("li", this).addClass("grid-x");
+      $(this)
+        .children("li")
+        .each(function(i) {
+          $(this)
+            .wrapInner(
+              "<div class='inner-content cell align-self-middle auto'></div>"
+            )
+            .prepend(
+              `<div class='cell small-1 large-1 inner-counter align-self-middle text-center'><span class='counter'>${i +
+                1}</span></div>`
+            );
+        });
+    });
+  });
+});

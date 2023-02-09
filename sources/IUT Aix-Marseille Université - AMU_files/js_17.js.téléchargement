@@ -1,0 +1,69 @@
+jQuery($ => {
+  const breakpoint = 63.9375; /* rem */
+  function headerDisplayMode($mode) {
+    if ($mode === "mobile") {
+      $(".site-top-header")
+        .clone()
+        .addClass("clone")
+        .appendTo(".is-drilldown");
+      $(".site-top-header.clone .title-bar-right")
+        .removeClass("grid-x")
+        .removeClass("align-right");
+      $(
+        ".site-top-header.clone .title-bar-right .language-switcher.menu"
+      ).appendTo(".title-bar.main-menu-responsive");
+
+      $(".site-top-header:not(.clone").hide();
+
+      if ($(".title-bar #block-dropdownlanguage").length === 0) {
+        $("#block-dropdownlanguage").appendTo(".title-bar");
+      }
+      if ($(".top-bar #block-dropdownlanguage").length) {
+        $(".top-bar #block-dropdownlanguage").remove();
+      }
+    } else {
+      $(".site-top-header.clone").remove();
+      $(".site-top-header:not(.clone").show();
+      if ($(".top-bar #block-dropdownlanguage").length === 0) {
+        $(".title-bar #block-dropdownlanguage").appendTo(".top-bar");
+      }
+    }
+  }
+
+  function translateBackDrilldownMenu() {
+    if (window.matchMedia(`(max-width:${breakpoint}rem)`).matches) {
+      const codeLang = window.location.pathname.split("/")[1];
+      if (codeLang !== "en") {
+        $(".drilldown .js-drilldown-back a").text("Retour");
+      }
+    }
+  }
+
+  jQuery(document).ready(() => {
+    $(".menu-main, .site-header .title-bar").each(function() {
+      $(this).toggleClass("hide");
+    });
+    /* global Foundation */
+    if (Foundation.MediaQuery.upTo("medium")) {
+      headerDisplayMode("mobile");
+      translateBackDrilldownMenu();
+    }
+    $(window).on("changed.zf.mediaquery", (event, newSize, oldSize) => {
+      if (
+        (oldSize === "small" && newSize === "large") ||
+        (oldSize === "small" && newSize === "xxlarge") ||
+        (oldSize === "medium" && newSize === "large") ||
+        (oldSize === "medium" && newSize === "xxlarge")
+      ) {
+        headerDisplayMode("desktop");
+      } else if (
+        (oldSize === "xxlarge" && newSize === "small") ||
+        (oldSize === "large" && newSize === "small") ||
+        (oldSize === "large" && newSize === "medium") ||
+        (oldSize === "xxlarge" && newSize === "medium")
+      ) {
+        headerDisplayMode("mobile");
+      }
+    });
+  });
+});

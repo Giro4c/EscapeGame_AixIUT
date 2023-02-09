@@ -1,0 +1,50 @@
+"use strict";
+(((Drupal) => {
+    let onlyOnce;
+    function insertMatomo() {
+        // eslint-disable-next-line no-multi-assign
+        const _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        const siteId = drupalSettings.amu_matomo_site_id;
+        const tags = drupalSettings.amu_matomo_tags;
+        // const u = 'https://univamu.matomo.cloud/';
+        let u = drupalSettings.amu_matomo_server;
+        if (u.length === 0) {
+            u = 'https://univamu.matomo.cloud/';
+        }
+        _paq.push(['setTrackerUrl', `${u}matomo.php`]);
+        _paq.push(['setSiteId', siteId]);
+        const d = document;
+        let g = d.createElement('script');
+        const script = d.getElementsByTagName('script')[0];
+        g.type = 'text/javascript';
+        g.async = true;
+        // g.src = 'https://cdn.matomo.cloud/univamu.matomo.cloud/matomo.js';
+        g.src = `${u}matomo.js`;
+        if (script.parentNode !== null) {
+            script.parentNode.insertBefore(g, script);
+        }
+        if (tags.count > 0) {
+            tags.forEach((value) => {
+                g = d.createElement('script');
+                g.type = 'text/javascript';
+                g.async = true;
+                g.src = `https://cdn.matomo.cloud/univamu.matomo.cloud/container_${value}.js`;
+                if (script.parentNode !== null) {
+                    script.parentNode.insertBefore(g, script);
+                }
+            });
+        }
+    }
+    Drupal.behaviors.amu_matomo = {
+        attach() {
+            if (!onlyOnce) {
+                onlyOnce = true;
+                insertMatomo();
+            }
+        },
+    };
+})(Drupal));
+//# sourceMappingURL=amu_matomo.js.map
