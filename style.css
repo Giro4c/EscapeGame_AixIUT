@@ -8,9 +8,6 @@ body {
     font-size: 17px;
     line-height: 1.6;
     color:#fff;
-}
-
-#bg{
     background-image: url("https://images.pexels.com/photos/8721342/pexels-photo-8721342.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
     height: 100vh;
     background-position: center;
@@ -57,7 +54,7 @@ body {
     font-size: 20px;
 }
 
-#bg .button {
+#bg #manual {
     font-size: 10px;
 }
 
