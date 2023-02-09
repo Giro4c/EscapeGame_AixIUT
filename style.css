@@ -74,6 +74,17 @@ a
     justify-content: center;
 }
 
+#texte {
+    margin: 10%;
+    padding: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
 #fbouton{
     margin: 20px;
     border: none;
