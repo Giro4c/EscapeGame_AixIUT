@@ -1,0 +1,17 @@
+(function() {
+  // Cherche tous les éléments qui contiennent la classe .region-stack
+  // Récupère les attributs data data-height et data-margin de l'élément
+  // Crée et positionne une balise style dans le <head> avec les styles propres à chaque région
+  function defineStack() {
+    const head = document.querySelector("head");
+    Array.from(document.querySelectorAll(".region-stack")).forEach(el => {
+      const cssHeight = `.${el.id}.region-stack::before { height:${el.dataset.stackHeight}rem; } `;
+      const cssMargin = `.${el.id}.region-stack .region { margin-top:${el.dataset.stackMargin}rem;  } `;
+      const styleElt = document.createElement("style");
+      styleElt.innerHTML = `${cssHeight} ${cssMargin}`;
+      head.append(styleElt);
+    });
+  }
+
+  defineStack();
+})();

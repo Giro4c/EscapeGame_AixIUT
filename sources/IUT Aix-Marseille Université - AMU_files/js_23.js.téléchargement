@@ -1,0 +1,97 @@
+jQuery($ => {
+  jQuery(document).ready(() => {
+    const accordionContentItems = $(
+      ".accordion-mode > .content, .accordion-item > .accordion-content"
+    );
+
+    function collapseAccordions() {
+      accordionContentItems.each(function collapse() {
+        $(this).slideUp();
+        $(this)
+          .parent()
+          .removeClass("is-active");
+      });
+    }
+
+    // contenus ciblés par une ancre restent ouvert
+    // eslint-disable-next-line no-shadow
+    function openAccordionsTargetedbyAnchor() {
+      const hash = window.location.hash.substr(1);
+      accordionContentItems.each(function SlideUpOrDown() {
+        if (hash !== "") {
+          if (
+            $(this)
+              .parent()
+              // eslint-disable-next-line eqeqeq
+              .find(`#${hash}`).length !== 0
+          ) {
+            $(this)
+              .parent()
+              .addClass("is-active");
+            $(this).slideDown();
+
+            // Déplie la tab si l'ancre cible un accordeon contenu dans une tab
+            const isContainedInTab = $(this).closest(".tabs-panel");
+            if (
+              typeof isContainedInTab !== "undefined" &&
+              isContainedInTab != null &&
+              typeof isContainedInTab.attr("id") !== "undefined"
+            ) {
+              const tabContentId = isContainedInTab.attr("id");
+              const targetTabTitle = document.querySelector(
+                `#${tabContentId.replace("-", "-title-")}`
+              );
+              if (targetTabTitle != null) {
+                document
+                  .querySelectorAll(".tabs-title")
+                  .forEach(el => el.classList.remove("is-active"));
+                targetTabTitle.classList.add("is-active");
+                const targetTabLink = targetTabTitle.children[0];
+                document.querySelectorAll(".tab-title--link").forEach(el => {
+                  el.setAttribute("tabindex", "-1");
+                  el.setAttribute("aria-selected", "false");
+                });
+                targetTabLink.setAttribute("tabindex", "0");
+                targetTabLink.setAttribute("aria-selected", "true");
+                const tabPanel = document.querySelector(`#${tabContentId}`);
+                document
+                  .querySelectorAll(".tabs-panel")
+                  .forEach(el => el.classList.remove("is-active"));
+                tabPanel.classList.add("is-active");
+              }
+            }
+          }
+        } else if (
+          $(this).attr("expand-onload") !== "true" &&
+          typeof $(this).attr("expand-onload") !== "undefined"
+        ) {
+          $(this).slideUp();
+          $(this)
+            .parent()
+            .removeClass("is-active");
+        }
+      });
+    }
+
+    function locationHashChanged() {
+      collapseAccordions(accordionContentItems);
+      openAccordionsTargetedbyAnchor(accordionContentItems);
+    }
+
+    /* global Foundation */
+    if (Foundation.MediaQuery.upTo("medium")) {
+      collapseAccordions(accordionContentItems);
+    }
+    openAccordionsTargetedbyAnchor(accordionContentItems);
+
+    $(window).on("changed.zf.mediaquery", (event, newSize, oldSize) => {
+      if (oldSize === "large" && newSize === "medium") {
+        collapseAccordions(accordionContentItems);
+        openAccordionsTargetedbyAnchor(accordionContentItems);
+      }
+    });
+    if ("onhashchange" in window) {
+      window.onhashchange = locationHashChanged;
+    }
+  });
+});

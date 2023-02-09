@@ -1,0 +1,10 @@
+/**
+ * @file
+ * Front librairies.
+ */
+
+jQuery($ => {
+  $(document).ready(() => {
+    // TO DO
+  });
+});

@@ -1,0 +1,101 @@
+jQuery($ => {
+  function readableFileSize(size) {
+    const units = ["octets", "Ko", "Mo", "Go", "To", "Po"];
+    let ord = Math.floor(Math.log(size) / Math.log(1024));
+    ord = Math.min(Math.max(0, ord), units.length - 1);
+    const s = Math.round((size / 1024 ** ord) * 100) / 100;
+    return `${s} ${units[ord]}`;
+  }
+
+  function ajaxFileTypeInfo(fullURL, current, format) {
+    $.ajax({
+      type: "HEAD",
+      url: fullURL,
+      complete(xhr) {
+        const size = readableFileSize(xhr.getResponseHeader("Content-Length"));
+        const dateChanged = new Date(xhr.getResponseHeader("Last-Modified"));
+        current.append(
+          `<span class="file-link" aria-hidden="true">${format} - ${size} - ${dateChanged.getDate()}/${dateChanged.getMonth() +
+            1}/${dateChanged.getFullYear()}</span>`,
+          `<span class="file-link-sr show-for-sr"> ${format} - ${size} - ${dateChanged.getDate()}/${dateChanged.getMonth() +
+            1}/${dateChanged.getFullYear()}</span>`
+        );
+      }
+    });
+  }
+
+  function addMimeType() {
+    const currentSubDomain = window.location.hostname.split(".")[0];
+    $(".paragraph.content a, .paragraph a, .accordion-content.content a").each(
+      function() {
+        try {
+          if (
+            $(this)[0].hasAttribute("href") &&
+            !$(this).hasClass("gallery-item-image-link") &&
+            !$(this).hasClass("gallery-item---wrapper") &&
+            !$(this).hasClass("stretched-link")
+          ) {
+            const href = $(this)
+              .attr("href")
+              .toLowerCase();
+            const fullURL = $(this).prop("href");
+            const fileExt = new RegExp(
+              "/(?=.*[.](?:pdf|doc|docx|odt|xls|xlsx|csv|ods|ppt|pptx|odp|png|gif|jpg|jpeg)$).*/"
+            );
+            const pdfExt = new RegExp("/(?=.*[.](?:pdf)$).*/");
+            const docExt = new RegExp("/(?=.*[.](?:doc|docx|odt)$).*/");
+            const tabExt = new RegExp("/(?=.*[.](?:xls|xlsx|csv|ods)$).*/");
+            const presExt = new RegExp("/(?=.*[.](?:ppt|pptx|odp)$).*/");
+            const imgExt = new RegExp("/(?=.*[.](?:png|gif|jpg|jpeg)$).*/");
+            const r = new RegExp("^(?:[a-z]+:)?//", "i");
+            if (r.test(href)) {
+              const url = new URL($(this).attr("href"));
+              const urlSubDomain = url.hostname.split(".")[0];
+              if (
+                urlSubDomain !== currentSubDomain &&
+                $(this).children("img").length === 0
+              ) {
+                const codeLang = window.location.pathname.split("/")[1];
+                const urlText = $.trim($(this).text()).substring(0, 150);
+                const urlTextTitle = urlText.replace(/(\r\n|\n|\r)/gm, "");
+                /* affichage de l'icone 'Ouverture d'une nouvelle fenêtre' */
+                if (!$(this).hasClass("cta-link")) {
+                  $(this).addClass("external-link");
+                }
+                if (codeLang === "en") {
+                  $(this).attr("title", `${urlTextTitle} (External link)`);
+                } else {
+                  $(this).attr("title", `${urlTextTitle} (Lien externe)`);
+                }
+                return;
+              }
+            }
+
+            if (fileExt.test(href)) {
+              if ($(this).children("img").length === 0) {
+                const current = $(this);
+                if (pdfExt.test(href)) {
+                  ajaxFileTypeInfo(fullURL, current, "PDF");
+                } else if (docExt.test(href)) {
+                  ajaxFileTypeInfo(fullURL, current, "DOC");
+                } else if (tabExt.test(href)) {
+                  ajaxFileTypeInfo(fullURL, current, "XLS");
+                } else if (presExt.test(href)) {
+                  ajaxFileTypeInfo(fullURL, current, "PPT");
+                } else if (imgExt.test(href)) {
+                  ajaxFileTypeInfo(fullURL, current, "Image");
+                }
+              }
+            }
+          }
+        } catch (err) {
+          console.log(err);
+        }
+      }
+    );
+  }
+
+  $(document).ready(() => {
+    addMimeType();
+  });
+});

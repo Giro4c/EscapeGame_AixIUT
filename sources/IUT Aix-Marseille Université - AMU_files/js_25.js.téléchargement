@@ -1,0 +1,29 @@
+(function(Drupal) {
+  function getCookieIsDev() {
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const cookies = decodedCookie.split("; ");
+    const cookieIsDev = cookies.find(row => row.startsWith("DevWarningClosed"));
+    if (cookieIsDev !== undefined) {
+      return cookieIsDev.split("=")[1];
+    }
+    return "";
+  }
+
+  function sessionDevWarning() {
+    const devWarning = document.querySelector(".callout.alert.devsite");
+    const closeDev = document.querySelector(
+      ".callout.alert.devsite .close-button"
+    );
+    const isDev = getCookieIsDev();
+    if (devWarning != null) {
+      closeDev.addEventListener("click", event => {
+        document.cookie = `DevWarningClosed=true; SameSite=Strict; secure`;
+      });
+      if (isDev && isDev === "true") {
+        devWarning.classList.add("hide");
+      }
+    }
+  }
+
+  sessionDevWarning();
+})(Drupal); // Drupal

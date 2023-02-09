@@ -1,0 +1,21 @@
+jQuery($ => {
+  $(document).ready(() => {
+    $(".carrousel__carrousel-item").each(function() {
+      $(this).slick({
+        dots: true,
+        arrows: true,
+        infinite: true,
+        autoplay: false,
+        slidesToShow: 1,
+        slideToScroll: 1,
+        adaptiveHeight: true,
+        prevArrow:
+          '<div class="prev-arrow show-for-large"><span class="fas fa-angle-left"></span><a aria-label="previous slide" class="sr-only">Prev</a></div>',
+        nextArrow:
+          '<div class="next-arrow show-for-large"><span class="fas fa-angle-right"></span><a aria-label="next slide" class="sr-only">Next</a></div>',
+        regionLabel: "carousel"
+      });
+    });
+  });
+  $(".paragraph.carrousel").show();
+});

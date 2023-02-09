@@ -1,0 +1,10 @@
+/**
+ * @file
+ * language switcher librairies.
+ */
+
+jQuery($ => {
+  $(document).ready(() => {
+    // TO DO
+  });
+});

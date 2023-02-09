@@ -1,0 +1,42 @@
+"use strict";
+(function (Drupal) {
+    let onlyOnce;
+    Drupal.behaviors.editLink = {
+        attach(context, settings) {
+            if (!onlyOnce) {
+                onlyOnce = true;
+                window.addEventListener('load', () => {
+                    var _a;
+                    const queryString = window.location.search;
+                    if (queryString) {
+                        const urlParams = new URLSearchParams(queryString);
+                        const targetID = urlParams.get('updatedPID');
+                        if (targetID) {
+                            (_a = document.getElementById(`paragraph-${targetID}`)) === null || _a === void 0 ? void 0 : _a.scrollIntoView();
+                            let opacity = 1.0;
+                            const target = document.getElementById(`paragraph-${targetID}`);
+                            target === null || target === void 0 ? void 0 : target.setAttribute('style', `background-color:rgba(248,238,136,${opacity})`);
+                            const handle = setInterval(() => {
+                                if (opacity < 0) {
+                                    clearInterval(handle);
+                                    return;
+                                }
+                                target === null || target === void 0 ? void 0 : target.setAttribute('style', `background-color:rgba(248,238,136,${opacity -= 0.1})`);
+                            }, 230);
+                        }
+                    }
+                });
+                document.querySelectorAll('.edit-link')
+                    .forEach((item) => {
+                    const linkScr = item.getAttribute('href');
+                    item.addEventListener('mouseover', (event) => {
+                        if (window.location.hash) {
+                            item.setAttribute('href', `${linkScr}&fragment=${window.location.hash.substring(1)}`);
+                        }
+                    }, false);
+                });
+            }
+        }, // attach
+    }; // behavior
+}(Drupal)); // Drupal
+//# sourceMappingURL=script.js.map

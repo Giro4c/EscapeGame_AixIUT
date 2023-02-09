@@ -1,0 +1,19 @@
+"use strict";
+(function () {
+    function titleInit() {
+        const titleAsh = (document.querySelector('.page-title'));
+        const titleMod = titleAsh === null || titleAsh === void 0 ? void 0 : titleAsh.innerHTML.replace('#', '</span> <span>');
+        const breadAsh = (document.querySelector('.current-page'));
+        const breadMod = breadAsh === null || breadAsh === void 0 ? void 0 : breadAsh.innerHTML.split('#')[1];
+        if (titleAsh && titleMod) {
+            titleAsh.innerHTML = titleMod;
+        }
+        if (breadAsh && breadMod) {
+            breadAsh.innerHTML = breadMod;
+        }
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        titleInit();
+    });
+}());
+//# sourceMappingURL=amu_iut_parcours.js.map

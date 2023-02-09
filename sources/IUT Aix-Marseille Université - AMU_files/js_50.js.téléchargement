@@ -1,0 +1,35 @@
+"use strict";
+(function () {
+    // Une carte 'invisible' au chargement de la page (dans un accordéon ou tab)
+    // n'est pas chargée correctement par Leaflet.
+    // Pour obtenir toutes les tiles et regénérer la carte, il faut redéclencher un Event 'resize'.
+    // @see issue #3
+    /**
+     * Charge les cartes au clic d'un lien accordéon ou onglet.
+     *
+     * @param {string} classes - Selecteur(s) CSS qui défini(ssen)t le lien
+     * */
+    function setMapOnClick(classes) {
+        const accordionBtns = document.querySelectorAll(`${classes}`);
+        accordionBtns.forEach((item) => {
+            item.addEventListener('click', () => {
+                window.dispatchEvent(new Event('resize'));
+            });
+        });
+    }
+    /**
+     * Charge la ou les carte(s) présente(s) dans un accordéon au chargement de la page.
+     * */
+    function setMapOnAccordionLoad() {
+        const { hash } = window.location;
+        if (hash.includes('#section-')) {
+            window.addEventListener('load', () => {
+                window.dispatchEvent(new Event('resize'));
+            });
+        }
+    }
+    setMapOnClick('a.accordion-title');
+    setMapOnClick('a.tab-title--link');
+    setMapOnAccordionLoad();
+}());
+//# sourceMappingURL=amu_p_map_load.js.map

@@ -1,0 +1,181 @@
+"use strict";
+(function (Drupal) {
+    let onlyOnce;
+    const btnClose = document.querySelector('.amu-chatbot-initial-msg__close-btn');
+    const btnCloseConsent = document.querySelector('.amu-chatbot-initial-msg__activate-btn--grow');
+    const btnOpen = document.querySelector('.amu-chatbot-initial-open-btn');
+    const btnActivate = document.querySelector('.amu-chatbot-initial-msg__activate-btn');
+    const modalConsent = document.querySelector('.amu-chatbot-container');
+    const modalText = document.querySelector('.amu-chatbot-consent');
+    /**
+     * Définit un cookie de session.
+     *
+     * @param {string} cookieName Nom du cookie
+     * @param {string} consent Valeur du cookie (statut du consentement, état de la fenêtre)
+     * */
+    function setCookie(cookieName, consent) {
+        document.cookie = `${cookieName}=${consent}; SameSite=Strict; secure`;
+    }
+    /**
+     * Récupère le cookie défini pour identifer la réponse de l'utilisateur.
+     *
+     * @param {string} cookieName Nom du cookie
+     * @return {string} Valeur du cookie, retournée si le cookie existe ou pas
+     * */
+    function getCookie(cookieName) {
+        const name = `${cookieName}=`;
+        const decodedCookie = decodeURIComponent(document.cookie);
+        const cookies = decodedCookie.split('; ');
+        const cookieImage = cookies.find((row) => row.startsWith(name));
+        if (cookieImage !== undefined) {
+            return cookieImage.split('=')[1];
+        }
+        return '';
+    }
+    /**
+     * N'affiche pas la fenêtre modale qui permet de donner le consentement.
+     * */
+    function hideModalChatbotConsent() {
+        modalConsent === null || modalConsent === void 0 ? void 0 : modalConsent.classList.add('hide');
+    }
+    /**
+     * Définit le script du chatbot et le place dans le DOM.
+     *
+     * @param {string} scriptLink Lien du script JS
+     * */
+    function setScriptElement(scriptLink) {
+        const script = document.createElement('script');
+        script.id = 'amuchatbot-script';
+        script.src = scriptLink;
+        document.body.appendChild(script);
+    }
+    /**
+     * Ajoute ou supprime les classes 'grow' ou 'hide' pour permettre l'animation au clic,
+     * c'est-à-dire l'ouverture/fermeture de la fenêtre avec le message et les boutons d'autorisation
+     * ou de refus de l'utilisation du chatbot.
+     * */
+    function expandModalChatbotConsent() {
+        modalText === null || modalText === void 0 ? void 0 : modalText.classList.toggle('grow');
+        btnActivate === null || btnActivate === void 0 ? void 0 : btnActivate.classList.toggle('grow');
+        btnClose === null || btnClose === void 0 ? void 0 : btnClose.classList.toggle('hide');
+        btnCloseConsent === null || btnCloseConsent === void 0 ? void 0 : btnCloseConsent.classList.toggle('hide');
+    }
+    /**
+     * Minimise ou déploie la fenêtre modale intermédiaire portant le bouton 'Activez le chatbot'.
+     * */
+    // eslint-disable-next-line max-len
+    function hideOpenModalChatbotInitialConsent(elementTohide, elementToReveal) {
+        elementTohide === null || elementTohide === void 0 ? void 0 : elementTohide.classList.add('hide');
+        elementToReveal === null || elementToReveal === void 0 ? void 0 : elementToReveal.classList.remove('hide');
+    }
+    /**
+     * Charge le script en fonction du bouton cliqué :
+     * - 'j'autorise' valide le consentement et change la valeur du cookie en 'true',
+     * - 'je refuse' valide le refus du dépôt de cookies et change la valeur du cookie en 'false'.
+     *
+     * @param {string} scriptLink Lien du script JS
+     * */
+    function setConsentStatus(scriptLink) {
+        document.addEventListener('click', (event) => {
+            event.stopImmediatePropagation();
+            switch (event.target.id) { // sans 'as Element' event.target.id ne fonctionne pas
+                case 'amu-chatbot-consent__button':
+                    setCookie('AmuChatbotConsent', 'true');
+                    setScriptElement(scriptLink);
+                    hideModalChatbotConsent();
+                    break;
+                case 'amu-chatbot-noconsent__button':
+                    setCookie('AmuChatbotConsent', 'false');
+                    hideOpenModalChatbotInitialConsent(modalConsent, btnOpen);
+                    setCookie('AmuChatbotInitialClosed', 'true');
+                    break;
+                default:
+                    break;
+            }
+        });
+    }
+    /**
+     * Détermine l'affichage de la fenêtre modale intermédiaire avec le bouton 'Activez le chatbot'.
+     * 'false' - la fenêtre est visible à l'écran.
+     * 'true' - la fenêtre est fermée, un bouton avec l'icône 'bulle-question' apparait à la place.
+     * */
+    function setModalChatbotInitialConsent() {
+        const isCookieDefined = document.cookie.indexOf('AmuChatbotInitialClosed');
+        const isCookieConsentDefined = document.cookie.indexOf('AmuChatbotConsent');
+        let consentGiven;
+        if (isCookieConsentDefined !== -1) {
+            consentGiven = getCookie('AmuChatbotConsent');
+        }
+        if (isCookieDefined === -1) {
+            setCookie('AmuChatbotInitialClosed', 'false');
+        }
+        else {
+            const isModalInitialClosed = getCookie('AmuChatbotInitialClosed');
+            if (isModalInitialClosed === 'true') {
+                hideOpenModalChatbotInitialConsent(modalConsent, btnOpen);
+            }
+            else { // === false
+                hideOpenModalChatbotInitialConsent(btnOpen, modalConsent);
+            }
+            if (consentGiven === 'true') {
+                hideModalChatbotConsent();
+            }
+        }
+    }
+    /**
+     * Met en place le chatbot au chargement de la page si le consentement est donné,
+     * affiche la fenêtre modale pour donner ou refuser son utilisation sinon.
+     *
+     * @param {string} scriptLink Lien du script JS
+     * */
+    function setChatbotOnLoad(scriptLink) {
+        const isCookieDefined = document.cookie.indexOf('AmuChatbotConsent');
+        if (isCookieDefined === -1) { // le cookie n'existe pas
+            setConsentStatus(scriptLink); // le consentement est (re)demandé
+        }
+        else {
+            const cookieValue = getCookie('AmuChatbotConsent');
+            if (cookieValue === 'true') {
+                setScriptElement(scriptLink); // charge le script et la fenêtre du chatbot
+                hideModalChatbotConsent();
+            }
+            else if (cookieValue === 'false') {
+                hideOpenModalChatbotInitialConsent(modalConsent, btnOpen);
+            }
+        }
+    }
+    // gestion des évènements sur les boutons 'ouvrir', 'fermer', 'activer', etc.
+    btnClose === null || btnClose === void 0 ? void 0 : btnClose.addEventListener('click', () => {
+        setCookie('AmuChatbotInitialClosed', 'true');
+        hideOpenModalChatbotInitialConsent(modalConsent, btnOpen);
+    });
+    btnOpen === null || btnOpen === void 0 ? void 0 : btnOpen.addEventListener('click', () => {
+        setCookie('AmuChatbotInitialClosed', 'false');
+        hideOpenModalChatbotInitialConsent(btnOpen, modalConsent);
+    });
+    btnActivate === null || btnActivate === void 0 ? void 0 : btnActivate.addEventListener('click', () => {
+        expandModalChatbotConsent();
+    });
+    btnCloseConsent === null || btnCloseConsent === void 0 ? void 0 : btnCloseConsent.addEventListener('click', () => {
+        hideOpenModalChatbotInitialConsent(modalConsent, btnOpen);
+        setCookie('AmuChatbotInitialClosed', 'true');
+    });
+    // ferme la fenêtre quand on clique à l'extérieur de la fenêtre
+    document.addEventListener('click', (event) => {
+        if (!(modalConsent === null || modalConsent === void 0 ? void 0 : modalConsent.contains(event.target)) && (modalText === null || modalText === void 0 ? void 0 : modalText.classList.contains('grow'))) {
+            expandModalChatbotConsent();
+        }
+    });
+    Drupal.behaviors.amuChatbotConsent = {
+        attach(context, drupalSettings) {
+            if (!onlyOnce) {
+                onlyOnce = true;
+                const scriptSrc = drupalSettings.mode;
+                setChatbotOnLoad(scriptSrc);
+                setConsentStatus(scriptSrc);
+                setModalChatbotInitialConsent();
+            }
+        },
+    };
+}(Drupal));
+//# sourceMappingURL=amu_chatbot_consent.js.map

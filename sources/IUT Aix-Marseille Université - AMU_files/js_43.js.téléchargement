@@ -1,0 +1,61 @@
+jQuery($ => {
+  $(document).ready(() => {
+    $.fancybox.defaults.hash = false;
+    $(".fancybox").fancybox();
+    $(".paragraph-gallery").each(function() {
+      const thisId = $(this).attr("id");
+      $(this)
+        .find(".gallery-item---wrapper")
+        .attr("data-fancybox", thisId);
+    });
+
+    if ($(".carrousel__images .gallery").length) {
+      $(".carrousel__images .gallery").each(function() {
+        const thumbnailsWidth = $(this)
+          .parent()
+          .data("amu-thumbnails-width");
+        const slidesToShow = Math.floor(100 / thumbnailsWidth.replace("%", ""));
+        $(this).slick({
+          dots: true,
+          arrows: true,
+          infinite: true,
+          autoplay: false,
+          slidesToShow,
+          slideToScroll: slidesToShow,
+          prevArrow:
+            '<div class="prev-arrow"><span class="fa fa-angle-left"></span><span class="show-for-sr">Prev</span></div>',
+          nextArrow:
+            '<div class="next-arrow"><span class="fa fa-angle-right"></span><span class="show-for-sr">Next</span></div>',
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true
+              }
+            },
+            {
+              breakpoint: 640,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                arrows: false,
+                dots: true
+              }
+            }
+          ]
+        });
+      });
+    }
+
+    // Nécessaire aux galleries dans accordéons inactifs
+    $(".accordion-item").on("click", e => {
+      $(".carrousel__images .gallery").slick("setPosition");
+    });
+    // Nécessaire aux galleries dans tabs inactifs
+    $(".tabs").on("click", e => {
+      $(".carrousel__images .gallery").slick("setPosition");
+    });
+  });
+});
