@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- A faire modif le code source pour que quand logo Python cliqué, affiche <form> pour code accès mdp p2 buncker -->
+<html lang="fr">
+
+<head>
+    <title>Repère des fonctions Python</title>
+    <meta charset="utf-8"/>
+    <!-- Ajout du favicon -->
+    <link rel="icon" type="image/jpg" href="RTFM.jpg">
+    <!-- Ajout des fiches de style nécessaires -->
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <header id="bg">
+        <nav id="manuell">
+            <button type="button" id="manuel">Manuel</button>
+        </nav>
+    </header>
+
+    <section id="E-P_P1-Fct">
+        <figure>
+            <img src="./Python_Logo.png" alt="Logo du langage de programmation Python" width="100px">
+        </figure>
+        <h1>Le Repère Python</h1>
+        <p>
+            s s s s s s s s s s s s s s s s s s s s s s s s s 
+            s s s s s s s s s s s s s s s s s s s s s s s s s 
+            s s s s s s s s s s s s s s s s s s s s s s s s s 
+            s s s s s s s s s s s 
+        </p>
+
+        <pre>
+
+    def leMotDePasseport (z)
+        return ((z * 4 - 2) // 5)%3 + 10
+
+        </pre>
+        <pre>
+
+    def leMotDePasserelle (y)
+        laVar = y - 200
+        laVarPasVar = y%3
+        theVar = laVarPasVar * 10 + 31
+        return (laVar + laVarPasVar + theVar)
+
+        </pre>
+        <pre>
+    
+    def leMotDePassage (x)
+        uneVar = x - x%5
+        autreVar = x + 25
+        autreVar2 = autreVar // 2
+        uneVar2 = (uneVar * 2) // 3
+        return max({uneVar + uneVar2, autreVar + autreVar2})
+
+        </pre>
+    </section>
+
+    <section id="E-P_P1-Code">
+        <form>
+            <input id="codeC1" type="text">
+            <input id="codeC2" type="text">
+            <input id="codeC3" type="text">
+            <input id="codeC4" type="text">
+            <input id="codeC5" type="text">
+            <input type="submit" value="Valider">
+        </form>
+    </section>
+
+</body>
+
+</html>
