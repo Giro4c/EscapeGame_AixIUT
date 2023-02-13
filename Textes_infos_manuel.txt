@@ -49,23 +49,13 @@ Voici le tableau des caractères et leur code :
     
     C++ :
 
-Le C++ est un langage de programmation compilé incontournable pour les développeurs : il permet d'écrire des programmes informatiques, pour créer des applications mobiles ou des jeux vidéo, par exemple. 
-C++ est créé à partir du langage C, dont il étend les fonctionnalités : C++ permet notamment de faire de la programmation orientée objet (POO).
+Cliquez ici pour accéder à la page d'information.
 
-Comme tout langage de programmation, il repose sur le l'algorithmie : l'exécution de suites d'opération élémentaires selon un processus défini pour aboutir à un résultat.
-Il utilise ainsi des variables de stockage de valeur qui sont définies selon un type (nombre, caractère, chaine de caractère, booléen, etc...), des expressions logiques utilisées dans l'évaluation d'une condition, des boucles (répétition d'instruction dont la condition de fin est définie), etc...
+    Java :
 
-Pour les variables, le C++ utilise un grand nombre de type définis sur un certain nombre de bits en fonction notamment du "préfixe" de celui ci.
-Voici les types les plus communs utilisés :
-    (Faire un tableau)
-    - bool
-    - unsigned int
-    - int 
-    - float
-    - char
-    - string
+Cliquez ici pour accéder à la page d'information.
 
+    Python :
 
-
-
+Cliquez ici pour accéder à la page d'information.
 

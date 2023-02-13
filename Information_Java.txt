@@ -1,0 +1,138 @@
+Le Java est un autre langage de programmation compilé incontournable pour les développeurs : il permet d'écrire des programmes informatiques, pour créer des applications mobiles ou des jeux vidéo, par exemple. 
+Java un langage inpiré du C++, dont il reprend des fonctionnalités mais en ajoute aussi des nouvelles : Java est notamment très dirigé vers la programmation orientée objet (POO).
+
+Comme tout langage de programmation, il repose sur le l'algorithmie : l'exécution de suites d'opération élémentaires selon un processus défini pour aboutir à un résultat. Mais aussi sur des principes fondamentaux de la POO tels que les classes, les instances de classes, l'héritage et le polymorphisme par exemple.
+Il utilise ainsi des variables de stockage de valeur qui sont définies selon un type (nombre, caractère, chaine de caractère, booléen, etc...), des expressions logiques utilisées dans l'évaluation d'une condition, des boucles (répétition d'instruction dont la condition de fin est définie), etc...
+<strong>Il est cependant sensible à la casse : c'est-à-dire que pour une instruction comme if (que l'on verra plus tard), écrire If avec une majuscule fera "planter" le programme. </strong>
+
+    Petite explication simple des principes de la POO :
+
+        Les classes et instances de classe :
+
+Une classe est la description de données appelées attributs, et d’opérations appelées méthodes.
+Ces attributs et méthodes ont des "portées" différentes : si ils sont <code>private</code> alors il ne sont accessibles qu'en interne (à l'intérieur de la classe), si ils sont <code>public</code> alors ils peuvent être utiliser en dehors de la classe à condition que l'appel soit précédé de "nomClasse.".
+Une classe est un modèle de définition pour des objets ayant le même ensemble d’attributs, et le même ensemble d’opérations.
+
+A partir d'une classe, on peut créer un ou plusieurs objet. C'est ce qu'on appelle l'instanciation : chaque objet est une instance d'une seule classe.
+
+        L'héritage :
+
+L'héritage est un concept fondamental de la POO qui permet de réutiliser du code de la classe mère dans la classe fille. 
+En Java, l'héritage est indiqué par le mot clé <code>extends</code> après le nom de la classe.
+On dit donc qu'une classe en étend une autre. La classe qui est étendue est appelée classe mère ou classe parente et la classe qui étend est appelée classe fille ou classe enfant.
+<strong>Remarque : une classe ne peut étendre qu'une seule classe à la fois mais une classe peut être étendue par plusieurs classes.</strong>
+
+        Le polymorphisme :
+
+Le polymorphisme est un concept lié à l'héritage puisqu'il permet de "surcharger" les méthodes de la classe mère pour redéfinir leur comportement sans changer leur signature.
+    Par exemple :
+On a la classe mère Cercle et la classe fille Cylindre.
+Cylindre hérite de la méthode Aire de Cercle mais l'aire d'un cylindre est différente de celle d'un cercle.
+Pour résoudre ce problème, il faut surcharger la méthode. 
+Ainsi il sera possible de faire appel aux deux fonctions de même signature en utilisant le préfixe <code>super.</code> pour la méthode de la classe mère.
+
+    La syntaxe du langage :
+
+Pour les variables, le Java utilise un certain nombre de type définis. La plupart proviennent du C++ mais certaines du C++ ne se trouvent pas dans Java.
+Voici les types primitifs (de base) du langage :
+    (Faire un tableau)
+    - int = un entier relatif sur 32 bit
+    - long = un entier relatif sur 64 bit (intervalle plus grand que int)
+    - float = un nombre décimal sur 32 bit
+    - double = un nombre décimal sur 64 bit
+    - char = un caractère (de l'unicode 16 bit)
+    - boolean = un bouléen / un binaire (vrai ou faux / 0 ou 1)
+
+Contrairement au C++, le type <code>string</code> s'appelle <code>String</code> et est un type complexe particulier représentant une chaîne de caractères.
+
+Pour se retrouver dans un programme ou l'annoter, ajouter des commentaires, il existe deux syntaxes 
+    // Un commentaire sur une seule ligne
+    /* Un autre commentaire sur une seule ligne */
+    /* Un commentaire sur 
+    plusieurs lignes */
+
+Voici quelques intructions généralisées et leur explication :
+
+// Déclaration d'une classe :
+[public | private] class nomClasse { }
+
+// Instanciation d'une classe :
+nomClasse nomObjet;
+nomClasse nomObjet = new nomClasse(valeur des attributs);
+
+// Déclaration d'une variable de type nomType et de nom nomVar
+nomType nomVar;
+
+// Déclaration d'une variable de type nomType, de nom nomVar et inisialisation à la valeur val :
+nomType nomVar = val;
+
+// Modification d'une variable :
+nomVar = val; // La variable prend la valeur val
+nomVar = nomVar + val; // La variable est incrémentée de val. Ne fonctionne que si la variable a déjà été initialisée
+
+// Expression de la condition :
+if (Condition1) // Si la Condition1 est remplie alors...
+{
+    action1;
+    action2; // ...exécute les instructions action1 et action2...
+}
+else if (Condition2) // ...sinon si la Condition2 est remplie alors...
+{
+    action3;
+    action4; // ...exécute les instructions action1 et action2...
+}
+else // ...sinon...
+{
+    action5; // ...exécute l'instruction action5.
+}
+
+// Expression des boucles
+
+// Boucle while (tant que la condition n'est pas remplie, répète l'exécution des instructions dans la boucle)
+while (Condition1)
+{
+    action1;
+    action2;
+}
+
+// Boucle infinie (sortie de la boucle avec l'instruction break)
+while (true)
+{
+    action1;
+    if (Condition1) break; // Sortie de la boucle si Condition1 remplie
+    action2;
+    if (Condition2) break; // Sortie de la boucle si Condition2 remplie
+}
+
+// Boucle for (une boucle de type while particulière : peut déclarer une variable propre à la boucle (un compteur) et exécuter une action à chaque fin de boucle)
+for (nomType nomVar (val); Condition1; action1)
+{
+    action2;
+    action3;
+}
+
+// Les procédures :
+
+    // Déclaration :
+void procedure1 (paramètres : types et noms)
+{
+    action1;
+    action2;
+}
+
+    // Appel :
+procedure1(Variable); 
+
+// Les fonctions :
+
+    // Déclaration :
+nomType fonction1 (paramètres : types et noms) // Le type de la fonction dépend de la valeur qu'elle renvoie
+{
+    action1;
+    action3;
+    return val; // Renvoie une valeur de type nomType
+}
+
+    // Appel :
+fonction1(Variable) // Comme une fonction renvoie une valeur, elle est appelée dans l'initialisation de variables, des comparaisons, etc...
+
