@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <title>Java Infos</title>
+    <meta charset="utf-8"/>
+    <!-- Ajout du favicon -->
+    <link rel="icon" type="image/jpg" href="RTFM.jpg">
+    <!-- Ajout des fiches de style nécessaires -->
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <header id="bg">
+        <nav id="manuell">
+            <button type="button" id="manuel">Manuel</button>
+        </nav>
+    </header>
+
+    <h1>Langages de Programmation : Java</h1>
+
+    <p>
+        Le Java est un autre langage de programmation compilé incontournable pour les développeurs : il permet d'écrire des programmes informatiques, pour créer des applications mobiles ou des jeux vidéo, par exemple.<br>
+        Java un langage inpiré du C++, dont il reprend des fonctionnalités mais en ajoute aussi des nouvelles : Java est notamment très dirigé vers la programmation orientée objet (POO).<br>
+        <br>
+        Comme tout langage de programmation, il repose sur le l'algorithmie : l'exécution de suites d'opération élémentaires selon un processus défini pour aboutir à un résultat. Mais aussi sur des principes fondamentaux de la POO tels que les classes, les instances de classes, l'héritage et le polymorphisme par exemple.<br>
+        Il utilise ainsi des variables de stockage de valeur qui sont définies selon un type (nombre, caractère, chaine de caractère, booléen, etc...), des expressions logiques utilisées dans l'évaluation d'une condition, des boucles (répétition d'instruction dont la condition de fin est définie), etc...<br>
+        <strong>Il est cependant sensible à la casse : c'est-à-dire que pour une instruction comme if (que l'on verra plus tard), écrire If avec une majuscule fera "planter" le programme. </strong>
+    </p>
+    
+    <h2>Petite explication simple des principes de la POO :</h2>
+
+    <h3>Les classes et instances de classe :</h3>
+    <p>
+        Une classe est la description de données appelées attributs, et d'opérations appelées méthodes.<br>
+        Ces attributs et méthodes ont des "portées" différentes : si ils sont <code>private</code> alors il ne sont accessibles qu'en interne (à l'intérieur de la classe), si ils sont <code>public</code> alors ils peuvent être utiliser en dehors de la classe à condition que l'appel soit précédé de "nomClasse.".<br>
+        Une classe est un modèle de définition pour des objets ayant le même ensemble d'attributs, et le même ensemble d'opérations.<br>
+        <br>
+        A partir d'une classe, on peut créer un ou plusieurs objet. C'est ce qu'on appelle l'instanciation : chaque objet est une instance d'une seule classe.
+    </p>
+                
+    <h3>L'héritage :</h3>
+    <p>
+        L'héritage est un concept fondamental de la POO qui permet de réutiliser du code de la classe mère dans la classe fille.<br>
+        En Java, l'héritage est indiqué par le mot clé <code>extends</code> après le nom de la classe.<br>
+        On dit donc qu'une classe en étend une autre. La classe qui est étendue est appelée classe mère ou classe parente et la classe qui étend est appelée classe fille ou classe enfant.<br>
+        <strong>Remarque : une classe ne peut étendre qu'une seule classe à la fois mais une classe peut être étendue par plusieurs classes.</strong>
+    </p>
+
+    <h3>Le polymorphisme :</h3>
+    <p>
+        Le polymorphisme est un concept lié à l'héritage puisqu'il permet de "surcharger" les méthodes de la classe mère pour redéfinir leur comportement sans changer leur signature.
+    </p>     
+    <h4>Par exemple :</h4>
+    <p>
+        On a la classe mère Cercle et la classe fille Cylindre.<br>
+        Cylindre hérite de la méthode Aire de Cercle mais l'aire d'un cylindre est différente de celle d'un cercle.<br>
+        Pour résoudre ce problème, il faut surcharger la méthode.<br>
+        Ainsi il sera possible de faire appel aux deux fonctions de même signature en utilisant le préfixe <code>super.</code> pour la méthode de la classe mère.
+    </p>
+
+    <h2>La syntaxe du langage :</h2>
+
+    <p>
+        Pour les variables, le Java utilise un certain nombre de types définis. La plupart proviennent du C++ mais certaines du C++ ne se trouvent pas dans Java.<br>
+        Voici les types primitifs (de base) du langage :
+    </p>
+    <table border="1">
+        <tr>
+            <td>int</td>
+            <td>entier relatif sur 32 bit</td>
+        </tr>
+        <tr>
+            <td>long</td>
+            <td>entier relatif sur 64 bit (intervalle plus grand que int)</td>
+        </tr>
+        <tr>
+            <td>float</td>
+            <td>nombre décimal sur 32 bit</td>
+        </tr>
+        <tr>
+            <td>double</td>
+            <td>nombre décimal sur 64 bit</td>
+        </tr>
+        <tr>
+            <td>char</td>
+            <td>caractère (de l'unicode 16 bit)</td>
+        </tr>
+        <tr>
+            <td>boolean</td>
+            <td>bouléen / binaire (vrai ou faux / 0 ou 1)</td>
+        </tr>
+    </table>
+
+    <p>
+        Contrairement au C++, le type <code>string</code> s'appelle <code>String</code> et est un type complexe particulier représentant une chaîne de caractères.
+    </p>
+    <p>
+        Pour se retrouver dans un programme ou l'annoter, ajouter des commentaires, il existe deux syntaxes :<br>
+        <code class="commentaire"> // Un commentaire sur une seule ligne</code><br>
+        ou<br>
+        <code class="commentaire">/* Un autre commentaire sur une seule ligne */</code><br>
+        <code class="commentaire">/* Un commentaire sur <br>
+        plusieurs lignes */</code>
+    </p>
+
+    <h3>Quelques intructions généralisées et leur explication :</h3>
+
+    <pre>
+    <code class="commentaire">// Déclaration d'une classe :</code>
+    [public | private] class nomClasse { }
+
+    <code class="commentaire">// Instanciation d'une classe :</code>
+    nomClasse nomObjet;
+    nomClasse nomObjet = new nomClasse(valeur des attributs);
+
+    <code class="commentaire">// Déclaration d'une variable de type nomType et de nom nomVar</code>
+    nomType nomVar;
+
+    <code class="commentaire">/* Déclaration d'une variable de type nomType, de nom nomVar et 
+        initialisation à la valeur val : */</code>
+    nomType nomVar = val;
+
+    <code class="commentaire">// Modification d'une variable :</code>
+    nomVar = val; // La variable prend la valeur val
+    nomVar = nomVar + val; // La variable est incrémentée de val. Ne fonctionne que si la variable a déjà été initialisée
+
+    <code class="commentaire">// Expression de la condition :</code>
+    if (Condition1) <code class="commentaire">// Si la Condition1 est remplie alors...</code>
+    {
+        action1;
+        action2; <code class="commentaire">// ...exécute les instructions action1 et action2...</code>
+    }
+    else if (Condition2) <code class="commentaire">// ...sinon si la Condition2 est remplie alors...</code>
+    {
+        action3;
+        action4; <code class="commentaire">// ...exécute les instructions action1 et action2...</code>
+    }
+    else <code class="commentaire">// ...sinon...</code>
+    {
+        action5; <code class="commentaire">// ...exécute l'instruction action5.</code>
+    }
+
+    <code class="commentaire">// Expression des boucles</code>
+
+    <code class="commentaire">/* Boucle while (tant que la condition n'est pas remplie, 
+        répète l'exécution des instructions dans la boucle) */</code>
+    while (Condition1)
+    {
+        action1;
+        action2;
+    }
+
+    <code class="commentaire">// Boucle infinie (sortie de la boucle avec l'instruction break)</code>
+    while (true)
+    {
+        action1;
+        if (Condition1) break; <code class="commentaire">// Sortie de la boucle si Condition1 remplie</code>
+        action2;
+        if (Condition2) break; <code class="commentaire">// Sortie de la boucle si Condition2 remplie</code>
+    }
+
+    <code class="commentaire">/* Boucle for (une boucle de type while particulière : peut déclarer 
+        une variable propre à la boucle (un compteur) et exécuter une action à chaque fin de boucle) */</code>
+    for (nomType nomVar (val); Condition1; action1)
+    {
+        action2;
+        action3;
+    }
+
+    <code class="commentaire">// Les procédures :</code>
+
+        <code class="commentaire">// Déclaration :</code>
+    void procedure1 (paramètres : types et noms)
+    {
+        action1;
+        action2;
+    }
+
+        <code class="commentaire">// Appel :</code>
+    procedure1(Variable); 
+
+    <code class="commentaire">// Les fonctions :</code>
+
+        <code class="commentaire">// Déclaration :</code>
+    nomType fonction1 (paramètres : types et noms) // Le type de la fonction dépend de la valeur qu'elle renvoie
+    {
+        action1;
+        action3;
+        return val; <code class="commentaire">// Renvoie une valeur de type nomType</code>
+    }
+
+        <code class="commentaire">// Appel :</code>
+    fonction1(Variable) 
+    <code class="commentaire">/* Comme une fonction renvoie une valeur, elle est appelée dans 
+        l'initialisation de variables, des comparaisons, etc... */ </code>
+        
+    </pre>
