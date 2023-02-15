@@ -33,7 +33,7 @@ body {
 #manuel{
     margin: 20px;
     border: none;
-    background-color: #ea1538;
+    background-color: #f66a42;
     padding: 12px 30px;
     border-radius: 30px;
     font-weight: bold;
@@ -57,8 +57,7 @@ body {
 a
 {
     color:#fff;
-    text-decoration:none; 
-    text-transform: uppercase;
+    text-decoration:none;
 }
 
 #texte {
@@ -81,7 +80,7 @@ a
 #fbouton{
     margin: 20px;
     border: none;
-    background-color: #ea1538;
+    background-color: #f66a42;
     padding: 12px 30px;
     border-radius: 30px;
     color:white;
