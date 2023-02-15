@@ -5,3 +5,10 @@ home_hack.html
     Indice : Turing
 
 1 2 7 12 15 20 23 Code Java
+
+<button onclick="click()">Indice</button>
+
+dans le fichier js
+function click(){
+    alert("l'indice")
+}
