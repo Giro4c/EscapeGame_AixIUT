@@ -4,3 +4,25 @@ faux_site.html
 
 home_hack.html
     "Vous êtes arrivés dans ce qui semblerait être le home du hacker mais il ne semble pas y avoir grand chose... Peut-être en cherchant un peu plus, il serait possible d'accéder à d'autres fichiers ?"
+
+al_c++.html
+    "C'est comme ça que fonctionne le home... ça a tout l'air d'être une page banale. Peut-être qu'il y aura quelque chose d'utile dans ce programme ?"
+
+repere_python.html
+    "Le hacker semble vraiment intéressé dans les langages de programmation... A quoi peuvent bien servir ces fonctions ?"
+
+laby_c++.html
+    "Tiens, cette page semble proposer quatre options. Pourquoi celles-ci ? Bizarre..."
+
+The_Laby.html
+    "Encore des options !? C'est quoi cet endroit ? Un labyrinthe ?"
+
+java_info.html
+    "Un page informative du le langage Java. OK... Le texte semble être le même que sur le manuel, à moins que-"
+
+found_buncker.html
+    "Dernière ligne droite ! Les datas du hacker doivent forcément se trouver là-dedans ! Comment ça accès restreint !? Vite ! Il faut trouver le code avant qu'il ne se rende compte de votre présence !"
+
+select_buncker.html
+    "Hmm... Dans quel buncker le hacker cacherait-il ses datas ? A vous de trouver le bon.
+
