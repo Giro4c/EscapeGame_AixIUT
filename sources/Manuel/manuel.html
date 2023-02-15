@@ -47,7 +47,146 @@
         
         <h2 id="T">Turing</h2>
 
+        <p>
+            D'après Wikipédia :<br>
+            Alan Mathison Turing, né le 23 juin 1912 à Londres et mort le 7 juin 1954 à Wilmslow, est un mathématicien et cryptologue britannique, 
+            auteur de travaux qui fondent scientifiquement l'informatique.<br>
+        </p>
+        <p>
+            Pour résoudre le problème fondamental de la décidabilité en arithmétique, il présente en 1936 une expérience de pensée que l'on 
+            nommera ensuite machine de Turing et des concepts de programme et de 
+            programmation, qui prendront tout leur sens avec la diffusion des ordinateurs, dans la seconde moitié du xxe siècle. Son modèle 
+            a contribué à établir la thèse de Church, qui définit le concept mathématique intuitif de fonction calculable.
+        </p>
+        <p>
+            Durant la Seconde Guerre mondiale, il joue un rôle majeur dans la cryptanalyse de la machine Enigma utilisée par les armées 
+            allemandes : l'invention de machines usant de procédés électroniques, les bombes, fera passer le décryptage à plusieurs milliers 
+            de messages par jour. Mais tout ce travail doit forcément rester secret, et ne sera connu du public que dans les années 1970. 
+            Après la guerre, il travaille sur un des tout premiers ordinateurs, puis contribue au débat sur la possibilité de l'intelligence 
+            artificielle, en proposant le test de Turing. Vers la fin de sa vie, il s'intéresse à des modèles de morphogenèse du vivant 
+            conduisant aux "structures de Turing".
+        </p>
+
         <h2 id="MT">Machine de Turing</h2>
+        <p>
+            D'après Wikipédia :<br>
+            En informatique théorique, une machine de Turing est un modèle abstrait du fonctionnement des appareils mécaniques de calcul, 
+            tel un ordinateur. Ce modèle a été imaginé par Alan Turing en 1936, en vue de donner une définition précise au concept d'algorithme 
+            ou de "procédure mécanique". Il est toujours largement utilisé en informatique théorique, en particulier dans les domaines de la 
+            complexité algorithmique et de la calculabilité.
+        </p>
+        <h3>Définition :</h3>
+        <p>
+            Quoique son nom de « machine » puisse conduire à croire le contraire, une machine de Turing est un concept abstrait, c'est-à-dire 
+            un objet mathématique. Une machine de Turing comporte les éléments suivants :
+        </p>
+        <ul>
+            <li>Un <strong>ruban infini</strong> divisé en cases consécutives. Chaque case contient un symbole d'un alphabet fini donné. L'alphabet contient un symbole spécial appelé « symbole blanc » ('0' dans les exemples qui suivent), et un ou plusieurs autres symboles. Le ruban est supposé être de longueur illimitée vers la gauche ou vers la droite, en d'autres termes la machine doit toujours avoir assez de longueur de ruban pour son exécution. On considère que les cases du ruban contiennent par défaut le « symbole blanc » ;</li>
+            <li>Une <strong>tête de lecture/écriture</strong> qui peut lire et écrire les symboles sur le ruban, et se déplacer vers la gauche ou vers la droite du ruban ;</li>
+            <li>Un <strong>registre d'état</strong> qui mémorise l'état courant de la machine de Turing. Le nombre d'états possibles est toujours fini, et il existe un état spécial appelé « état de départ » qui est l'état initial de la machine avant son exécution ;</li>
+            <li>Une <strong>table d'actions</strong> qui indique à la machine quel symbole écrire sur le ruban, comment déplacer la tête de lecture (par exemple « ←\leftarrow  » pour une case vers la gauche, « →\rightarrow  » pour une case vers la droite), et quel est le nouvel état, en fonction du symbole lu sur le ruban et de l'état courant de la machine. Si aucune action n'existe pour une combinaison donnée d'un symbole lu et d'un état courant, la machine s'arrête.</li>
+        </ul>
+        <h3>Exemple de table d'action :</h3>
+        <p>
+            La table d'action est un exemple infini sans réel but. MAIS elle pourrait être utile...
+        </p>
+        <table border="1">
+            <tr>
+                <th>Etat</th>
+                <th>Lit</th>
+                <th>Ecrit</th>
+                <th>Déplace vers</th>
+                <th>Suivant</th>
+            </tr>
+            <!-- Etat 1 -->
+            <tr>
+                <td> E1 </td>
+                <td> VIDE </td>
+                <td> VIDE </td>
+                <td> Droite </td>
+                <td> E2 </td>
+            </tr>
+            <!-- Etat 2 -->
+            <tr>
+                <td rowspan="3"> E2 </td>
+                <td> 0 </td>
+                <td> 1 </td>
+                <td> Droite </td>
+                <td> E2 </td>
+            </tr>
+            <tr>
+                <td> 1 </td>
+                <td> 0 </td>
+                <td> Droite </td>
+                <td> E4 </td>
+            </tr>
+            <tr>
+                <td> VIDE </td>
+                <td> VIDE </td>
+                <td> Droite </td>
+                <td> E2 </td>
+            </tr>
+            <!-- Etat 3 -->
+            <tr>
+                <td rowspan="3">E3</td>
+                <td> 0 </td>
+                <td> 0 </td>
+                <td> Droite </td>
+                <td> E2 </td>
+            </tr>
+            <tr>
+                <td> 1 </td>
+                <td> 1 </td>
+                <td> Gauche </td>
+                <td> E3 </td>
+            </tr>
+            <tr>
+                <td> VIDE </td>
+                <td> 1 </td>
+                <td> Droite </td>
+                <td> E4 </td>
+            </tr>
+            <!-- Etat 4 -->
+            <tr>
+                <td rowspan="3">E4</td>
+                <td> 0 </td>
+                <td> 0 </td>
+                <td> Droite </td>
+                <td> E4 </td>
+            </tr>
+            <tr>
+                <td> 1 </td>
+                <td> 1 </td>
+                <td> Droite </td>
+                <td> E4 </td>
+            </tr>
+            <tr>
+                <td> VIDE </td>
+                <td> 0 </td>
+                <td> Gauche </td>
+                <td> E5 </td>
+            </tr>
+            <!-- Etat 5 -->
+            <tr>
+                <td rowspan="3"> E5 </td>
+                <td> 0 </td>
+                <td> 1 </td>
+                <td> Gauche </td>
+                <td> E3 </td>
+            </tr>
+            <tr>
+                <td> 1 </td>
+                <td> 1 </td>
+                <td> Gauche </td>
+                <td> E4 </td>
+            </tr>
+            <tr>
+                <td> VIDE </td>
+                <td> VIDE </td>
+                <td> Gauche </td>
+                <td> E2 </td>
+            </tr>
+        </table>
 
         <h2 id="SM">Systèmes de numération</h2>
         <h3>Le système décimal</h3>
