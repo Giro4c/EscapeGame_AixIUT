@@ -21,7 +21,7 @@ Pour se retrouver dans un programme ou l'annoter, ajouter des commentaires, il e
     /* Un commentaire sur 
     plusieurs lignes */
 
-Voici quelques intructions généralisées et leur explication :
+Voici Quelques intructions généralisées et leur explication :
 
 // Déclaration d'une variable de type nomType et de nom nomVar
 nomType nomVar;
