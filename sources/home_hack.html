@@ -8,18 +8,22 @@
     <link rel="icon" href="RTFM.jpg">
     <link rel="icon" type="image/jpg" href="RTFM.jpg">
     <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="">
 </head>
 
 <body>
     <header id="bouton">
-        <p onClick="alert('Vous êtes arrivés dans ce qui semblerait être le home du hacker mais il ne semble pas y avoir grand chose... Peut-être en cherchant un peu plus, il serait possible d\'accéder à d\'autres fichiers ?');">Histoire</p>
+        <div id="home">
+            <a class="active" href="../index.html"><i class="fa fa-home"></i></a> 
+            <p id="histoire" onClick="alert('');">?</p>
+        </div> 
+        <p id="histoire" onClick="alert('');">Histoire</p>
         <a href="./Manuel/manuel.html" id="manuel">Manuel</a>
     </header>
-
+    
     <section class="body">
         <!-- Les deux bandes de la machine du Turing -->
-        
         <!-- Bande 1 -->
         <table border="1">
             <tr>
@@ -35,7 +39,7 @@
                 <td>   </td>
             </tr>
         </table>
-
+        
         <p>E1</p>
         
         <!-- Bande 2 -->
@@ -53,8 +57,8 @@
                 <td>   </td>
             </tr>
         </table>
-
-
+        
+        
         <!-- La partie à remplir avant que les bandes de la machine de Turing apparaissent -->
         <form id="E-MT_P1" action="" method="post" enctype="text/plain">
             <label for="E-MT_P1-MDP">Pour avoir l'accès complet à la page, veuillez entrer le code à 4 chiffres</label><br>
@@ -62,18 +66,22 @@
             <input type="submit" value="Valider">
         </form>
     </section>
-
+    
     <section class="body">
         <!-- Le navigateur de page -->
-
+        
         <form id="Nav-E_Form" action="" method="post" enctype="text/plain">
             <label for="Nav-Key">Entrez la clé d'accès à la page voulue :</label><br>
             <input type="text" id="Nav-Key" name="Access_Key">
             <input type="submit" value="->">
         </form>
-
+        
     </section>
-    
+    <script src="./home_hack.js">
+        function click(){
+            alert("l'indice")
+        }
+    </script>
 </body>
 
 </html>

@@ -3,4 +3,4 @@ faux_site.html
     Peut-être le hacker aurait-t-il oublié d'enlever un lien important quelque part. Cherchez la faille."
 
 home_hack.html
-    "Vous êtes arrivés dans ce qui semblerait être le home du hacker mais il ne semble pas y avoir grand chose... Peut-être en cherchant un peu plus, il serait possible d'accéder à d'autres fichiers ?"
+    "Vous êtes arrivés dans ce qui semblerait être le home du hacker mais il ne semble pas y avoir grand chose... Peut-être en cherchant un peu plus, il serait possible d\'accéder à d\'autres fichiers ?"

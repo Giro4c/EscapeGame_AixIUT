@@ -6,10 +6,3 @@ home_hack.html
 
 1 2 7 12 15 20 23 Code Java
 1936 Code affichage turing dans home_hack
-
-<button onclick="click()">Indice</button>
-
-dans le fichier js
-function click(){
-    alert("l'indice")
-}
