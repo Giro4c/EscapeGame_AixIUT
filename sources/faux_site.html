@@ -14,6 +14,7 @@
   <link rel="alternate" hreflang="fr" href="https://iut.univ-amu.fr/fr">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="faux_site.css">
+  <link rel="stylesheet" href="global.css" />
   <style>
     .paragraph-region-2359.region-wrapper  {
       background-image: url(/sites/iut.univ-amu.fr/files/styles/max_1300x1300/public/media-image/Groupe%201467_0.png?itok=1eDj6IKi);
@@ -171,9 +172,13 @@
         <meta class="foundation-mq" name="foundation-mq" content=""></head>
         <body class="front page node-78">
           <header id="bouton">
-            <a href="#" id="manuel">Manuel</a>
-          </header>
-          <p onClick="alert('Voici donc ce que le hacker compte faire du site. Il est indispenssable de combler la brèche de sécurité avant qu\'il ne mette son plan à exécution !Peut-être le hacker aurait-t-il oublié d\'enlever un lien important quelque part. Cherchez la faille.');"</p>
+            <div id="home">
+                <a class="active" href="../index.html"><i class="fa fa-home"></i></a> 
+                <p id="indice" onClick="alert('');">?</i></p>
+            </div> 
+            <p id="histoire" onClick="alert('');">Histoire</p>
+            <a href="./Manuel/manuel.html" id="manuel">Manuel</a>
+        </header>
             <a href="https://iut.univ-amu.fr/fr#main-content" class="visually-hidden focusable">
               Aller au contenu principal
             </a>
