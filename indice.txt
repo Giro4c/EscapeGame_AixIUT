@@ -2,7 +2,32 @@ faux_site.html
     Indice : "ASCII HEXA"
 
 home_hack.html
-    Indice : Turing
+    Indice 1 : Turing
+    Indice 2 : Buncker
+
+al_c++.html
+    Indice : INDICE
+
+repere_python.html
+    Indice 1 : Le serpent a l'air suspect...
+    Indice 2 : Les datas gardées par le labyrinthe C++ pourront peut-être vous aider
+    Indice 3 : okml1024 -> okml = 1024
+
+laby_c++.html
+    Indice : Ne pense pas, juste execute
+
+java_info.html
+    Indice : Les 7 Intrus Différences
+
+found_buncker.html
+    Indice 1 : Le manuel aura peut-être un indice sur le code ?
+    Indice 2 : RTFM
+
+
+
+
+
+
 
 1 2 7 12 15 20 23 Code Java
 1936 Code affichage turing dans home_hack
