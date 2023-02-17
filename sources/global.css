@@ -3,19 +3,31 @@
     padding: 0;
 }
 
+
 header{
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 5%;
 }
+table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li{
+    color:#009900;
+}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    /*background-image: url("https://images.pexels.com/photos/8721342/pexels-photo-8721342.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
-    */
+    background-color: black;
+    color: #009900;
+    display: none;
     height: 100vh;
+    text-align: center;
     background-position: center;
     background-size: cover;
 }
