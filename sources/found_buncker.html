@@ -25,25 +25,25 @@
     <h1>Accès Restreint</h1>
 
     <section id="E-B_P3-Phase1">
-        <p>Entrez le code de sécurité (12 chiffres)</p>
         <form>
-            <input type="text" id="B-Key" name="Security_Key">
-            <input type="submit" value="->">
+            <form class="passform" action="./found_buncker.html" onsubmit="return passcheck1()">
+                Entrez le code de sécurité (12 chiffres) <br> <input type="password" require id="pass1">
+                <input type="submit" value="->">
+            </form>
         </form>
     </section>
-
+<br>
     <section id="E-B_P3-Phase2">
-        <p>
-            Deuxième vérification requise<br>
-            Entrez la phrase clé de tout informaticien :
-        </p>
         <form>
-            <input type="text" id="I-Key" name="Informatic_Key">
-            <input type="submit" value="->">
+            <form class="passform" action="./congratulations.html" onsubmit="return passcheck2()">
+                Deuxième vérification requise<br>
+            Entrez la phrase clé de tout informaticien : <br> <input type="password" require id="pass2">
+                <input type="submit" value="->">
+            </form>
         </form>
     </section>
 
-
+    <script src="./bunker.js"></script>
 </body>
 
 </html>

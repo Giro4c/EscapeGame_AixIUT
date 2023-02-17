@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="global.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="global.css" />
+    <script src="./home_hack.js"></script>
 </head>
 
 <body>
@@ -70,19 +71,43 @@
     
     <section class="body">
         <!-- Le navigateur de page -->
-        
-        <form id="Nav-E_Form" action="" method="post" enctype="text/plain">
-            <label for="Nav-Key">Entrez la clé d'accès à la page voulue :</label><br>
-            <input type="text" id="Nav-Key" name="Access_Key">
+        <br>
+        <form class="passform" action="./al_c++.html" onsubmit="return passcheck1()">
+            Entrez la clé d'accès pour l'algo c++ : <br> <input type="password" require id="pass1">
+            <input type="submit" value="->">
+        </form>
+
+        <form class="passform" action="./laby_c++.html" onsubmit="return passcheck2()">
+            Entrez la clé d'accès pour le labyrinthe c++ : <br> <input type="password" require id="pass2">
+            <input type="submit" value="->">
+        </form>
+
+        <form class="passform" action="./java_info.html" onsubmit="return passcheck3()">
+            Entrez la clé d'accès a Java info: <br> <input type="password" require id="pass3">
+            <input type="submit" value="->">
+        </form>
+
+        <form class="passform" action="./memo_java.html" onsubmit="return passcheck4()">
+            Entrez la clé d'accès à Mémo java : <br> <input type="password" require id="pass4">
             <input type="submit" value="->">
         </form>
         
+        <form class="passform" action="./repere_python.html" onsubmit="return passcheck5()">
+            Entrez la clé d'accès au repaire des fonctions pythons : <br> <input type="password" require id="pass5">
+            <input type="submit" value="->">
+        </form>
+
+        <form class="passform" action="./memo_py.html" onsubmit="return passcheck6()">
+            Entrez la clé d'accès au Mémo python : <br> <input type="password" require id="pass6">
+            <input type="submit" value="->">
+        </form>
+
+        <form class="passform" action="./found_buncker.html" onsubmit="return passcheck7()">
+            Entrez la clé d'accès au bunker : <br> <input type="password" require id="pass7">
+            <input type="submit" value="->">
+        </form>
     </section>
-    <script src="./home_hack.js">
-        function click(){
-            alert("l'indice")
-        }
-    </script>
+    <script src="./home_hack.js"></script>
 </body>
 
 </html>
